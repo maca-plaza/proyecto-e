@@ -1,0 +1,41 @@
+/* src/Stepper.css */
+
+.stepper {
+    display: flex;
+    align-items: center;
+}
+
+.arrow {
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.circles {
+    display: flex;
+    gap: 10px;
+}
+
+.circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #e0e0e0;
+    border-radius: 50%;
+    text-decoration: none;
+    color: #333;
+    transition: background-color 0.3s;
+}
+
+.circle.active {
+    background-color: #4caf50;
+    color: white;
+}
+
+.circle:hover {
+    background-color: #81c784;
+}
