@@ -11,7 +11,7 @@ body{
 
 
 main{
-    background-image: url("eficiencia energetica/header1.jpeg");
+    /* background-image: url("eficiencia energetica/header1.jpeg"); */
     width: 1440px;
     display: flex;
     justify-content: center;

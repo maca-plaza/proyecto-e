@@ -23,8 +23,9 @@ export default function App() {
           <Route path= "residuos" element ={ <Residuos />}/>
           <Route path="energias" element={<Energias />}>
             <Route path="calculadora" element={<Calculadora />}/>
-            <Route path="productos" element={<Productos />}/>
+            
           </Route>
+          <Route path="productos" element={<Productos />}/>
 
         </Routes>
         <Footer />
