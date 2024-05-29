@@ -1,0 +1,397 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 1440px;
+    font-family: "Montserrat", sans-serif;
+}
+
+
+main{
+    background-image: url("eficiencia energetica/header1.jpeg");
+    width: 1440px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    padding: 0 50px;
+  
+}
+.info_main{
+  width: 80%;
+}
+.icono_main{
+  width: 20%;
+  display: flex;
+  justify-content: start;
+}
+.icono_main .fa-regular{
+  font-size: 250px;
+  opacity: .6;
+  color: yellow;
+}
+
+.title{
+    font-size: 55px;
+    font-weight: 400;
+    color: white;
+}
+.yellow {
+    color: #FBD914;
+    font-weight: 700;
+}
+
+.intro{
+    width: 80%;
+    font-size: 20px;
+    text-align: justify;
+    color: #fff;
+    font-weight: 400;
+    
+}
+
+/* Main */
+
+section{
+    width: 1440px;
+}
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.content_reverse img{
+    height: 600px;
+}
+
+.content_imagen img{
+    width: 650px;
+    height: 700px;
+    object-fit: cover;
+    object-position: right;
+}
+
+.content_info{
+    margin-top: 30px;
+    
+}
+.content_title{
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+
+.content_subtitle{
+    margin: 20px 0;
+}
+li::marker{
+    color: #FBD914;
+    font-size: 30px;
+}
+
+ul{
+    line-height: 40px;
+}
+
+.content_reverse{
+    flex-direction: row-reverse;
+}
+.Conoces-la-diferencia-entre-basura-y-residuos- {
+  width: 763px;
+  height: 37px;
+  flex-grow: 0;
+  margin: 0 132px 56px 185px;
+  flex-grow: 0;
+  font-family: Montserrat;
+  font-size: 30px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 4;
+  letter-spacing: normal;
+  text-align: center;
+  color: #000;
+}
+.text-style-1  {
+  color: #fbd914;
+}
+.text-style-2 {
+  color: #fbd914;
+}
+.productos .image{
+  width: 1440px;
+  height: 443px;
+
+}
+.productos .text-wrapper {
+  position: absolute;
+  width: 624px;
+  top: 250px;
+  left: 300px;
+  font-family: "Montserrat-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 70px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.productos .text-wrapper-2 {
+  position: absolute;
+  width: 683px;
+  top: 235px;
+  left: 675px;
+  font-family: "Montserrat-ExtraBold", Helvetica;
+  font-weight: 800;
+  color: #fbd914;
+  font-size: 70px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.align-self-center {
+  width: 700px;
+  height: 137px;
+  flex-grow: 0;
+  margin: 0px 50px 0px 0px;
+  font-family: Montserrat;
+  font-size: 17px;
+  text-align: left;
+  color: #000;
+}
+
+.text-style-3 {
+  font-weight: bold;
+}
+
+.image-110 {
+  width: 517px;
+  height: 291px;
+  flex-grow: 0;
+  margin: 0px 0px 0px 0px;
+  text-align: center;
+  display: inline-block;
+}
+
+
+
+.Residuos-Los-residuos-son-materiales-sustancias-o-productos-que-ya-no-son-tiles-para-el-propsito {
+  width: 493px;
+  height: 126px;
+  flex-grow: 0;
+  margin: 120px 0 45px 70px;
+  font-family: Montserrat;
+  font-size: 17px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000;
+}
+
+.image-111 {
+  width: 517px;
+  height: 291px;
+  flex-grow: 0;
+  margin: 1px 50px 0px 0px;
+  text-align: center;
+}
+
+.Segn-sus-caractersticas {
+  width: 403px;
+  height: 37px;
+  flex-grow: 0;
+  margin: 100px 499px 26px 0px;
+  font-family: Montserrat;
+  font-size: 30px;
+  font-weight: 900;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 4;
+  letter-spacing: normal;
+  text-align: left;
+  color: #fbd914;
+}
+.Segn-sus-caractersticas .text-style-1 {
+  font-weight: normal;
+  color: #000;
+}
+
+.Segn-su-origen {
+  width: 429px;
+  height: 37px;
+  flex-grow: 0;
+  margin: 0 408px 56px 0;
+  font-family: Montserrat;
+  font-size: 30px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 4;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000;
+}
+.Segn-su-origen .text-style-1 {
+  font-weight: 900;
+  color: #fbd914;
+}
+
+
+
+.Segn-su-origen {
+  width: 429px;
+  height: 37px;
+  flex-grow: 0;
+  margin: 0 408px 56px 0;
+  font-family: Montserrat;
+  font-size: 30px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000;
+}
+.Segn-su-origen .text-style-1 {
+  font-weight: 900;
+  color: #fbd914;
+}
+
+/*imagenes*/
+.gris-claro{
+  width: 410px;
+  height:416px ;
+  }
+.verde{
+    width: 410px;
+    height:416px ;
+    }
+    .beige{
+      width: 410px;
+      height:416px ;
+      }
+      .azul{
+        width: 410px;
+        height:416px ;
+        }
+        .rojo{
+          width: 410px;
+          height:416px ;
+          }
+          .burdeos{
+            width: 410px;
+            height:416px ;
+            }
+            .gris-oscuro{
+              width: 410px;
+              height:416px ;
+              }
+              .amarillo{
+                width: 410px;
+                height:416px ;
+                }
+                .cafe{
+                  width: 410px;
+                  height:416px ;
+                  }
+            
+/*iconos*/
+.icono_main
+.fa-regular{
+  font-size: 30px;
+  color:#000;
+}
+.fa-light{
+  font-size: 30px;
+  color: #000;
+}
+
+.fa-car-battery{
+  font-size: 30px;
+  color: black;
+}
+.fa-oil-can{
+  font-size: 30px;
+  color: black;
+}
+.fa-box-open{
+  font-size: 30px;
+  color: black;
+}
+.fa-trowel-bricks{
+  font-size: 30px;
+  color: black;
+}
+.fa-truck-moving{
+  font-size: 30px;
+  color: black;
+}
+.fa-trash-can{
+  font-size: 30px;
+  color: black;
+}
+.fa-industry{
+  font-size: 30px;
+  color: black;
+}
+.fa-person-digging{
+  font-size: 30px;
+  color: black;
+}
+
+
+
+
+
+/* Cards*/
+
+.cards {
+    background-color: #c4c4c4;
+    height: 650px;
+}
+
+.card{
+    padding: 20px 20px 20px 20px
+}
+
+.cards .card{
+    width: 340px;
+    height: 400px;
+    box-shadow: 2px 4px 10px 0 #000;
+    border-radius: 10%;
+}
+
+.card-body{
+   text-align: center;
+}
+
+.card p{
+    text-align: justify;
+    font-size: 15px;
+}
+.card h3{
+  font-size: 20px;
+  text-align: center;
+  font-weight: 700;
+  padding: 15px 0;
+}
+
+img.card-img-top{
+    width: 90px;
+    margin: auto;
+    padding-top: 10px;
+}
+
+.cards{
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+}

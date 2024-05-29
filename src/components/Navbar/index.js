@@ -5,28 +5,28 @@ const Navbar = () => {
   return (
     <>
       <header>
-        <div class="overlap-2">
-          <div class="overlap-3">
+        <div className="overlap-2">
+          <div className="overlap-3">
             <img
               src="/eficiencia energetica/CasaBlanca.png"
               alt="logo"
-              class="casablanca"
+              className="casablanca"
             />
             <img
               src="/eficiencia energetica/LogoNombre.png"
               alt="Energiza Tech"
-              class="logonombre"
+              className="logonombre"
             />
           </div>
-          <div class="overlap-group-wrapper">
-            <div class="overlap-group-2">
-              <div class="text-wrapper-8">Contáctanos</div>
-              <div class="rectangle"></div>
+          <div className="overlap-group-wrapper">
+            <div className="overlap-group-2">
+              <div className="text-wrapper-8">Contáctanos</div>
+              <div className="rectangle"></div>
             </div>
           </div>
-          <div class="overlap-4">
+          <div className="overlap-4">
             <input
-              class="buscador"
+              className="buscador"
               type="text"
               placeholder="¿Qué estás buscando?"
               required
@@ -34,21 +34,24 @@ const Navbar = () => {
             <img
               src="/eficiencia energetica/Search.png"
               alt="buscar"
-              class="search"
+              className="search"
             />
           </div>
         </div>
-        <nav class="menu-navegacion">
+        <nav className="menu-navegacion">
           <ul>
-            <li class="inicio">
+            <li className="inicio">
               <Link to="/">Inicio </Link>
             </li>
-            <li class="energetica">Eficiencia Energética</li>
-            <li class="residuos">Gestión de Residuos</li>
-            <li class="renovables">
+            <li className="energetica">
+              <Link to= "/eficiencia" >Eficiencia Energética </Link></li>
+            <li className="residuos">
+              < Link to= "/residuos" > Gestión de Residuos </Link></li>
+            <li className="renovables">
               <Link to="/energias">Energías Renovables </Link>
             </li>
-            <li class="sostenibles">Productos Sostenibles</li>
+            <li className="sostenibles">
+              <Link to= "/productos" >Productos Sostenibles </Link></li>
           </ul>
         </nav>
       </header>
