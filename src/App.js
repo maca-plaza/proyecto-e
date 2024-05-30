@@ -1,5 +1,6 @@
 // src/App.js
 
+
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
@@ -14,6 +15,8 @@ import Marina from "./pages/Energias/pages/Marina";
 import Solar from "./pages/Energias/pages/Solar";
 import Productos from "./pages/Productos" ;
 import Footer from "./components/Footer";
+import "./style.css";
+
 
 
 export default function App() {
