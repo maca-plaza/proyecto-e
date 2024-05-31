@@ -1,4 +1,6 @@
 import Form from "./components/Form";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import "./styles.css";
 
 const Footer = () => {
@@ -14,10 +16,11 @@ const Footer = () => {
         <div className="contacto">
           <h2>Síguenos</h2>
           <div className="redes_contacto">
-            <i className="fa-brands fa-x-twitter"></i>
-            <i className="fa-brands fa-linkedin-in"></i>
-            <i className="fa-brands fa-instagram"></i>
+            <i className="faTwitter"></i>
+            <i className="faLinkedin-in"></i>
+            <i className="faInstagram"></i>
             <i className="fa-regular fa-envelope"></i>
+            
           </div>
           <div className="info_contacto">
             <p>energizatec@gmail.com</p>
