@@ -20,7 +20,7 @@ const Home = () => {
         
         <div>
           <button className="botonproductos">
-            <Link to="/productos" className="click">¡A un solo CLICK!</Link>
+            <Link to="/productos" className="click"style={{ color: 'inherit' }} >¡A un solo CLICK!</Link>
           </button>
         </div>
   
@@ -61,7 +61,7 @@ const Home = () => {
     <img className="imagencalculadora" src="https://lh3.googleusercontent.com/fife/ALs6j_H_Se0y4r911PdrPcxP-V3dJLt-_eGOivQLqgdgzws5wmwLxuwnVkU1qI2DI7l3Hqi0aliyRFW4Tsps1AYRHujd2GjuoIhlEyFoTd_8-6K9Pe-w7oF2Bwy8klp-kq-gbnVYjpIM-4QDri_TM6T2AibY1bWzORWsz5-PXxsLfzizUXMGDpWUjDjb-cKasRc70RZkEZTRj2BNOLbnZ5Sw0A_ttdDTSIvn7nrkbmpHwG2rTL4eUdDJ0eMNFfZCAQHQ4bsCTFNnTw190Psec8Iit6axXz9Z_3grpq0sDxziAh3xbEbsT4L9N0Oe0bslRUhxSpgPg6RzfS2sEBxuP-l6jfJ2WsFxwdGgAj-xz7kbvCk0qnocvfODglEAuaiN903HBLLSv0F7WrG8BV99KfYRTQf890rJACOQbkqgp9w06IwPindTR6iu1hAeSyiUCTx3jwK3aJmt_JN5PKTfLIJtQD9zb29aw7oPqLtDxTLweVxpP6Ycb8KbdXEFs0c--QIEvYADm0SzwUUrOEaaG9qb83nKHi57kmuUNxgmSEqn4WiPFRh_imJapu_rzwcVGlyQaKG20XrQeeuYjq74FyGsqaFNiYNPMUu-7c-kQMaA7i0HEZQCT4tu0uf3cF4KCRYSa-DMZN-CarYG9Xv7DFrzzALd1k2fpynLHjrTVi_Bg3G6xVFv5B4mLxx_0GyjCxyWWTvi6OLo1ANPxOPBxgPeYE2hfehzVyJVVxbNkvwCXmZSDvvWL5JRsKhnUHe61XffihIXF6dmfXhzVmnA8-xLilKfvFkO6-_UwLBhvWHBkQWk2WnzM0ZmWf5bzXXnXxfFWfvNh6BbRSdl4jwM94PG5s_ecEGXLAyt0bl6eSgWImqog67bUwLl8HZCe1uft5dgXT65AS2H2Oj0ofaC5ZrQcTpZg3LiRhgvpwsw1z1p_G7Fpa48fMZgoo_jl3aT-iCiDnneP7DIgt8E-0JZ22f3GUBdn7rasT3nTzB7t2FzCDI0Pc6P0YccgltSdGKY7v3wNiX13CtbH9jxNhS13WE6pKplqQkp6cBanD8Y3QDQ0Nkw9wuNXdi7S1aKQ9FeyZxnLqs56d0phnf7O7oVLSXweYdsbX947xNg6eZOELgno3eklrS0cD9VXJkqkpzOO4Xhyay2fVdBo3S8HxQfpyHckCqPgHpTKcUSYHEZEBLkSKUp8jSK6LouA8EZcb4aSJUhwyYpUJ-t-F7-IOOdQuP27q4pxLlrJ01GUFQXaXlLqZIT6klqVIYRYffZ6Baw2o3BxQIbhtwKFGbEQyejUXTV4AbVXiXGRfLw0LFN6JocGqaKMUxaDTk2h0UV3xZdWpMRy7AL8RcdwCjINzeT_pVlG52R3Y1oQb4MOOMqJ91duxYYgn2iTUTMc_pW6V2DdqmiUBq8uWKgpZy8KFJSX34NLNaSyJowavSQatsThNON9_QrMllUbnky3tw5W9OEp0i3qH1ZczFrzb84TZTgWrVAtjgDZqUkhJ2VOIPJK7H0TNmfVVoa2qfQwi_3Jf_BrkqbPRP4uRE3PKKiXyseZxxVS6sXba0WsjJLkRA3-sHzcVT374XhFHZ3_ba-DNN-22f2tzaZt70IvD62YuNg=w1920-h838" width="100%"/>
     <div className="text-container1">
       <h1 className="calculator">Calcula tu gasto energético</h1>
-      <button className="button2">Aqui</button>
+      <Link to="/"className="button2">Aqui</Link>
     </div>
   </div>
       </>
