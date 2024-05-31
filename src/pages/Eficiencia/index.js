@@ -3,6 +3,7 @@ import "./styles.css";
 const Eficiencia = () => {
   return (
     <>
+      <body>
       <main>
         <div className="info_main">
           <h1 className="title">
@@ -46,7 +47,7 @@ const Eficiencia = () => {
             </ul>
           </div>
           <div className="content_imagen">
-            <img src="/eficiencia energetica/refri 1.jpeg " alt="" />
+            <img src="https://lh3.google.com/u/0/d/1TGCLNVS3gzKAjAc_ydZGMibtYoFGWQMb=w1439-h753-iv1" alt="" />
           </div>
         </div>
 
@@ -86,7 +87,7 @@ const Eficiencia = () => {
           </div>
           <div className="content_imagen">
             <img
-              src="/eficiencia energetica/iluminación.jpeg"
+              src="https://lh3.google.com/u/0/d/1m1YfHNB57AcoklNbCBREBtjkbh8AytLi=w1439-h460-iv1"
               className="imagen_principal"
               alt=""
             />
@@ -124,7 +125,7 @@ const Eficiencia = () => {
             </ul>
           </div>
           <div className="content_imagen">
-            <img src="/eficiencia energetica/cocina2.jpeg " alt="" />
+            <img src="https://lh3.google.com/u/0/d/1QQqQ4riGQagmUCcVQVJttqhtYuz-3kmR=w1439-h460-iv1" alt="" />
           </div>
         </div>
 
@@ -153,7 +154,7 @@ const Eficiencia = () => {
             </ul>
           </div>
           <div className="content_imagen">
-            <img src="/eficiencia energetica/consumo vampiro.png" alt="" />
+            <img src="https://lh3.google.com/u/0/d/1Qk5wn28dueNw19D1ov8cKeEQmc1D8DXd=w1439-h460-iv1" alt="" />
           </div>
         </div>
       </section>
@@ -207,6 +208,7 @@ const Eficiencia = () => {
           </div>
         </div>
       </div>
+      </body>
     </>
   );
 };
