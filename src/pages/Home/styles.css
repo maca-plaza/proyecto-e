@@ -22,16 +22,16 @@ main {
 }
 
 .texto-superpuesto {
-    position: fixed;
-    font-style: Montserrat;
-    top: 60%;
-    left: 39%;
-    transform: translate(-40%, -60%);
-    background-color: none;
+    position: absolute;
+    font-family: Montserrat;
+    top: 50%; /* Centra verticalmente */
+    left: 50%; /* Centra horizontalmente */
+    transform: translate(-60%, -40%);
+    background-color: none; /* Puedes cambiar esto según tus necesidades */
     color: #ffffff; 
     padding: 10px; 
     border-radius: 5px; 
-    font-size: 40px; 
+    font-size: 50px; 
 }
 
 /*Párrafo abajo foto*/
@@ -50,6 +50,7 @@ main {
   letter-spacing: normal;
   text-align: start;
   color: #000;
+  margin-top: -40px;
 }
 
 .botonproductos{
@@ -59,10 +60,14 @@ main {
   color: #000000; 
   width: 550px;
   height: 100px;
-  margin: 55px 202px 45px 72px;
+  margin: none;
   object-fit: contain;
   background-color: transparent;
   text-align: start;
+  margin-top: 50px;
+  text-decoration: none;
+  border: none;
+  background-color: transparent;
 }
 
 /*Primera corrida de fotos*/
@@ -100,7 +105,7 @@ main {
   transform: translateY(100%);
 }
 .button1{
-  font-size: 60px;
+  font-size: 50px;
   align-items: center;
   font-style: Monserrat;
   margin-top: 15%;
@@ -171,7 +176,7 @@ main {
   font-family: Montserrat;
   color: aliceblue;
   align-content: flex-start;
-  margin-top: -160px;
+  margin-top: -700px;
   text-align: center;
 }
 
@@ -246,6 +251,21 @@ main {
 
 .foto4:hover .foto5:hover .foto6:hover{
   transform: translateY(-10px);
+}
+/*arreglar */
+.container, .container2 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; 
+  margin-top: -30px; 
+}
+
+.aca, .here, .card, .foto4, .foto5, .foto6 {
+  width: 350px;
+  height: 400px;
+  margin: 5px;
 }
 
 /*MISION, HISTORIA Y EQUIPO*/
