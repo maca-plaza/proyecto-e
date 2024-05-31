@@ -71,21 +71,24 @@
   border-color: #ffffff;
 }
 
-.overlap-4 {
+/* .overlap-4 {
+  /* align-items: center; */
+  /* gap: 20px; */
+  /* position: absolute; */
+  /* width: 324px; */
+  /* top: 28px; */
+  /* left: 827px; */
+
+.cajabuscador{
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
-  position: absolute;
-  width: 324px;
-  height: 60px;
-  top: 28px;
-  left: 827px;
+  padding-top: 19px;
 }
 
 .buscador {
   width: 350px;
-  height: 30px;
+  height: 45px;
   background: none;
   border: none;
   border-bottom: 2px solid #fff;
@@ -97,6 +100,10 @@
   text-align: center;
   font-size: 15px;
 }
+.search {
+  color: #fff;
+  font-size: 26px;
+} 
 
 .rectangle-2 {
   position: absolute;
@@ -108,14 +115,6 @@
   border-bottom-style: solid;
   border-color: #ffffff;
 }
-
-/* .search {
-    position: absolute;
-    width: 28px;
-    height: 30px;
-    top: 20px;
-    left: 279px;
-  } */
 
 .text-wrapper-9 {
   position: absolute;
@@ -135,7 +134,7 @@
 }
 
 .menu-navegacion {
-  /* position: absolute; */
+ position: absolute;
   width: 100%;
   height: 62px;
   top: 113px;
@@ -148,7 +147,6 @@
 }
 
 .menu-navegacion ul {
-  list-style-type: none;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -158,13 +156,14 @@
   width: 100%;
 }
 
-.menu-navegacion li {
+.menu-navegacion li a {
   font-family: Montserrat, Helvetica;
   font-weight: 400;
   color: #ffffff;
   font-size: 17px;
   letter-spacing: 0;
   white-space: nowrap;
+  text-decoration: none;
 }
 
 .menu-navegacion .inicio {
