@@ -1,33 +1,32 @@
-const email = document.getElementById("exampleFormControlInput1")
-const texto = document.getElementById("exampleFormControlTextarea1")
-const form = document.getElementById("form")
-const parrafo = document.getElementById("warnings")
-warnings.style.color = "orange";
-
-
-
-form.addEventListener ("submit", e=>{
-    
-    e.preventDefault()
-    let warnings = ""
-    let entrar = false
-    let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
-    parrafo.innerHTML = ""
-    if(texto.value.length > 6){
-        warnings += `El texto es muy corto <br>`
-    }
-
-    if(!regexEmail.test(email.value)){
-        warnings += `El email no es válido <br>`
-        entrar = true
-    }
-    if(entrar){
-        parrafo.innerHTML = warnings
-    }
-    else{
-        parrafo.innerHTML = "Enviado"
-    }
-    document.getElementById("form").reset();
-})
+<form id="form">
+        <Form />
+          <div className="subtitulo_formulario">
+            <h1>¿Quieres ofrecer tus servicios?</h1>
+            <p>Registra tus datos y nos pondremos en contacto contigo</p>
+          </div>
+          <div className="mb-0">
+            <label for="exampleFormControlInput1" class="form-label"></label>
+            <input
+              type="email"
+              class="form-control"
+              id="exampleFormControlInput1"
+              placeholder="ejemplo@gmail.com"
+            />
+          </div>
+          <div className="mb-0">
+            <label for="exampleFormControlTextarea1" class="form-label"></label>
+            <textarea
+              className="form-control"
+              id="exampleFormControlTextarea1"
+              rows="3"
+              required
+              placeholder="Cuéntanos brevemente sobre tus productos"
+            ></textarea>
+            <button type="submit" class="btn">
+              Enviar
+            </button>
+            <p className="warnings" id="warnings"></p>
+          </div>
+        </form>
 
 
