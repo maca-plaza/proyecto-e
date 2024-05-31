@@ -1,3 +1,5 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLightbulb } from "@fortawesome/free-solid-svg-icons";
 import "./styles.css";
 
 const Eficiencia = () => {
@@ -161,11 +163,7 @@ const Eficiencia = () => {
 
       <div className="cards">
         <div className="card">
-          <img
-            src="eficiencia energetica/ampolleta.png"
-            className="card-img-top"
-            alt="..."
-          />
+          <FontAwesomeIcon icon={faLightbulb} className="icon" />
           <div className="card-body">
             <h3>Ahorro de energía y costes</h3>
             <p className="card-text">
@@ -177,11 +175,7 @@ const Eficiencia = () => {
         </div>
 
         <div className="card">
-          <img
-            src="eficiencia energetica/ampolleta.png"
-            className="card-img-top"
-            alt="..."
-          />
+          <FontAwesomeIcon icon={faLightbulb} className="icon" />
           <div className="card-body">
             <h3>Mejoras para el medioambiente</h3>
             <p className="card-text">
@@ -193,11 +187,7 @@ const Eficiencia = () => {
         </div>
 
         <div className="card">
-          <img
-            src="eficiencia energetica/ampolleta.png"
-            className="card-img-top"
-            alt="..."
-          />
+          <FontAwesomeIcon icon={faLightbulb} className="icon" />
           <div className="card-body">
             <h3>Mejoras en el abastecimiento</h3>
             <p className="card-text">

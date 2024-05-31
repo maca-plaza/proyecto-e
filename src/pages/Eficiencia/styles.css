@@ -11,12 +11,14 @@ body{
 /*Header imagen más información*/
 main{
   background-image: url("https://lh3.google.com/u/0/d/17Kz3oO7n1SUfjVG4XcKnM6XeoGZbdoJL=w1439-h460-iv1");
-  width: 100%;
-  height: 100vh;
+  width: 100vw;
+  height: 540px;
+  background-size: 100%;
+  background-repeat:no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 50px;
+ 
 
 }
 .info_main{
@@ -97,6 +99,15 @@ ul{
 }
 
 /* Cards*/
+
+.icon{
+  color: #FBD914;
+  font-size: 70px;
+  text-align: center;
+  padding-top: 20px;
+  margin: 0 auto;
+}
+
 
 .cards {
   background-color: #c4c4c4;
