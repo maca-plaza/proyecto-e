@@ -1,4 +1,4 @@
-import { Link, Outlet } from "react-router-dom";
+import Form from "./components/Form";
 import "./styles.css";
 
 const Footer = () => {
@@ -57,7 +57,6 @@ const Footer = () => {
           <i className="fa-solid fa-circle-arrow-up"></i>
         </div>
       </footer>
-      <Outlet />
     </>
   );
 };
