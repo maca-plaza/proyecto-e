@@ -5,58 +5,18 @@
 }
 
 body{
-    width: 1440px;
+    width: 100vw;
     font-family: "Montserrat", sans-serif;
-}
-
-
-main{
-    /* background-image: url("eficiencia energetica/header1.jpeg"); */
-    width: 1440px;
-    display: flex;
     justify-content: center;
-    align-items: center;
-    margin-top: 50px;
-    padding: 0 50px;
-  
-}
-.info_main{
-  width: 80%;
-}
-.icono_main{
-  width: 20%;
-  display: flex;
-  justify-content: start;
-}
-.icono_main .fa-regular{
-  font-size: 250px;
-  opacity: .6;
-  color: yellow;
 }
 
-.title{
-    font-size: 55px;
-    font-weight: 400;
-    color: white;
-}
-.yellow {
-    color: #FBD914;
-    font-weight: 700;
-}
 
-.intro{
-    width: 80%;
-    font-size: 20px;
-    text-align: justify;
-    color: #fff;
-    font-weight: 400;
-    
-}
+
 
 /* Main */
 
 section{
-    width: 1440px;
+    width: 100vw;
 }
 .content{
     display: flex;
@@ -95,10 +55,14 @@ li::marker{
 ul{
     line-height: 40px;
 }
+/* .d-flex {
+  flex-wrap: row-reverse;
+  text-align: start;
+} */
 
-.content_reverse{
-    flex-direction: row-reverse;
-}
+
+
+
 .Conoces-la-diferencia-entre-basura-y-residuos- {
   width: 763px;
   height: 37px;
@@ -122,14 +86,14 @@ ul{
   color: #fbd914;
 }
 .productos .image{
-  width: 1440px;
+  width: 100vw;
   height: 443px;
 
 }
 .productos .text-wrapper {
   position: absolute;
   width: 624px;
-  top: 250px;
+  top: 150px;
   left: 300px;
   font-family: "Montserrat-SemiBold", Helvetica;
   font-weight: 600;
@@ -140,29 +104,20 @@ ul{
   white-space: nowrap;
 }
 
-.productos .text-wrapper-2 {
+.productos .residuos{
   position: absolute;
-  width: 683px;
-  top: 235px;
-  left: 675px;
-  font-family: "Montserrat-ExtraBold", Helvetica;
-  font-weight: 800;
+  width: 624px;
+  top: 0px;
+  left: 380px;
+  font-family: "Montserrat-SemiBold", Helvetica;
+  font-weight: 600;
   color: #fbd914;
   font-size: 70px;
   letter-spacing: 0;
   line-height: normal;
+  white-space: nowrap;
 }
 
-.align-self-center {
-  width: 700px;
-  height: 137px;
-  flex-grow: 0;
-  margin: 0px 50px 0px 0px;
-  font-family: Montserrat;
-  font-size: 17px;
-  text-align: left;
-  color: #000;
-}
 
 .text-style-3 {
   font-weight: bold;
@@ -171,15 +126,45 @@ ul{
 .image-110 {
   width: 517px;
   height: 291px;
-  flex-grow: 0;
-  margin: 0px 0px 0px 0px;
-  text-align: center;
-  display: inline-block;
+  margin-right: 20px;
+
+}
+
+.basura-1{
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  flex-direction: row-reverse;
+}
+.basura{
+  text-align: left;
+  margin-right: 20px;
+}
+
+.residuos-1{
+  display: flex;
+  align-items: center;
+  width: 100vw;
+}
+
+.residuos-2{
+  text-align: left;
+}
+.image-111 {
+  width: 517px;
+  height: 291px;
+  margin-right: 20px;
+  
+}
+
+.row{
+  vertical-align: middle;
+  text-align: left;
+  justify-content: center;
 }
 
 
-
-.Residuos-Los-residuos-son-materiales-sustancias-o-productos-que-ya-no-son-tiles-para-el-propsito {
+/* .Residuos-Los-residuos-son-materiales-sustancias-o-productos-que-ya-no-son-tiles-para-el-propsito {
   width: 493px;
   height: 126px;
   flex-grow: 0;
@@ -193,15 +178,9 @@ ul{
   letter-spacing: normal;
   text-align: left;
   color: #000;
-}
+} */
 
-.image-111 {
-  width: 517px;
-  height: 291px;
-  flex-grow: 0;
-  margin: 1px 50px 0px 0px;
-  text-align: center;
-}
+
 
 .Segn-sus-caractersticas {
   width: 403px;
