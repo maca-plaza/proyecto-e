@@ -1,4 +1,6 @@
 import { Link, Outlet } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import "./styles.css";
 
 const Navbar = () => {
@@ -8,12 +10,12 @@ const Navbar = () => {
         <div className="overlap-2">
           <div className="overlap-3">
             <img
-              src="/eficiencia energetica/CasaBlanca.png"
+              src="https://lh3.google.com/u/0/d/1T-YLlloczjmODB8o49LDnCdhthxtUn5P=w1439-h753-iv1"
               alt="logo"
               className="casablanca"
             />
             <img
-              src="/eficiencia energetica/LogoNombre.png"
+              src="https://lh3.google.com/u/0/d/1d2-SX2Karlmc9AI3FDqmVLN98FGLLpd5=w1439-h460-iv1"
               alt="Energiza Tech"
               className="logonombre"
             />
@@ -25,17 +27,14 @@ const Navbar = () => {
             </div>
           </div>
           <div className="overlap-4">
-            <input
-              className="buscador"
-              type="text"
-              placeholder="¿Qué estás buscando?"
-              required
-            />
-            <img
-              src="/eficiencia energetica/Search.png"
-              alt="buscar"
-              className="search"
-            />
+            <div className="cajabuscador">
+            <div className="box">
+            <input className="buscador" type="text" placeholder="¿Qué estás buscando?" required />
+            </div>
+            <div className="search">
+            <FontAwesomeIcon icon={faSearch} />
+            </div>
+          </div>
           </div>
         </div>
         <nav className="menu-navegacion">
