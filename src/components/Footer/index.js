@@ -1,26 +1,50 @@
 import Form from "./components/Form";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
+
 import "./styles.css";
+import {
+  faInstagram,
+  faLinkedin,
+  faXTwitter,
+} from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 const Footer = () => {
+  const icons = [
+    { icon: faXTwitter, key: "tw" },
+    { icon: faLinkedin, key: "ln" },
+    { icon: faInstagram, key: "in" },
+    { icon: faEnvelope, key: "mail" },
+  ];
+
+  const iconStyling = {
+    size: "2x",
+    color: "white",
+  };
   return (
     <>
       <footer>
         <div className="logo">
-          <img src="eficiencia energetica/LogoBlanco.png" alt="" />
+          <div>
+            <img
+              src="https://lh3.google.com/u/0/d/1T-YLlloczjmODB8o49LDnCdhthxtUn5P=w1439-h753-iv1"
+              alt="logo"
+            />
+            <img
+              src="https://lh3.google.com/u/0/d/1d2-SX2Karlmc9AI3FDqmVLN98FGLLpd5=w1439-h460-iv1"
+              alt="Energiza Tech"
+            />
+          </div>
         </div>
-          <form id="form">
-            <Form />
-          </form>
+        <Form />
         <div className="contacto">
           <h2>Síguenos</h2>
           <div className="redes_contacto">
-            <i className="faTwitter"></i>
-            <i className="faLinkedin-in"></i>
-            <i className="faInstagram"></i>
-            <i className="fa-regular fa-envelope"></i>
-            
+            {icons.map((i) => (
+              <a href="#">
+                <FontAwesomeIcon key={i.key} icon={i.icon} {...iconStyling} />
+              </a>
+            ))}
           </div>
           <div className="info_contacto">
             <p>energizatec@gmail.com</p>

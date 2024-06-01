@@ -1,79 +1,96 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
+import "./styles.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 
 const Form = () => {
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        message: ''
+  const constants = {
+    FORM_TITLE: "¿Quieres ofrecer tus servicios?",
+    FORM_SUBTITLE: "Dejanos tus datos en el formulario",
+  };
+
+  const [formData, setFormData] = useState({
+    email: "",
+    message: "",
+  });
+
+  const [status, setStatus] = useState("p");
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
     });
+  };
 
-    const [status, setStatus] = useState('');
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Aquí puedes agregar la lógica para enviar el formulario, por ejemplo, usando fetch o axios
+    setStatus("s");
 
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData({
-            ...formData,
-            [name]: value
-        });
-    };
+    // Simulación de envío
+    setTimeout(() => {
+      setStatus("r");
+      setFormData({
+        email: "",
+        message: "",
+      });
+    }, 2000);
+  };
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        // Aquí puedes agregar la lógica para enviar el formulario, por ejemplo, usando fetch o axios
-        setStatus('Enviando...');
-        
-        // Simulación de envío
-        setTimeout(() => {
-            setStatus('Mensaje enviado');
-            setFormData({
-                name: '',
-                email: '',
-                message: ''
-            });
-        }, 2000);
-    };
+  return (
+    <div className="form-container">
+      <div className="form-titles">
+        <p className="form-title">{constants.FORM_TITLE}</p>
+        <p className="form-subtitle">{constants.FORM_SUBTITLE}</p>
+      </div>
+      {status === "r" && (
+        <div className="form-response">
+          <p className="form-title">Gracias!</p>
+          <p className="form-subtitle">
+            Nos pondremos en contacto para resolver tus dudas.
+          </p>
+        </div>
+      )}
 
-    return (
-        <footer>
-            <h2>Contáctanos</h2>
-            <form onSubmit={handleSubmit}>
-                <div>
-                    <label htmlFor="name">Nombre:</label>
-                    <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleChange}
-                        required
-                    />
-                </div>
-                <div>
-                    <label htmlFor="email">Email:</label>
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        required
-                    />
-                </div>
-                <div>
-                    <label htmlFor="message">Mensaje:</label>
-                    <textarea
-                        id="message"
-                        name="message"
-                        value={formData.message}
-                        onChange={handleChange}
-                        required
-                    />
-                </div>
-                <button type="submit">Enviar</button>
-            </form>
-            {status && <p>{status}</p>}
-        </footer>
-    );
+      {status !== "r" && (
+        <div>
+          <form onSubmit={handleSubmit}>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="ejemplo@gmail.com"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
+
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Cuéntanos sobre tu pyme"
+              value={formData.message}
+              onChange={handleChange}
+              required
+            />
+            <button
+              type="submit"
+              className="form-submit-btn"
+              disabled={status !== "p"}
+            >
+              {status === "s" ? (
+                <FontAwesomeIcon icon={faSpinner} spin/>
+              ) : (
+                "Enviar"
+              )}
+            </button>
+          </form>
+        </div>
+      )}
+    </div>
+  );
 };
 
 export default Form;
