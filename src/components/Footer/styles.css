@@ -1,89 +1,89 @@
-footer{
-    background-color: #464646;
-    width: 100vw;
-    height: 500px;
-    display: flex;
-    justify-content:space-evenly;
-    align-items: center;
-  }
-  .logo img{
-    width: 250px;
-  }
-  .subtitulo_formulario h1{
-    font-size: 25px;
-    color: white;
-    margin-bottom: 20px;
-  }
-  .subtitulo_formulario p{
-    font-size: 18px;
-    color: white;
-    font-weight: 300;
-  }
-  
-  #exampleFormControlInput1{
-    background-color: #cbcbcb;
-    border: none;
-  }
-  #exampleFormControlTextarea1{
-    background-color: #cbcbcb;
-    border: none;
-  }
-  
-  button.btn {
-    width: 558px;
-    background-color: #FBD914;
-    margin-top: 10px;
-  }
-  button.btn:hover{
-    background-color: #e47a0f;
-  }
-  .contacto h2{
-    color: #fff;
-    text-decoration: underline;
-    padding-bottom: 20px;
-    font-size: 25px;
-  }
-  
-  .redes_contacto{
-    width: 80%;
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: 15px;
-  }
-  .fa-brands{
-    color: #fff;
-    font-size: 30px;
-  }
-  .fa-regular{
-    font-size: 30px;
-    color: #fff;
-  }
-  
-  .info_contacto p{
-    font-size: 16px;
-    color: #fff;
-    margin: 14px 0;
-  }
-  .derechos p{
-    font-size: 12px;
-    color: #fff;
-  }
-  .flecha{
-    margin-top: 290px;
-  }
-  .fa-solid{
-    color: #fff;
-    font-size: 30px;
-  }
-  
-  #warnings{
-    text-align: center;
-    margin-top: 10px;
-  }
-  
-  #exampleFormControlTextarea1:focus {
-    box-shadow: 0 0 5px #FBD914;
-  }
-  #exampleFormControlInput1:focus {
-    box-shadow: 0 0 5px #FBD914;
-  }
+footer {
+  background-color: #464646;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 76px 0px 74px;
+}
+.logo img {
+  width: 250px;
+}
+.subtitulo_formulario h1 {
+  font-size: 25px;
+  color: white;
+  margin-bottom: 20px;
+}
+.subtitulo_formulario p {
+  font-size: 18px;
+  color: white;
+  font-weight: 300;
+}
+
+#exampleFormControlInput1 {
+  background-color: #cbcbcb;
+  border: none;
+}
+#exampleFormControlTextarea1 {
+  background-color: #cbcbcb;
+  border: none;
+}
+
+button.btn {
+  width: 558px;
+  background-color: #fbd914;
+  margin-top: 10px;
+}
+button.btn:hover {
+  background-color: #e47a0f;
+}
+.contacto h2 {
+  color: #fff;
+  text-decoration: underline;
+  padding-bottom: 20px;
+  font-size: 25px;
+}
+
+.redes_contacto {
+  display: flex;
+  gap: 19px;
+  padding-bottom: 15px;
+}
+.fa-brands {
+  color: #fff;
+  font-size: 30px;
+}
+.fa-regular {
+  font-size: 30px;
+  color: #fff;
+}
+
+.info_contacto p {
+  font-size: 16px;
+  color: #fff;
+  margin: 14px 0;
+}
+.derechos p {
+  font-size: 12px;
+  color: #fff;
+}
+.flecha {
+  margin-top: 290px;
+}
+.fa-solid {
+  color: #fff;
+  font-size: 30px;
+}
+
+#warnings {
+  text-align: center;
+  margin-top: 10px;
+}
+
+#exampleFormControlTextarea1:focus {
+  box-shadow: 0 0 5px #fbd914;
+}
+#exampleFormControlInput1:focus {
+  box-shadow: 0 0 5px #fbd914;
+}
