@@ -6,7 +6,7 @@ import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 const Form = () => {
   const constants = {
     FORM_TITLE: "¿Quieres ofrecer tus servicios?",
-    FORM_SUBTITLE: "Dejanos tus datos en el formulario",
+    FORM_SUBTITLE: "Registra tus datos y nos pondremos en contacto contigo",
   };
 
   const [formData, setFormData] = useState({
