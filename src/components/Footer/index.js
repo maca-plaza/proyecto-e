@@ -41,7 +41,7 @@ const Footer = () => {
           <h2>Síguenos</h2>
           <div className="redes_contacto">
             {icons.map((i) => (
-              <a href="#">
+              <a key={i.key} href="#">
                 <FontAwesomeIcon key={i.key} icon={i.icon} {...iconStyling} />
               </a>
             ))}
