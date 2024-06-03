@@ -1,36 +1,3 @@
-overlap-2 {
-  width: 100%;
-  height: 113px;
-  top: 0;
-  left: 0;
-  background-color: #8c8a8a;
-}
-
-.overlap-3 {
-  position: absolute;
-  width: 325px;
-  height: 59px;
-  top: 42px;
-  left: 43px;
-}
-
-.casablanca {
-  width: 59px;
-  height: 40px;
-  top: 0;
-  left: 0;
-  object-fit: cover;
-}
-
-.logonombre {
-  position: absolute;
-  width: 274px;
-  height: 52px;
-  top: 7px;
-  left: 51px;
-  object-fit: cover;
-}
-
 .overlap-group-wrapper {
   position: absolute;
   width: 137px;
