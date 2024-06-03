@@ -1,15 +1,20 @@
-// src/Stepper.js
 
 import React, { useState } from "react";
-import { Link, Outlet } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLeaf } from "@fortawesome/free-solid-svg-icons";
 import "./styles.css";
 
 const Stepper = () => {
   const [currentStep, setCurrentStep] = useState(0);
-
-  const steps = [1, 2, 3, 4, 5]; //  cantidad de pasos según sea necesario
+  const location = useLocation();
+  const steps = [
+    { label: "Cambio Climático", path: "../../pages/Climatico" },
+    { label: "Acciones Sostenibles", path: "./Calculadora" },
+    { label: "Sistemas de climatización", path: "../../pages/Climatiza" },
+    { label: "Climatiza", path: "../../pages/Climatiza" },
+    { label: "Step 5", path: "./Calculadora" },
+  ]; //  cantidad de pasos según sea necesario
 
   const handlePrevClick = () => {
     if (currentStep > 0) {
@@ -45,7 +50,23 @@ const Stepper = () => {
           &#9654;
         </button>
       </div>
-      <Outlet />
+      <div>
+        <ul>
+          {steps.map((step, index) => (
+            <li key={index}>
+              <Link
+                to={step.path}
+                style={{
+                  fontWeight:
+                    location.pathname === step.path ? "bold" : "normal",
+                }}
+              >
+                {step.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
     </>
   );
 };
