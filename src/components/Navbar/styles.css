@@ -1,38 +1,64 @@
+/*new*/
+.navbar-upper-container {
+  background-color: #8c8a8a;
+  display: flex;
+  align-items: center;
+  gap: 102px;
+  height: 113px;
+  padding: 0 42px;
+  width: 100%;
+}
+
+.navbar-logo-container {
+  display: flex;
+  flex: 1 1 0;
+}
+
+.navbar-logo-container img {
+  object-fit: cover;
+}
+
+.navbar-btn-contacto{
+  color: #fff;
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 50px;
+  font-size: 18px;
+  height: 33px;
+  padding: 0 13px;
+}
+
+/*end new*/
+/* 
 header {
   position: relative;
   z-index: 1; 
-}
-.overlap-2 {
+} */
+/* .overlap-2 {
   width: 100%;
   height: 113px;
   top: 0;
   left: 0;
   background-color: #8c8a8a;
-}
-
+} */
+/* 
 .overlap-3 {
   position: absolute;
   width: 325px;
   height: 59px;
   top: 42px;
   left: 43px;
-}
+} */
 
 .casablanca {
   width: 59px;
   height: 40px;
-  top: 0;
-  left: 0;
-  object-fit: cover;
 }
 
 .logonombre {
-  position: absolute;
   width: 274px;
   height: 52px;
-  top: 7px;
-  left: 51px;
-  object-fit: cover;
+  margin-top: 8px;
 }
 
 .overlap-group-wrapper {
@@ -77,13 +103,13 @@ header {
 
 /* .overlap-4 {
   /* align-items: center; */
-  /* gap: 20px; */
-  /* position: absolute; */
-  /* width: 324px; */
-  /* top: 28px; */
-  /* left: 827px; */
+/* gap: 20px; */
+/* position: absolute; */
+/* width: 324px; */
+/* top: 28px; */
+/* left: 827px; */
 
-.cajabuscador{
+.cajabuscador {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -107,7 +133,7 @@ header {
 .search {
   color: #fff;
   font-size: 26px;
-} 
+}
 
 .rectangle-2 {
   position: absolute;
@@ -138,7 +164,7 @@ header {
 }
 
 .menu-navegacion {
- position: absolute;
+  position: absolute;
   width: 100%;
   height: 62px;
   top: 113px;
