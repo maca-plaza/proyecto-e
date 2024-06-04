@@ -1,9 +1,5 @@
 import { Link } from "react-router-dom";
 import Stepper from "../../components/Stepper";
-import Climatico from "./pages/Climatico";
-import Climatiza from "./pages/Climatiza";
-import Marina from "./pages/Marina";
-import Solar from "./pages/Solar";
 
 const Energias = () => {
   return (

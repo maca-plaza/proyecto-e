@@ -1,7 +1,6 @@
 import { Link, Outlet } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import "./styles.css";
+import SearchBar from "../Searchbar";
 
 const Navbar = () => {
   return (
@@ -21,32 +20,11 @@ const Navbar = () => {
             />
           </div>
           <div className="navbar-buscador-container">
-            <input type="text" placeholder="¿Qué estás buscando?" />
+            <SearchBar />
           </div>
           <div className="navbar-contacto">
             <button className="navbar-btn-contacto">Contáctanos</button>
           </div>
-          {/* <div className="overlap-4">
-            <div className="cajabuscador">
-              <div className="box">
-                <input
-                  className="buscador"
-                  type="text"
-                  placeholder="¿Qué estás buscando?"
-                  required
-                />
-              </div>
-              <div className="search">
-                <FontAwesomeIcon icon={faSearch} />
-              </div>
-            </div>
-          </div> */}
-          {/* <div className="overlap-group-wrapper">
-            <div className="overlap-group-2">
-              <div className="text-wrapper-8">Contáctanos</div>
-              <div className="rectangle"></div>
-            </div>
-          </div> */}
         </div>
         <nav className="menu-navegacion">
           <ul>

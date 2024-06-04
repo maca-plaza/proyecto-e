@@ -1,4 +1,6 @@
 
+import SearchBar from "../../components/Searchbar";
+
 const Calculadora = () => {
   return (
     <>
@@ -35,6 +37,7 @@ const Calculadora = () => {
         ></iframe>
         </div>
     </section>
+    
     </>
   )
 };
