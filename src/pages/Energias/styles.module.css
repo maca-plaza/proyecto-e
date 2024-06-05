@@ -1,0 +1,46 @@
+.container {
+  margin-top: 50px;
+}
+
+.title-container {
+  align-items: center;
+  padding: 2rem;
+}
+
+.action-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.button {
+  border: 0;
+  border-radius: 0.5rem;
+  color: #fff;
+  padding: 0.5rem 1rem;
+}
+
+.button-primary {
+  background-color: #00b894;
+}
+
+.cards-container {
+  padding: 2rem;
+}
+
+.cards-title-container {
+  align-items: center;
+}
+
+.cards-title {
+  font-weight: bold;
+}
+
+.cards-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}

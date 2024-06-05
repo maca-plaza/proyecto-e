@@ -1,13 +1,108 @@
-
-import { Link} from "react-router-dom";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSun, faWind, faWater, faLeaf, faBolt, faBatteryFull, faHospital, faDollarSign, faFan, faUsers, faShieldAlt } from '@fortawesome/free-solid-svg-icons';
-import "./icons.css";
+import { Link } from "react-router-dom";
+import {
+  faSun,
+  faWind,
+  faWater,
+  faLeaf,
+  faBolt,
+  faBatteryFull,
+  faHospital,
+  faDollarSign,
+  faFan,
+  faUsers,
+  faShieldAlt,
+} from "@fortawesome/free-solid-svg-icons";
+import styles from "./styles.module.css";
+import Card from "./components/Card";
 
 export default function Energias() {
+  const constants = {
+    TITLE: "Impulsando un Futuro Sostenible",
+    DESCRIPTION:
+      "Descubre el poder de las soluciones de energía renovable y cómo pueden transformar tu comunidad.",
+    ACTIONS: {
+      LEARN_MORE: "Aprende Más",
+      ENVOLVED: "Involúcrate",
+    },
+    CARDS: {
+      TITLE: "Soluciones de Energía Renovable",
+      BADGE: "Benefits of Renewable Energy",
+      DESCRIPTION:
+        "Explora las diferentes tecnologías de energía renovable y cómo pueden impulsar un futuro sostenible.",
+    },
+  };
+
+  const cards = [
+    {
+      icon: faSun,
+      title: "Sol",
+      paragraph:
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam harum accusantium cum officiis alias, voluptate sit exercitationem doloribus nesciunt aliquid cumque totam perferendis sequi ipsam!",
+    },
+    {
+      icon: faWind,
+      title: "Viento",
+      paragraph:
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam harum accusantium cum officiis alias, voluptate sit exercitationem doloribus nesciunt aliquid cumque totam perferendis sequi ipsam!",
+    },
+    {
+      icon: faShieldAlt,
+      title: "Escudo",
+      paragraph:
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam harum accusantium cum officiis alias, voluptate sit exercitationem doloribus nesciunt aliquid cumque totam perferendis sequi ipsam!",
+    },
+    {
+      icon: faLeaf,
+      title: "Hoja",
+      paragraph:
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam harum accusantium cum officiis alias, voluptate sit exercitationem doloribus nesciunt aliquid cumque totam perferendis sequi ipsam!",
+    },
+    {
+      icon: faSun,
+      title: "Sol2",
+      paragraph:
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam harum accusantium cum officiis alias, voluptate sit exercitationem doloribus nesciunt aliquid cumque totam perferendis sequi ipsam!",
+    },
+    {
+      icon: faSun,
+      title: "Sol3",
+      paragraph:
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam harum accusantium cum officiis alias, voluptate sit exercitationem doloribus nesciunt aliquid cumque totam perferendis sequi ipsam!",
+    },
+  ];
+
   return (
-    <body>
-    <div className="flex flex-col min-h-screen">
+    <div className={styles.container}>
+      <div className={`${styles["title-container"]} ${styles["flex-column"]}`}>
+        <h1>{constants.TITLE}</h1>
+        <p>{constants.DESCRIPTION}</p>
+        <div className={styles["action-container"]}>
+          <button className={`${styles.button} ${styles["button-primary"]}`}>
+            {constants.ACTIONS.LEARN_MORE}
+          </button>
+          <button className={`${styles.button}`}>
+            {constants.ACTIONS.ENVOLVED}
+          </button>
+        </div>
+      </div>
+      <div className={`${styles["cards-container"]} ${styles["flex-column"]}`}>
+        <div
+          className={`${styles["cards-title-container"]} ${styles["flex-column"]}`}
+        >
+          <span className={`${styles.button} ${styles["button-primary"]}`}>
+            {constants.CARDS.BADGE}
+          </span>
+          <h1 className={styles["cards-title"]}>{constants.CARDS.TITLE}</h1>
+          <p>{constants.CARDS.DESCRIPTION}</p>
+        </div>
+        <div className={styles["cards-wrapper"]}>
+          {cards.map((c) => (
+            <Card {...c} />
+          ))}
+        </div>
+      </div>
+    </div>
+    /* <div className="flex flex-col min-h-screen">
       <main className="flex-1">
         <section className="main-section">
           <img src="/placeholder.svg" alt="Energía Renovable" className="main-image" />
@@ -115,7 +210,6 @@ export default function Energias() {
           </div>
         </section>
       </main>
-    </div>
-    </body>
+    </div> */
   );
 }
