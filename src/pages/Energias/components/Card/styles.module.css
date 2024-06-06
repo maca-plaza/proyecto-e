@@ -3,3 +3,9 @@
   padding: 1rem;
   
 }
+
+@media only screen and (max-width: 600px) {
+  .card-container{
+    max-width: 50%;
+  }
+}
