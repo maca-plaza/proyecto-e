@@ -5,7 +5,7 @@ import "./styles.css";
 const Eficiencia = () => {
   return (
     <>
-      <body>
+      
       <main>
         <div className="info_main">
           <h1 className="title">
@@ -26,6 +26,7 @@ const Eficiencia = () => {
           <i className="fa-regular fa-lightbulb"></i>
         </div>
       </main>
+      <body>
       <section className="container-xxl">
         <div className="content">
           <div className="content_info">

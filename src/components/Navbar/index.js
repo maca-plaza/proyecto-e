@@ -34,9 +34,6 @@ const Navbar = () => {
             <li className="energetica">
               <Link to="/eficiencia">Eficiencia Energética </Link>
             </li>
-            <li className="calculadora">
-              <Link to="/calculadora">Calculadora Gasto Energético</Link>
-            </li>
             <li className="residuos">
               <Link to="/residuos"> Gestión de Residuos </Link>
             </li>
