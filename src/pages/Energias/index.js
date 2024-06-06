@@ -11,6 +11,7 @@ import {
   faFan,
   faUsers,
   faShieldAlt,
+  faWallet,
 } from "@fortawesome/free-solid-svg-icons";
 import styles from "./styles.module.css";
 import Card from "./components/Card";
@@ -46,13 +47,13 @@ export default function Energias() {
         "Al reemplazar los combustibles fósiles con energías renovables, se disminuyen significativamente las emisiones de dióxido de carbono y otros gases de efecto invernadero.",
     },
     {
-      icon: faWind,
+      icon: faLeaf,
       title: "Conservación de Recursos Naturales:",
       paragraph:
         "Las energías renovables no agotan los recursos naturales, preservando los ecosistemas y la biodiversidad.",
     },
     {
-      icon: faWater,
+      icon: faFan,
       title: "Reducción de Contaminación:",
       paragraph:
         "Estas fuentes de energía producen menos contaminación del aire y del agua, mejorando la         calidad ambiental y la salud pública.",
@@ -60,43 +61,43 @@ export default function Energias() {
   ];
   const CARDS2 = [
     {
-      icon: faSun,
-      title: "Acceso a Energía en Áreas Remotas:",
+      icon: faUsers,
+      title: "Educación y Conciencia:",
       paragraph:
-        "Las tecnologías renovables, como los sistemas solares, pueden proporcionar electricidad a comunidades rurales y aisladas.",
+        "Promover el uso de energías renovables fomenta una mayor conciencia ambiental y educa a la población sobre prácticas sostenibles.",
     },
     {
-      icon: faWind,
+      icon: faHospital,
       title: "Mejora de la Salud Pública:",
       paragraph:
         "Al disminuir la contaminación del aire, se reducen las enfermedades respiratorias y cardiovasculares relacionadas con la quema de combustibles fósiles.",
     },
     {
-      icon: faWater,
-      title: "Educación y Conciencia:",
+      icon: faBatteryFull,
+      title: "Acceso a Energía en Áreas Remotas:",
       paragraph:
-        "Promover el uso de energías renovables fomenta una mayor conciencia ambiental y educa a la población sobre prácticas sostenibles.",
+        "Las tecnologías renovables, como los sistemas solares, pueden proporcionar electricidad a comunidades rurales y aisladas.",
     },
   ];
 
   const CARDS3 = [
     {
-      icon: faSun,
-      title: "Ahorro en Costos Energéticos:",
+      icon: faWater,
+      title: "Independencia Energética:",
       paragraph:
-        "Aunque la inversión inicial puede ser alta, las energías renovables suelen tener costos operativos bajos, lo que resulta en ahorros a largo plazo.",
+        "Reducir la dependencia de importaciones de combustibles fósiles fortalece la seguridad energética y económica de los países.",
     },
     {
-      icon: faWind,
+      icon: faWallet,
       title: "Creación de Empleos:",
       paragraph:
         "El sector de las energías renovables genera empleo en la fabricación, instalación y mantenimiento de tecnologías verdes.",
     },
     {
-      icon: faWater,
-      title: "Independencia Energética:",
+      icon: faDollarSign,
+      title: "Ahorro en Costos Energéticos:",
       paragraph:
-        "Reducir la dependencia de importaciones de combustibles fósiles fortalece la seguridad energética y económica de los países.",
+        "Aunque la inversión inicial puede ser alta, las energías renovables suelen tener costos operativos bajos, lo que resulta en ahorros a largo plazo.",
     },
   ];
 
@@ -180,7 +181,7 @@ export default function Energias() {
               </p>
             </div>
           </div>
-          <div className={styles['summary-container-child']}>Imagen</div>
+          <div className={styles['summary-container-img']}></div>
         </div>
       </div>
     </div>

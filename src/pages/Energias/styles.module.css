@@ -24,7 +24,7 @@
 }
 
 .button-primary {
-  background-color: #00b894;
+  background-color:  #FBD914;;
 }
 
 .cards-container {
@@ -62,4 +62,11 @@
 
 .summary-container-child{
   min-width: 50%;
+}
+.summary-container-img{
+  min-width: 50%;
+  background-size: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  background-image: url("https://www.bbva.com/wp-content/uploads/2021/03/energi%CC%81a_renovable_apertura-paneles-sostenible-panel-solar-eolica-molinos-medioambiente.jpg");
 }
