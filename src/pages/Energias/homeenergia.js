@@ -44,26 +44,7 @@ const Renewal = () => {
         </section>
         <section className="benefits">
           <h2>Beneficios de las Energías Renovables</h2>
-
-          <h3>Beneficios Ambientales:</h3>
-          <ul>
-            <li>
-              <strong>Reducción de Emisiones de CO2:</strong> Al reemplazar los
-              combustibles fósiles con energías renovables, se disminuyen
-              significativamente las emisiones de dióxido de carbono y otros
-              gases de efecto invernadero.
-            </li>
-            <li>
-              <strong>Conservación de Recursos Naturales:</strong> Las energías
-              renovables no agotan los recursos naturales, preservando los
-              ecosistemas y la biodiversidad.
-            </li>
-            <li>
-              <strong>Menor Contaminación:</strong> Estas fuentes de energía
-              producen menos contaminación del aire y del agua, mejorando la
-              calidad ambiental y la salud pública.
-            </li>
-          </ul>
+          
 
           <h3>Beneficios Económicos:</h3>
           <ul>
@@ -84,25 +65,7 @@ const Renewal = () => {
             </li>
           </ul>
 
-          <h3>Beneficios Sociales:</h3>
-          <ul>
-            <li>
-              <strong>Acceso a Energía en Áreas Remotas:</strong> Las
-              tecnologías renovables, como los sistemas solares, pueden
-              proporcionar electricidad a comunidades rurales y aisladas.
-            </li>
-            <li>
-              <strong>Mejora de la Salud Pública:</strong> Al disminuir la
-              contaminación del aire, se reducen las enfermedades respiratorias
-              y cardiovasculares relacionadas con la quema de combustibles
-              fósiles.
-            </li>
-            <li>
-              <strong>Educación y Conciencia:</strong> Promover el uso de
-              energías renovables fomenta una mayor conciencia ambiental y educa
-              a la población sobre prácticas sostenibles.
-            </li>
-          </ul>
+          
         </section>
       </div>
       <body>
@@ -119,13 +82,7 @@ const Renewal = () => {
                       className="card-img-top"
                       alt="Imagen 1"
                     />
-                    <div className="card-body">
-                      <h5 className="card-title">Explorador Solar</h5>
-                      <p className="card-text">
-                        El Explorador Solar es la herramienta pública más
-                        completa y detallada sobre el recurso solar en Chile.
-                      </p>
-                    </div>
+                    
                   </div>
                 </a>
               </div>
@@ -137,15 +94,6 @@ const Renewal = () => {
                       className="card-img-top"
                       alt="Imagen 1"
                     />
-                    <div className="card-body">
-                      <h5 className="card-title">Explorador Marino</h5>
-                      <p className="card-text">
-                        El Explorador Marino es una herramienta que permite
-                        explorar las características del recurso mareomotriz en
-                        Chile y estimar su potencial. Beneficios y Retos:
-                        Ventajas y desafíos de esta tecnología.
-                      </p>
-                    </div>
                   </div>
                 </a>
               </div>
@@ -167,6 +115,7 @@ const Renewal = () => {
                         tecnologías para climatización eficiente. Comparativa de
                         Sistemas: Análisis de diferentes sistemas de
                         climatización.
+                        faSun,faWind,faWater,
                       </p>
                     </div>
                   </div>

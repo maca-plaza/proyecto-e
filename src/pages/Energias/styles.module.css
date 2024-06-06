@@ -1,10 +1,14 @@
-.container {
-  margin-top: 50px;
-}
 
 .title-container {
   align-items: center;
-  padding: 2rem;
+  color: white;
+  background: url("https://engineering.asu.edu/wp-content/uploads/sites/36/2021/08/solar-panel-clouds-sky-windmill-shutterstock_91355138-3x2-web-hero-1280x854.jpg");
+  background-size: 100% 100%;
+  padding: 5rem;
+}
+
+.title-container h1 {
+  font-weight: bold;
 }
 
 .action-container {
@@ -45,5 +49,17 @@
   flex-direction: column;
 }
 .summary-container {
+  gap: 2rem;
   padding: 2rem;
+}
+
+.summary-container-other{
+  display: flex;
+  flex: 1;
+
+  width: 100%;
+}
+
+.summary-container-child{
+  min-width: 50%;
 }

@@ -17,16 +17,16 @@ import Card from "./components/Card";
 
 export default function Energias() {
   const constants = {
-    TITLE: "Impulsando un Futuro Sostenible",
+    TITLE: "ENERGIAS RENOVABLES",
     DESCRIPTION:
-      "Descubre el poder de las soluciones de energía renovable y cómo pueden transformar tu comunidad.",
+      "Las energías renovables son fuentes de energía que se obtienen de recursos naturales como el sol, el viento, el agua y la biomasa. Estas fuentes son inagotables y no contaminantes, lo que las convierte en una alternativa sostenible y respetuosa con el medio ambiente.",
     ACTIONS: {
       LEARN_MORE: "Aprende Más",
       ENVOLVED: "Involúcrate",
     },
     CARDS: {
-      TITLE: "Soluciones de Energía Renovable",
-      BADGE: "Benefits of Renewable Energy",
+      TITLE: "Impulsando un Futuro Sosteniblee",
+      BADGE: "Beneficios de las Energías Renovables",
       DESCRIPTION:
         "Explora las diferentes tecnologías de energía renovable y cómo pueden impulsar un futuro sostenible.",
     },
@@ -35,49 +35,68 @@ export default function Energias() {
       BADGE: "Tecnologías de energías renovables",
       DESCRIPTION:
         "Desde paneles solares hasta turbinas eólicas, ofrecemos una amplia gama de tecnologías de energía renovable para satisfacer sus necesidades. Obtenga más información sobre las diferentes opciones y cómo pueden beneficiar su hogar, negocio o comunidad.",
-        ACTIONS1: "Solar Power, Harness the power of the sun with our efficient solar panel systems.",
-        ACTIONS2: "Aprende Más",
-        ACTIONS3:"",
     },
-
   };
 
   const cards = [
     {
       icon: faSun,
-      title: "Energía Solar",
+      title: "Menos Emisiones de CO2:",
       paragraph:
-        "Aprovecha la radiación solar para generar electricidad o calor mediante paneles solares fotovoltaicos y térmicos.",
+        "Al reemplazar los combustibles fósiles con energías renovables, se disminuyen significativamente las emisiones de dióxido de carbono y otros gases de efecto invernadero.",
     },
     {
       icon: faWind,
-      title: "Energía Eólica:",
+      title: "Conservación de Recursos Naturales:",
       paragraph:
-        "Utiliza la fuerza del viento para mover aerogeneradores que producen electricidad.",
+        "Las energías renovables no agotan los recursos naturales, preservando los ecosistemas y la biodiversidad.",
     },
     {
-      icon: faShieldAlt,
-      title: "Escudo",
+      icon: faWater,
+      title: "Reducción de Contaminación:",
       paragraph:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam harum accusantium cum officiis alias, voluptate sit exercitationem doloribus nesciunt aliquid cumque totam perferendis sequi ipsam!",
+        "Estas fuentes de energía producen menos contaminación del aire y del agua, mejorando la         calidad ambiental y la salud pública.",
     },
-    {
-      icon: faLeaf,
-      title: "Hoja",
-      paragraph:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam harum accusantium cum officiis alias, voluptate sit exercitationem doloribus nesciunt aliquid cumque totam perferendis sequi ipsam!",
-    },
+  ];
+  const CARDS2 = [
     {
       icon: faSun,
-      title: "Sol2",
+      title: "Acceso a Energía en Áreas Remotas:",
       paragraph:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam harum accusantium cum officiis alias, voluptate sit exercitationem doloribus nesciunt aliquid cumque totam perferendis sequi ipsam!",
+        "Las tecnologías renovables, como los sistemas solares, pueden proporcionar electricidad a comunidades rurales y aisladas.",
     },
     {
-      icon: faSun,
-      title: "Sol3",
+      icon: faWind,
+      title: "Mejora de la Salud Pública:",
       paragraph:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam harum accusantium cum officiis alias, voluptate sit exercitationem doloribus nesciunt aliquid cumque totam perferendis sequi ipsam!",
+        "Al disminuir la contaminación del aire, se reducen las enfermedades respiratorias y cardiovasculares relacionadas con la quema de combustibles fósiles.",
+    },
+    {
+      icon: faWater,
+      title: "Educación y Conciencia:",
+      paragraph:
+        "Promover el uso de energías renovables fomenta una mayor conciencia ambiental y educa a la población sobre prácticas sostenibles.",
+    },
+  ];
+
+  const CARDS3 = [
+    {
+      icon: faSun,
+      title: "Ahorro en Costos Energéticos:",
+      paragraph:
+        "Aunque la inversión inicial puede ser alta, las energías renovables suelen tener costos operativos bajos, lo que resulta en ahorros a largo plazo.",
+    },
+    {
+      icon: faWind,
+      title: "Creación de Empleos:",
+      paragraph:
+        "El sector de las energías renovables genera empleo en la fabricación, instalación y mantenimiento de tecnologías verdes.",
+    },
+    {
+      icon: faWater,
+      title: "Independencia Energética:",
+      paragraph:
+        "Reducir la dependencia de importaciones de combustibles fósiles fortalece la seguridad energética y económica de los países.",
     },
   ];
 
@@ -104,11 +123,28 @@ export default function Energias() {
           </span>
           <h1 className={styles["cards-title"]}>{constants.CARDS.TITLE}</h1>
           <p>{constants.CARDS.DESCRIPTION}</p>
+          
         </div>
+        <h1>Beneficios Ambientales:</h1>
         <div className={styles["cards-wrapper"]}>
           {cards.map((c) => (
             <Card {...c} />
           ))}
+          
+          <h1>Beneficios Sociales:</h1>
+            <div className={styles["cards-wrapper"]}>
+          {CARDS2.map((c) => (
+            <Card {...c} />
+          ))}
+            </div>
+          <h1>Beneficios Económicos:</h1>
+            <div className={styles["cards-wrapper"]}>
+          {CARDS3.map((c) => (
+            <Card {...c} />
+          ))}
+            </div>
+            
+
         </div>
       </div>
       <div
@@ -123,8 +159,28 @@ export default function Energias() {
           <h1 className={styles["cards-title"]}>{constants.SUMMARY.TITLE}</h1>
           <p>{constants.SUMMARY.DESCRIPTION}</p>
         </div>
-        <div className={styles["summary-col"]}>
-
+        <div className={styles['summary-container-other']}>
+          <div className={styles['summary-container-child']}>
+            <div>
+              <h1>Energía Solar</h1>
+              <p>
+              Aprovecha la radiación solar para generar electricidad o calor mediante paneles solares fotovoltaicos y térmicos. El Explorador Solar es la herramienta pública más completa y detallada sobre el recurso solar en Chile.
+              </p>
+            </div>
+            <div>
+              <h1>Energía Eolica</h1>
+              <p>
+              Utiliza la fuerza del viento para mover aerogeneradores que producen electricidad.
+              </p>
+            </div>
+            <div>
+              <h1>Energía Marina</h1>
+              <p>
+              Es una herramienta que permite explorar las características del recurso mareomotriz en Chile y estimar su potencial. Beneficios y Retos: Ventajas y desafíos de esta tecnología.
+              </p>
+            </div>
+          </div>
+          <div className={styles['summary-container-child']}>Imagen</div>
         </div>
       </div>
     </div>
