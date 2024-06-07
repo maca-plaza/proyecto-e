@@ -115,7 +115,7 @@ const Renewal = () => {
                         tecnologías para climatización eficiente. Comparativa de
                         Sistemas: Análisis de diferentes sistemas de
                         climatización.
-                        faSun,faWind,faWater,
+                        
                       </p>
                     </div>
                   </div>
@@ -142,28 +142,6 @@ const Renewal = () => {
               </div>
             </div>
           </div>
-
-          <section id="links" className="my-4">
-            <h2>Enlaces de Interés</h2>
-            <ul>
-              <li>
-                <a href="https://energia.gob.cl/">Ministerio de Energía</a>
-              </li>
-              <li>
-                <a href="https://www.cne.cl/">Comisión Nacional de Energía</a>
-              </li>
-              <li>
-                <a href="https://eolico.minenergia.cl/inicio ">
-                  Explorador Eólico
-                </a>
-              </li>
-              <li>
-                <a href="https://sit.conaf.cl/">
-                  Explorador de bioenergia en Chile
-                </a>
-              </li>
-            </ul>
-          </section>
         </div>
       </body>
     </>
