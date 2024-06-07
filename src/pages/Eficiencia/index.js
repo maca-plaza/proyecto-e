@@ -4,7 +4,7 @@ import "./styles.css";
 
 const Eficiencia = () => {
   return (
-    <>
+    <div>
       <main>
         <div className="info_main">
           <h1 className="title">
@@ -25,12 +25,8 @@ const Eficiencia = () => {
           <FontAwesomeIcon icon={faLightbulb} className="icon_main" />
         </div>
       </main>
-      <section >
-<<<<<<< HEAD
-      <body>
-      <section className="container-xxl">
-=======
->>>>>>> 2da35c81fd0e0cb9b468e960807bbbfb511dc4fa
+      
+      <body>      <section className="container-xxl">
         <div className="content">
           <div className="content_info">
             <h2 className="content_title">CONSEJOS EFICIENTES</h2>
@@ -210,7 +206,7 @@ const Eficiencia = () => {
 
 
       </body>
-    </>
+    </div>
   );
 };
 
