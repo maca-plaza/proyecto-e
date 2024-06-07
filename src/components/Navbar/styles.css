@@ -1,19 +1,52 @@
-/*new*/
-.navbar-upper-container {
-  background-color: #8c8a8a;
+
+header{
+  background:#8c8a8a;
+  width: 100vw;
+  padding: 30px;
+  height: 140px;
+}
+.caja{
+  height: 60px;
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 102px;
-  height: 113px;
-  padding: 0 42px;
-  width: 100%;
+  border: 1px solid red;
+  gap: 20px;
 }
 
-.navbar-logo-container {
+.navbar-buscador-container{
+  padding-top: 15px;
+}
+.navbar-upper-container{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.navbar-logo-container{
+  margin: 15px;
   display: flex;
   flex: 1 1 0;
 }
-
+.menu-navegacion{
+  background-color: #00011060;
+  width: 100vw;
+  height: 55px;
+  position: relative;
+  z-index: 2;
+  margin-left: -33px;
+  bottom:4px;
+  padding-top: 8px;
+}
+.menu-navegacion ul{
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+}
+.menu-navegacion a{
+  text-decoration: none;
+  color: white;
+}
 .navbar-logo-container img {
   object-fit: cover;
 }
@@ -39,157 +72,81 @@
   margin-top: 8px;
 }
 
-.overlap-group-wrapper {
-  position: absolute;
-  width: 137px;
-  height: 33px;
-  top: 42px;
-  left: 1251px;
+nav_toggle{
+  display: none;
 }
 
-.overlap-group-2 {
-  position: relative;
-  height: 33px;
-  border-radius: 50px;
-}
 
-.text-wrapper-8 {
-  position: absolute;
-  width: 116px;
-  top: 6px;
-  left: 11px;
-  font-family: "Montserrat-Medium", Helvetica;
-  font-weight: 500;
-  color: #ffffff;
-  font-size: 18px;
-  letter-spacing: 0;
-  line-height: normal;
-  white-space: nowrap;
-  text-align: center;
-}
+/* responsive */
 
-.rectangle {
-  position: absolute;
-  width: 137px;
-  height: 33px;
-  top: 0;
-  left: 0;
-  border-radius: 50px;
-  border: 2px solid;
-  border-color: #ffffff;
-}
 
-/* .overlap-4 {
-  /* align-items: center; */
-/* gap: 20px; */
-/* position: absolute; */
-/* width: 324px; */
-/* top: 28px; */
-/* left: 827px; */
-
-.cajabuscador {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 19px;
+@media (max-width: 950px){
+.nav_items{
+    position: absolute;
+    top: 60px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: -webkit-fill-available;        
+    transform: translateX(-100%);
+    transition: 0.3s ease all;
 }
-
-.buscador {
-  width: 350px;
-  height: 45px;
-  background: none;
-  border: none;
-  border-bottom: 2px solid #fff;
-  padding: 0 15px;
-  color: #fff;
-}
-.overlap-4 ::placeholder {
-  color: #b4b4b4;
-  text-align: center;
-  font-size: 15px;
-}
-.search {
-  color: #fff;
-  font-size: 26px;
-}
-
-.rectangle-2 {
-  position: absolute;
-  width: 320px;
-  height: 60px;
-  top: 0;
-  left: 4px;
-  border-bottom-width: 1.5px;
-  border-bottom-style: solid;
-  border-color: #ffffff;
-}
-
-.text-wrapper-9 {
-  position: absolute;
-  width: 302px;
-  top: 32px;
-  left: 0;
-  text-shadow: 0px 4px 4px #00000040;
-  -webkit-text-stroke: 1px transparent;
-  font-family: "Montserrat-Regular", Helvetica;
-  font-weight: 400;
-  color: #ffffffcc;
-  font-size: 16px;
-  text-align: center;
-  letter-spacing: 0;
-  line-height: 18.7px;
-  white-space: nowrap;
-}
-
-.menu-navegacion {
-  position: absolute;
+.nav_items li{
   width: 100%;
-  height: 62px;
-  top: 113px;
-  left: 0;
-  background: rgba(0, 0, 0, 0.3);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
-.menu-navegacion ul {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+  height: 600px;
+  background-color: white;
   text-align: center;
-  padding: 0;
-  margin: 0;
-  width: 100%;
+}
+.nav_items a{
+  color: #000;
+  
+}
+.nav_items.open{
+  transform: translateX(0) !important
+}
+  /* .menu-navegacion  {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: -webkit-fill-available;        
+    transform: translateX(-100%);
+    transition: 0.3s ease all;
+}
+.menu-navegacion.open{
+  transform: translateX(0)!important;
+} */
+.nav_toggle{
+  display: flex!important;
+  flex-direction: column;                
+  margin: 15px;
+}
+.nav_toggle span{
+  width: 50px;
+  height: 10px;
+  background: rgb(0, 0, 0);
+  margin-bottom: 5px;
+  border-radius: 2px;             
+  transform-origin: 5px 0px;
+  transition: all 0.2s linear;
+}
+.nav_toggle.open > span{
+  transform: rotate(45deg) translate(0px, 0px);
+}
+.nav_toggle.open > span:nth-child(2){
+  display: none;
+}
+.nav_toggle.open > span:nth-child(3){
+  transform: rotate(-45deg) translate(-5px, 1px);
+}
+.navbar-btn-contacto{
+  display: none;
+}
 }
 
-.menu-navegacion li a {
-  font-family: Montserrat, Helvetica;
-  font-weight: 400;
-  color: #ffffff;
-  font-size: 17px;
-  letter-spacing: 0;
-  white-space: nowrap;
-  text-decoration: none;
-}
 
-.menu-navegacion .inicio {
-  line-height: 62px;
-}
 
-.menu-navegacion .energetica {
-  line-height: 62px;
-}
-
-.menu-navegacion .residuos {
-  line-height: 62px;
-}
-
-.menu-navegacion .renovables {
-  line-height: 62px;
-}
-
-.menu-navegacion .sostenibles {
-  line-height: 62px;
-}
