@@ -5,7 +5,6 @@ import "./styles.css";
 const Eficiencia = () => {
   return (
     <>
-      
       <main>
         <div className="info_main">
           <h1 className="title">
@@ -23,9 +22,10 @@ const Eficiencia = () => {
           </p>
         </div>
         <div className="icono_main">
-          <i className="fa-regular fa-lightbulb"></i>
+          <FontAwesomeIcon icon={faLightbulb} className="icon_main" />
         </div>
       </main>
+      <section >
       <body>
       <section className="container-xxl">
         <div className="content">
@@ -163,11 +163,11 @@ const Eficiencia = () => {
       </section>
 
       <div className="cards">
-        <div className="card">
+        <div className="card_info">
           <FontAwesomeIcon icon={faLightbulb} className="icon" />
-          <div className="card-body">
+          <div className="card_body">
             <h3>Ahorro de energía y costes</h3>
-            <p className="card-text">
+            <p className="card_text">
               Al utilizar menos recursos para llevar a cabo una actividad
               contribuimos al ahorro energético. Además, un menor gasto de
               energía se traduce en una reducción en la factura energética.
@@ -175,7 +175,7 @@ const Eficiencia = () => {
           </div>
         </div>
 
-        <div className="card">
+        <div className="card_info">
           <FontAwesomeIcon icon={faLightbulb} className="icon" />
           <div className="card-body">
             <h3>Mejoras para el medioambiente</h3>
@@ -187,7 +187,7 @@ const Eficiencia = () => {
           </div>
         </div>
 
-        <div className="card">
+        <div className="card_info">
           <FontAwesomeIcon icon={faLightbulb} className="icon" />
           <div className="card-body">
             <h3>Mejoras en el abastecimiento</h3>
@@ -199,10 +199,16 @@ const Eficiencia = () => {
           </div>
         </div>
       </div>
+
+      {/* <div className="calculator">
+        <button></button>
+      </div> */}
+
+
+
       </body>
     </>
   );
 };
 
 export default Eficiencia;
-
