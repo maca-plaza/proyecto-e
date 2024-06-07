@@ -32,7 +32,7 @@ export default function Energias() {
         "Explora las diferentes tecnologías de energía renovable y cómo pueden impulsar un futuro sostenible.",
     },
     SUMMARY: {
-      TITLE: "Explorar soluciones de energía renovable",
+      TITLE: "Explorar el IMPACTO de energía renovable",
       BADGE: "Tecnologías de energías renovables",
       DESCRIPTION:
         "Desde paneles solares hasta turbinas eólicas, ofrecemos una amplia gama de tecnologías de energía renovable para satisfacer sus necesidades. Obtenga más información sobre las diferentes opciones y cómo pueden beneficiar su hogar, negocio o comunidad.",
@@ -41,7 +41,7 @@ export default function Energias() {
 
   const cards = [
     {
-      icon: faSun,
+      icon: faWind,
       title: "Menos Emisiones de CO2:",
       paragraph:
         "Al reemplazar los combustibles fósiles con energías renovables, se disminuyen significativamente las emisiones de dióxido de carbono y otros gases de efecto invernadero.",
@@ -108,7 +108,7 @@ export default function Energias() {
         <p>{constants.DESCRIPTION}</p>
         <div className={styles["action-container"]}>
           <button className={`${styles.button} ${styles["button-primary"]}`}>
-            {constants.ACTIONS.LEARN_MORE}
+            <Link to="/calculadora">{constants.ACTIONS.LEARN_MORE}</Link>
           </button>
           <button className={`${styles.button}`}>
             {constants.ACTIONS.ENVOLVED}
@@ -124,28 +124,25 @@ export default function Energias() {
           </span>
           <h1 className={styles["cards-title"]}>{constants.CARDS.TITLE}</h1>
           <p>{constants.CARDS.DESCRIPTION}</p>
-          
         </div>
         <h1>Beneficios Ambientales:</h1>
         <div className={styles["cards-wrapper"]}>
           {cards.map((c) => (
             <Card {...c} />
           ))}
-          
-          <h1>Beneficios Sociales:</h1>
-            <div className={styles["cards-wrapper"]}>
-          {CARDS2.map((c) => (
-            <Card {...c} />
-          ))}
-            </div>
-          <h1>Beneficios Económicos:</h1>
-            <div className={styles["cards-wrapper"]}>
-          {CARDS3.map((c) => (
-            <Card {...c} />
-          ))}
-            </div>
-            
 
+          <h1>Beneficios Sociales:</h1>
+          <div className={styles["cards-wrapper"]}>
+            {CARDS2.map((c) => (
+              <Card {...c} />
+            ))}
+          </div>
+          <h1>Beneficios Económicos:</h1>
+          <div className={styles["cards-wrapper"]}>
+            {CARDS3.map((c) => (
+              <Card {...c} />
+            ))}
+          </div>
         </div>
       </div>
       <div
@@ -160,28 +157,57 @@ export default function Energias() {
           <h1 className={styles["cards-title"]}>{constants.SUMMARY.TITLE}</h1>
           <p>{constants.SUMMARY.DESCRIPTION}</p>
         </div>
-        <div className={styles['summary-container-other']}>
-          <div className={styles['summary-container-child']}>
+        <div className={styles["summary-container-other"]}>
+          <div className={styles["summary-container-child"]}>
             <div>
               <h1>Energía Solar</h1>
               <p>
-              Aprovecha la radiación solar para generar electricidad o calor mediante paneles solares fotovoltaicos y térmicos. El Explorador Solar es la herramienta pública más completa y detallada sobre el recurso solar en Chile.
+                Aprovecha la radiación solar para generar electricidad o calor
+                mediante paneles solares fotovoltaicos y térmicos. El Explorador
+                Solar es la herramienta pública más completa y detallada sobre
+                el recurso solar en Chile.
               </p>
             </div>
             <div>
               <h1>Energía Eolica</h1>
               <p>
-              Utiliza la fuerza del viento para mover aerogeneradores que producen electricidad.
+                Utiliza la fuerza del viento para mover aerogeneradores que
+                producen electricidad.
               </p>
             </div>
             <div>
-              <h1>Energía Marina</h1>
+               <h1 >Explorador de Energía Marina</h1>
               <p>
-              Es una herramienta que permite explorar las características del recurso mareomotriz en Chile y estimar su potencial. Beneficios y Retos: Ventajas y desafíos de esta tecnología.
+                Es una herramienta que permite explorar las características del
+                recurso mareomotriz en Chile y estimar su potencial.
               </p>
             </div>
           </div>
-          <div className={styles['summary-container-img']}></div>
+          <div className={styles["summary-container-img"]}></div>
+        </div>
+      </div>
+      <div className={`${styles["others-container"]} ${styles["flex-column"]}`} >
+        
+        <span className={`${styles.button} ${styles["button-primary"]}`}>
+          {"Involúcrate"}
+        </span>
+        <h1>Únete a la revolución de las energías renovables</h1>
+        <p>Si eres propietario de una vivienda, de un negocio o un líder comunitario, hay muchas maneras de involucrarse en el movimiento de las energías renovables. Explora los recursos disponibles. Otros Enlaces de Interés</p>
+        <div className={styles["action-container"]}>
+        <button className={`${styles.button} ${styles["button-primary"]}`}>
+          <a href="https://eolico.minenergia.cl/inicio" className="button-link">Explorador Eólico</a>
+          </button>
+          <button className={`${styles.button}${styles["button-primary"]}`}>
+          <a href="https://sit.conaf.cl/" className="button-link">Explorador de Bioenergía Forestal</a>
+          </button>
+          <button className={`${styles.button} ${styles["button-primary"]}`}>
+          <a href="https://energia.gob.cl/" className="button-link">Ministerio de Energía</a>
+          </button>
+          <button className={`${styles.button}${styles["button-primary"]}`}>
+          <a href="https://www.cne.cl//" className="button-link">Comisión Nacional de Energía</a>
+          </button>
+          
+          
         </div>
       </div>
     </div>

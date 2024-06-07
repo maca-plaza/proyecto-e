@@ -1,5 +1,6 @@
 
 import SearchBar from "../../components/Searchbar";
+import Solar from "../Energias/pages/Solar"
 
 const Calculadora = () => {
   return (
@@ -22,7 +23,7 @@ const Calculadora = () => {
         dependencia de la red eléctrica convencional.
         </p>
     </section>
-    <section id="video" className="my-4">
+    {/* <section id="video" className="my-4">
         <h2>Video Tutorial</h2>
         <p>
         A continuación, te mostramos un breve video que te guiará en cómo revisar
@@ -36,8 +37,8 @@ const Calculadora = () => {
             allowfullscreen
         ></iframe>
         </div>
-    </section>
-    
+    </section>  */}
+    <Solar/>
     </>
   )
 };
