@@ -26,8 +26,11 @@ const Eficiencia = () => {
         </div>
       </main>
       <section >
+<<<<<<< HEAD
       <body>
       <section className="container-xxl">
+=======
+>>>>>>> 2da35c81fd0e0cb9b468e960807bbbfb511dc4fa
         <div className="content">
           <div className="content_info">
             <h2 className="content_title">CONSEJOS EFICIENTES</h2>
