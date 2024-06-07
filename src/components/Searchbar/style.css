@@ -19,3 +19,8 @@ header {
   top: 42px;
   left: 43px;
 } */
+
+#buscador{
+  border-radius: 50%;
+  color: red;
+}

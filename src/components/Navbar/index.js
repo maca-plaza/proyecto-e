@@ -1,8 +1,10 @@
 import { Link, Outlet } from "react-router-dom";
 import "./styles.css";
 import SearchBar from "../Searchbar";
+import React, {useState} from "react";
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false)
   return (
     <>
       <header>
@@ -19,15 +21,17 @@ const Navbar = () => {
               className="logonombre"
             />
           </div>
+          <div className="caja">
           <div className="navbar-buscador-container">
             <SearchBar />
           </div>
           <div className="navbar-contacto">
             <button className="navbar-btn-contacto">Contáctanos</button>
           </div>
+          </div>
         </div>
-        <nav className="menu-navegacion">
-          <ul>
+        <nav className="menu-navegacion" >   
+          <ul className={`nav_items ${isOpen && "open"}`}>
             <li className="inicio">
               <Link to="/">Inicio </Link>
             </li>
@@ -44,7 +48,12 @@ const Navbar = () => {
               <Link to="/productos">Productos Sostenibles </Link>
             </li>
           </ul>
-        </nav>
+          <div className={`nav_toggle ${isOpen &&"open"}`} onClick={() => setIsOpen(!isOpen)}>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          </nav>
       </header>
       <Outlet />
     </>

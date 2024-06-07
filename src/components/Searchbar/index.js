@@ -13,7 +13,7 @@ const SearchBar = () => {
        );
     return ( 
       <div> 
-        <input type="text" value={searchTerm} onChange={handleSearch} placeholder="¿Qué estas buscando?" /> 
+        <input id="buscador" type="text" value={searchTerm} onChange={handleSearch} placeholder="¿Qué estas buscando?" /> 
         <ul>
           {filteredResults.map(item => ( 
               <li key={item.id}>{item.title}</li> 
