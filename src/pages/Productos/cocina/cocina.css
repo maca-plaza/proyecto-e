@@ -1,0 +1,332 @@
+.productos {
+    background-color: #e9ecef;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .productos .div {
+    background-color: #e9ecef;
+    height: 1691px;
+    overflow: hidden;
+    position: relative;
+    width: 1442px;
+  }
+  
+  .productos .overlap {
+    height: 1228px;
+    left: -4px;
+    position: absolute;
+    top: 0;
+    width: 1448px;
+  }
+  
+  .productos .image {
+    height: 417px;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 107px;
+    width: 1446px;
+  }
+  
+  .productos .hero-banner {
+    background-color: #ffffff;
+    border: 1px solid;
+    height: 684px;
+    left: 4px;
+    position: absolute;
+    top: 522px;
+    width: 1442px;
+  }
+  
+  .productos .img {
+    height: 253px;
+    left: 131px;
+    object-fit: cover;
+    position: absolute;
+    top: 565px;
+    width: 232px;
+  }
+  
+  .productos .text-wrapper {
+    color: #000000;
+    font-family: "Montserrat-Bold", Helvetica;
+    font-size: 15px;
+    font-weight: 700;
+    left: 127px;
+    letter-spacing: 0;
+    line-height: 17.5px;
+    position: absolute;
+    top: 820px;
+    width: 282px;
+  }
+  
+  .productos .text-wrapper-2 {
+    color: #000000;
+    font-family: "Montserrat-Bold", Helvetica;
+    font-size: 15px;
+    font-weight: 700;
+    height: 33px;
+    left: 795px;
+    letter-spacing: 0;
+    line-height: 22.5px;
+    position: absolute;
+    top: 813px;
+    width: 252px;
+  }
+  
+  .productos .text-wrapper-3 {
+    color: #000000;
+    font-family: "Montserrat-Bold", Helvetica;
+    font-size: 15px;
+    font-weight: 700;
+    height: 33px;
+    left: 470px;
+    letter-spacing: 0;
+    line-height: 22.5px;
+    position: absolute;
+    top: 813px;
+    width: 216px;
+  }
+  
+  .productos .p {
+    color: #000000;
+    font-family: "Montserrat-Bold", Helvetica;
+    font-size: 15px;
+    font-weight: 700;
+    height: 33px;
+    left: 1134px;
+    letter-spacing: 0;
+    line-height: 22.5px;
+    position: absolute;
+    top: 813px;
+    width: 285px;
+  }
+  
+  .productos .image-2 {
+    height: 253px;
+    left: 795px;
+    object-fit: cover;
+    position: absolute;
+    top: 565px;
+    width: 232px;
+  }
+  
+  .productos .image-3 {
+    height: 253px;
+    left: 470px;
+    object-fit: cover;
+    position: absolute;
+    top: 565px;
+    width: 232px;
+  }
+  
+  .productos .image-4 {
+    height: 253px;
+    left: 1134px;
+    object-fit: cover;
+    position: absolute;
+    top: 567px;
+    width: 232px;
+  }
+  
+  .productos .text-wrapper-4 {
+    color: #000000;
+    font-family: "Inter-ExtraBold", Helvetica;
+    font-size: 15px;
+    font-weight: 800;
+    height: 23px;
+    left: 126px;
+    letter-spacing: 0;
+    line-height: 22.5px;
+    position: absolute;
+    top: 856px;
+    white-space: nowrap;
+  }
+  
+  .productos .element {
+    color: #000000;
+    font-family: "Inter-Bold", Helvetica;
+    font-size: 15px;
+    font-weight: 700;
+    height: 46px;
+    left: 795px;
+    letter-spacing: 0;
+    line-height: 22.5px;
+    position: absolute;
+    top: 856px;
+  }
+  
+  .productos .text-wrapper-5 {
+    color: #000000;
+    font-family: "Inter-Bold", Helvetica;
+    font-size: 15px;
+    font-weight: 700;
+    height: 23px;
+    left: 1134px;
+    letter-spacing: 0;
+    line-height: 22.5px;
+    position: absolute;
+    top: 868px;
+    white-space: nowrap;
+    width: 62px;
+  }
+  
+  .productos .text-wrapper-6 {
+    color: #000000;
+    font-family: "Inter-ExtraBold", Helvetica;
+    font-size: 15px;
+    font-weight: 800;
+    height: 46px;
+    left: 503px;
+    letter-spacing: 0;
+    line-height: 22.5px;
+    position: absolute;
+    top: 1036px;
+  }
+  
+  .productos .image-5 {
+    height: 253px;
+    left: 137px;
+    object-fit: cover;
+    position: absolute;
+    top: 902px;
+    width: 232px;
+  }
+  
+  .productos .image-6 {
+    height: 253px;
+    left: 473px;
+    object-fit: cover;
+    position: absolute;
+    top: 902px;
+    width: 232px;
+  }
+  
+  .productos .text-wrapper-7 {
+    color: #000000;
+    font-family: "Montserrat-SemiBold", Helvetica;
+    font-size: 32px;
+    font-weight: 600;
+    left: 40px;
+    letter-spacing: 0;
+    line-height: 37.3px;
+    position: absolute;
+    text-align: center;
+    top: 527px;
+    width: 125px;
+  }
+  
+  .productos .text-wrapper-8 {
+    color: #000000;
+    font-family: "Montserrat-Bold", Helvetica;
+    font-size: 15px;
+    font-weight: 700;
+    height: 23px;
+    left: 137px;
+    letter-spacing: 0;
+    line-height: 22.5px;
+    position: absolute;
+    top: 1159px;
+    white-space: nowrap;
+  }
+  
+  .productos .text-wrapper-9 {
+    color: #000000;
+    font-family: "Inter-ExtraBold", Helvetica;
+    font-size: 15px;
+    font-weight: 800;
+    height: 46px;
+    left: 137px;
+    letter-spacing: 0;
+    line-height: 22.5px;
+    position: absolute;
+    top: 1182px;
+  }
+  
+  .productos .text-wrapper-10 {
+    color: #000000;
+    font-family: "Montserrat-Bold", Helvetica;
+    font-size: 15px;
+    font-weight: 700;
+    height: 33px;
+    left: 474px;
+    letter-spacing: 0;
+    line-height: 22.5px;
+    position: absolute;
+    top: 1154px;
+    width: 257px;
+  }
+  
+  .productos .element-2 {
+    color: #000000;
+    font-family: "Inter-Bold", Helvetica;
+    font-size: 15px;
+    font-weight: 700;
+    height: 46px;
+    left: 474px;
+    letter-spacing: 0;
+    line-height: 22.5px;
+    position: absolute;
+    top: 1182px;
+  }
+  
+  .productos .element-3 {
+    color: #000000;
+    font-family: "Inter-Bold", Helvetica;
+    font-size: 15px;
+    font-weight: 700;
+    height: 46px;
+    left: 470px;
+    letter-spacing: 0;
+    line-height: 22.5px;
+    position: absolute;
+    top: 856px;
+  }
+  
+  .productos .text-wrapper-11 {
+    color: #ffffff;
+    font-family: "Montserrat-SemiBold", Helvetica;
+    font-size: 70px;
+    font-weight: 600;
+    left: 199px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 238px;
+    white-space: nowrap;
+    width: 624px;
+  }
+  
+  .productos .text-wrapper-12 {
+    color: #fbd914;
+    font-family: "Montserrat-ExtraBold", Helvetica;
+    font-size: 70px;
+    font-weight: 800;
+    left: 251px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 301px;
+    width: 683px;
+  }
+  
+  .productos .group {
+    height: 175px;
+    left: 4px;
+    position: absolute;
+    top: 0;
+    width: 1444px;
+  }
+    
+  .productos .left {
+    height: 35px;
+    left: 7px;
+    position: absolute;
+    top: 528px;
+    width: 33px;
+  }
+  
+  
