@@ -13,6 +13,7 @@ import Climatiza from "./pages/Energias/pages/Climatiza";
 import Marina from "./pages/Energias/pages/Marina";
 import Solar from "./pages/Energias/pages/Solar";
 import Productos from "./pages/Productos";
+import Cocina from "./pages/Productos/cocina";
 import Footer from "./components/Footer";
 import "./style.css";
 
@@ -32,7 +33,9 @@ function App() {
             <Route path="marina" element={<Marina />} />
             <Route path="solar" element={<Solar />} />
           </Route>
-          <Route path="productos" element={<Productos />} />
+          <Route path="productos" element={<Productos />}>
+            <Route path="cocina" element={<Cocina />} />
+            </Route>
         </Routes>
         <Footer />
       </BrowserRouter>
@@ -40,3 +43,4 @@ function App() {
   );
 }
 export default App;
+
