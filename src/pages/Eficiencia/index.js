@@ -4,11 +4,11 @@ import "./styles.css";
 import Header from "../../components/Header";
 
 const Eficiencia = () => {
-  const header = [
+  const HEADER = [
     {
-      TITULO: "EFICIENCIA",
-      TITULO2: "ENERGETICA",
-      INFO: "El concepto de uso eficiente de la energía hace referencia a la capacidad para obtener los mejores resultados en cualquier actividad empleando la menor cantidad posible de recursos energéticos. Nos permite reducir el consumo de cualquier tipo de energía y con ello los posibles impactos ambientales asociados a ella. Esto es aplicable desde la generación de dicha energía hasta su consumo final.",
+      titulo: "EFICIENCIA",
+      titulo2: "ENERGETICA",
+      info: "El concepto de uso eficiente de la energía hace referencia a la capacidad para obtener los mejores resultados en cualquier actividad empleando la menor cantidad posible de recursos energéticos. Nos permite reducir el consumo de cualquier tipo de energía y con ello los posibles impactos ambientales asociados a ella. Esto es aplicable desde la generación de dicha energía hasta su consumo final.",
     },
   ];
 
@@ -17,7 +17,10 @@ const Eficiencia = () => {
       <body>
         <main>
           <div>
-            {header.map((c) => (
+            {/* {header.map((h) => (
+              <Header {...h} />
+            ))} */}
+            {HEADER.map((c) => (
               <Header {...c} />
             ))}
           </div>
@@ -38,9 +41,9 @@ const Eficiencia = () => {
           </p>
         </div> */}
 
-          <div className="icono_main">
+          {/* <div className="icono_main">
             <FontAwesomeIcon icon={faLightbulb} className="icon_main" />
-          </div>
+          </div> */}
         </main>
 
         <section className="container-xxl">

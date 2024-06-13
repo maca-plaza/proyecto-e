@@ -2,26 +2,36 @@
     width: 100vw;
     height: 100vh;
     display: flex;
+    flex-direction: column;
+    padding: 0px 40px;
     justify-content: center;
-    align-items: center;
     font-family: "Montserrat", sans-serif;   
-    background-color: red;
+    
 }
 
-.fondo{
+/* .fondo{
     background-size: 100%;
     background-repeat:no-repeat;
-    background-color: red;
-}
+} */
 
 .titulo{
     font-size: 55px;
     font-weight: 400;
-    color: white;
+    color: #fff;
+    margin-bottom: -20px;
 }
 
 .titulo2{
     color: #FBD914;
     font-weight: 700;
     font-size: 55px;
+}
+
+.info{
+    width: 80%;
+    font-size: 18px;
+    text-align: justify;
+    font-weight: 400;
+    margin-top: 15px;
+    color: #fff;
 }

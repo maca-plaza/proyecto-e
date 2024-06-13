@@ -10,18 +10,19 @@ main{
   background-image: url("https://lh3.google.com/u/0/d/17Kz3oO7n1SUfjVG4XcKnM6XeoGZbdoJL=w1439-h460-iv1");
   /* width: 100vw;
   height: 100vh;
-  background-size: 100%;
-  background-repeat:no-repeat;
   display: flex;
   justify-content: center;
-  align-items: center; */
+  align-items: center;
+   */
+  background-size: 100%;
+  background-repeat:no-repeat;
 }
 /* .info_main{
 width: 80%;
 margin-left: 40px;
 
 } */
-.icono_main{
+/* .icono_main{
 width: 25%;
 display: flex;
 justify-content: start;
@@ -30,7 +31,7 @@ justify-content: start;
 font-size: 10rem;
 opacity: .7;
 color: yellow;
-}
+} */
 
 /* .title{
   font-size: 55px;
