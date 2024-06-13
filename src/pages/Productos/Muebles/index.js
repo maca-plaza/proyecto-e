@@ -1,48 +1,30 @@
 import "./styles.css";
 import Product from "../componentes/Product";
 
-const PRODUCTOSC = () => {
+const PRODUCTOSMUE = () => {
   const header = {
     title: "PRODUCTOS",
     title2: "SOSTENIBLES",
-    categories: "cocina",
+    categories: "Muebles",
   };
   const productos = [
     {
-      name: "ESTUCHE REUTILIZABLE DE ALGODÓN",
-      price: "$1.800",
+      name: "COLUMPIO DOBLE",
+      price: "$249.990",
       image:
-        "https://www.weltunvidasustentable.cl/cdn/shop/products/37_cda00110-0a9b-48f0-9fe9-59e59515aa85_1024x1024.png?v=1654628997",
+        "https://tiendarevalora.cl/wp-content/uploads/2022/04/Renders-Columpios-1-500x500.jpg",
     },
     {
-      name: "PAÑOS ABSORBENTES",
-      price: "$4.990",
+      name: "SITIAL MODULAR",
+      price: "$129.990",
       image:
-        "https://casa-nativa.cl/cdn/shop/files/TriplePanosAbsorbentesCarmenA4_5000x.png?v=1683660247",
+        "https://tiendarevalora.cl/wp-content/uploads/2022/04/Sitial-modular-gris-500x500.png",
     },
     {
-      name: "REMOVEDOR DE SARRO",
-      price: "$13.000",
+      name: "SOFÁ KAI ",
+      price: "$219.990",
       image:
-        "https://freemet.cl/cdn/shop/files/Removedor_de_Sarro_250_gramos_FreeMet.jpg?v=1711553053&width=823",
-    },
-    {
-      name: "KITS DE BOLSAS PARA RECICLAR",
-      price: "$16.900",
-      image:
-        "https://freemet.cl/cdn/shop/products/Ecohogar52.jpg?v=1696046065&width=1100",
-    },
-    {
-      name: "TRAPERO DE TELA RECICLADA",
-      price: "$2.500",
-      image:
-        "https://freemet.cl/cdn/shop/files/trapero_FreeMet.jpg?v=1712623405&width=823",
-    },
-    {
-      name: "LAVALOZA MANDARINA 5L",
-      price: "$4.500",
-      image:
-        "https://freemet.cl/cdn/shop/products/Lavalozas-Mandarina-5L-FreeMet.jpg?v=1696046101&width=823",
+        "https://tiendarevalora.cl/wp-content/uploads/2022/04/sofa-kai-2-cuerpos-gris-500x500.png",
     },
   ];
 
@@ -78,5 +60,5 @@ const PRODUCTOSC = () => {
   );
 };
 
-export default PRODUCTOSC;
+export default PRODUCTOSMUE;
 
