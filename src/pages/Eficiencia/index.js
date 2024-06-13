@@ -17,9 +17,6 @@ const Eficiencia = () => {
       <body>
         <main>
           <div>
-            {/* {header.map((h) => (
-              <Header {...h} />
-            ))} */}
             {HEADER.map((c) => (
               <Header {...c} />
             ))}
