@@ -1,5 +1,4 @@
-
-header{
+.header_nav{
   background:#8c8a8a;
   width: 100vw;
   padding: 30px;
@@ -10,7 +9,6 @@ header{
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid red;
   gap: 20px;
 }
 
@@ -45,7 +43,10 @@ header{
 }
 .menu-navegacion a{
   text-decoration: none;
-  color: white;
+  color: #fff;
+}
+.menu-navegacion a:hover{
+  color: #FFCB13;
 }
 .navbar-logo-container img {
   object-fit: cover;
@@ -83,56 +84,48 @@ nav_toggle{
 @media (max-width: 950px){
 .nav_items{
     position: absolute;
-    top: 60px;
-    left: 0;
+    top: -1px;
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: -webkit-fill-available;        
+    height: -webkit-fill-available;  
     transform: translateX(-100%);
     transition: 0.3s ease all;
+    padding: 0;
+    
 }
 .nav_items li{
   width: 100%;
-  height: 600px;
-  background-color: white;
+  padding: 20px 0px;
+  background-color: rgb(178, 178, 178);
   text-align: center;
 }
 .nav_items a{
-  color: #000;
+  color: #ffffff;
+  font-weight: 500;
+}
+.nav_items a:hover{
+  font-weight: 700;
+  color: #FFCB13;
   
 }
+
 .nav_items.open{
   transform: translateX(0) !important
 }
-  /* .menu-navegacion  {
-    position: absolute;
-    top: 60px;
-    left: 0;
-    background: #fff;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: -webkit-fill-available;        
-    transform: translateX(-100%);
-    transition: 0.3s ease all;
-}
-.menu-navegacion.open{
-  transform: translateX(0)!important;
-} */
+
 .nav_toggle{
   display: flex!important;
   flex-direction: column;                
-  margin: 15px;
+  margin: 10px 25px;
 }
 .nav_toggle span{
-  width: 50px;
-  height: 10px;
-  background: rgb(0, 0, 0);
-  margin-bottom: 5px;
-  border-radius: 2px;             
-  transform-origin: 5px 0px;
-  transition: all 0.2s linear;
+  width: 35px;
+  height: 6px;
+  background: #fff;
+  margin-bottom: 6px;         
+  transform-origin: 5px 1px;
+  transition: all 0.3s linear;
 }
 .nav_toggle.open > span{
   transform: rotate(45deg) translate(0px, 0px);

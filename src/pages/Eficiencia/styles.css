@@ -8,19 +8,19 @@ body{
 /*Header imagen más información*/
 main{
   background-image: url("https://lh3.google.com/u/0/d/17Kz3oO7n1SUfjVG4XcKnM6XeoGZbdoJL=w1439-h460-iv1");
-  width: 100vw;
+  /* width: 100vw;
   height: 100vh;
   background-size: 100%;
   background-repeat:no-repeat;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
 }
-.info_main{
+/* .info_main{
 width: 80%;
 margin-left: 40px;
 
-}
+} */
 .icono_main{
 width: 25%;
 display: flex;
@@ -32,7 +32,7 @@ opacity: .7;
 color: yellow;
 }
 
-.title{
+/* .title{
   font-size: 55px;
   font-weight: 400;
   color: white;
@@ -40,16 +40,16 @@ color: yellow;
 .yellow {
   color: #FBD914;
   font-weight: 700;
-}
+} */
 
-.intro{
+/* .intro{
   width: 80%;
   font-size: 20px;
   text-align: justify;
   color: #fff;
   font-weight: 400;
   
-}
+} */
 
 /* Main */
 .section {
