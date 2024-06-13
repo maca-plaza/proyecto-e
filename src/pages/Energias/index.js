@@ -15,12 +15,10 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import styles from "./styles.module.css";
 import Card from "./components/Card";
+import Header from "../../components/Header";
 
 export default function Energias() {
   const constants = {
-    TITLE: "ENERGIAS RENOVABLES",
-    DESCRIPTION:
-      "Las energías renovables son fuentes de energía que se obtienen de recursos naturales como el sol, el viento, el agua y la biomasa. Estas fuentes son inagotables y no contaminantes, lo que las convierte en una alternativa sostenible y respetuosa con el medio ambiente.",
     ACTIONS: {
       LEARN_MORE: "Aprende Más",
       ENVOLVED: "Involúcrate",
@@ -38,7 +36,13 @@ export default function Energias() {
         "Desde paneles solares hasta turbinas eólicas, ofrecemos una amplia gama de tecnologías de energía renovable para satisfacer sus necesidades. Obtenga más información sobre las diferentes opciones y cómo pueden beneficiar su hogar, negocio o comunidad.",
     },
   };
-
+  const HEADER = [
+    {
+      titulo: "ENERGIAS",
+      titulo2: "RENOVABLES",
+      info: "Las energías renovables son fuentes de energía que se obtienen de recursos naturales como el sol, el viento, el agua y la biomasa. Estas fuentes son inagotables y no contaminantes, lo que las convierte en una alternativa sostenible y respetuosa con el medio ambiente.",
+    },
+  ];
   const cards = [
     {
       icon: faWind,
@@ -104,8 +108,11 @@ export default function Energias() {
   return (
     <div className={styles.container}>
       <div className={`${styles["title-container"]} ${styles["flex-column"]}`}>
-        <h1>{constants.TITLE}</h1>
-        <p>{constants.DESCRIPTION}</p>
+        <div>
+          {HEADER.map((c) => (
+            <Header {...c} />
+          ))}
+        </div>
         <div className={styles["action-container"]}>
           <button className={`${styles.button} ${styles["button-primary"]}`}>
             <Link to="/calculadora">{constants.ACTIONS.LEARN_MORE}</Link>
@@ -176,7 +183,7 @@ export default function Energias() {
               </p>
             </div>
             <div>
-               <h1 >Explorador de Energía Marina</h1>
+              <h1>Explorador de Energía Marina</h1>
               <p>
                 Es una herramienta que permite explorar las características del
                 recurso mareomotriz en Chile y estimar su potencial.
@@ -186,28 +193,41 @@ export default function Energias() {
           <div className={styles["summary-container-img"]}></div>
         </div>
       </div>
-      <div className={`${styles["others-container"]} ${styles["flex-column"]}`} >
-        
+      <div className={`${styles["others-container"]} ${styles["flex-column"]}`}>
         <span className={`${styles.button} ${styles["button-primary"]}`}>
           {"Involúcrate"}
         </span>
         <h1>Únete a la revolución de las energías renovables</h1>
-        <p>Si eres propietario de una vivienda, de un negocio o un líder comunitario, hay muchas maneras de involucrarse en el movimiento de las energías renovables. Explora los recursos disponibles. Otros Enlaces de Interés</p>
+        <p>
+          Si eres propietario de una vivienda, de un negocio o un líder
+          comunitario, hay muchas maneras de involucrarse en el movimiento de
+          las energías renovables. Explora los recursos disponibles. Otros
+          Enlaces de Interés
+        </p>
         <div className={styles["action-container"]}>
-        <button className={`${styles.button} ${styles["button-primary"]}`}>
-          <a href="https://eolico.minenergia.cl/inicio" className="button-link">Explorador Eólico</a>
+          <button className={`${styles.button} ${styles["button-primary"]}`}>
+            <a
+              href="https://eolico.minenergia.cl/inicio"
+              className="button-link"
+            >
+              Explorador Eólico
+            </a>
           </button>
           <button className={`${styles.button}${styles["button-primary"]}`}>
-          <a href="https://sit.conaf.cl/" className="button-link">Explorador de Bioenergía Forestal</a>
+            <a href="https://sit.conaf.cl/" className="button-link">
+              Explorador de Bioenergía Forestal
+            </a>
           </button>
           <button className={`${styles.button} ${styles["button-primary"]}`}>
-          <a href="https://energia.gob.cl/" className="button-link">Ministerio de Energía</a>
+            <a href="https://energia.gob.cl/" className="button-link">
+              Ministerio de Energía
+            </a>
           </button>
           <button className={`${styles.button}${styles["button-primary"]}`}>
-          <a href="https://www.cne.cl//" className="button-link">Comisión Nacional de Energía</a>
+            <a href="https://www.cne.cl//" className="button-link">
+              Comisión Nacional de Energía
+            </a>
           </button>
-          
-          
         </div>
       </div>
     </div>
