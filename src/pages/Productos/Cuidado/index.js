@@ -1,48 +1,30 @@
 import "./styles.css";
 import Product from "../componentes/Product";
 
-const PRODUCTOSC = () => {
+const PRODUCTOSCUI = () => {
   const header = {
     title: "PRODUCTOS",
     title2: "SOSTENIBLES",
-    categories: "cocina",
+    categories: "Cuidado personal",
   };
   const productos = [
     {
-      name: "ESTUCHE REUTILIZABLE DE ALGODÓN",
-      price: "$1.800",
-      image:
-        "https://www.weltunvidasustentable.cl/cdn/shop/products/37_cda00110-0a9b-48f0-9fe9-59e59515aa85_1024x1024.png?v=1654628997",
-    },
-    {
-      name: "PAÑOS ABSORBENTES",
-      price: "$4.990",
-      image:
-        "https://casa-nativa.cl/cdn/shop/files/TriplePanosAbsorbentesCarmenA4_5000x.png?v=1683660247",
-    },
-    {
-      name: "REMOVEDOR DE SARRO",
-      price: "$13.000",
-      image:
-        "https://freemet.cl/cdn/shop/files/Removedor_de_Sarro_250_gramos_FreeMet.jpg?v=1711553053&width=823",
-    },
-    {
-      name: "KITS DE BOLSAS PARA RECICLAR",
-      price: "$16.900",
-      image:
-        "https://freemet.cl/cdn/shop/products/Ecohogar52.jpg?v=1696046065&width=1100",
-    },
-    {
-      name: "TRAPERO DE TELA RECICLADA",
-      price: "$2.500",
-      image:
-        "https://freemet.cl/cdn/shop/files/trapero_FreeMet.jpg?v=1712623405&width=823",
-    },
-    {
-      name: "LAVALOZA MANDARINA 5L",
+      name: "PEINETA DE MADERA",
       price: "$4.500",
       image:
-        "https://freemet.cl/cdn/shop/products/Lavalozas-Mandarina-5L-FreeMet.jpg?v=1696046101&width=823",
+        "https://freemet.cl/cdn/shop/products/Eco_hogar40.jpg?v=1638357738&width=823",
+    },
+    {
+      name: "RASURADORA ACERO INOXIDABLE",
+      price: "$18.990",
+      image:
+        "https://www.casabulka.cl/cdn/shop/products/IMG_1610_1024x1024@2x.jpg?v=1624248006",
+    },
+    {
+      name: "DESODORANTE PIEDRA",
+      price: "$6.490",
+      image:
+        "https://www.casabulka.cl/cdn/shop/files/PenultimateFullSizeRender_3_1024x1024@2x.jpg?v=1685413038",
     },
   ];
 
@@ -78,5 +60,5 @@ const PRODUCTOSC = () => {
   );
 };
 
-export default PRODUCTOSC;
+export default PRODUCTOSCUI;
 
