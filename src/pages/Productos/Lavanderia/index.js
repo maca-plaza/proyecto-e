@@ -1,48 +1,24 @@
 import "./styles.css";
 import Product from "../componentes/Product";
 
-const PRODUCTOSC = () => {
+const PRODUCTOSL = () => {
   const header = {
     title: "PRODUCTOS",
     title2: "SOSTENIBLES",
-    categories: "cocina",
+    categories: "Lavanderia",
   };
   const productos = [
     {
-      name: "ESTUCHE REUTILIZABLE DE ALGODÓN",
-      price: "$1.800",
-      image:
-        "https://www.weltunvidasustentable.cl/cdn/shop/products/37_cda00110-0a9b-48f0-9fe9-59e59515aa85_1024x1024.png?v=1654628997",
-    },
-    {
-      name: "PAÑOS ABSORBENTES",
+      name: "PERLAS SUAVIZANTES AROMA",
       price: "$4.990",
       image:
-        "https://casa-nativa.cl/cdn/shop/files/TriplePanosAbsorbentesCarmenA4_5000x.png?v=1683660247",
+        "https://casa-nativa.cl/cdn/shop/files/1.Perla_Flores_b6112400-d318-4b26-8292-96e6e74c0aa1_5000x.png?v=1717511824",
     },
     {
-      name: "REMOVEDOR DE SARRO",
-      price: "$13.000",
+      name: "DETERGENTES LAVANDA",
+      price: "$3.990",
       image:
-        "https://freemet.cl/cdn/shop/files/Removedor_de_Sarro_250_gramos_FreeMet.jpg?v=1711553053&width=823",
-    },
-    {
-      name: "KITS DE BOLSAS PARA RECICLAR",
-      price: "$16.900",
-      image:
-        "https://freemet.cl/cdn/shop/products/Ecohogar52.jpg?v=1696046065&width=1100",
-    },
-    {
-      name: "TRAPERO DE TELA RECICLADA",
-      price: "$2.500",
-      image:
-        "https://freemet.cl/cdn/shop/files/trapero_FreeMet.jpg?v=1712623405&width=823",
-    },
-    {
-      name: "LAVALOZA MANDARINA 5L",
-      price: "$4.500",
-      image:
-        "https://freemet.cl/cdn/shop/products/Lavalozas-Mandarina-5L-FreeMet.jpg?v=1696046101&width=823",
+        "https://casa-nativa.cl/cdn/shop/files/6.DetergenteenLaminas1_5000x.jpg?v=1718031136",
     },
   ];
 
@@ -78,5 +54,5 @@ const PRODUCTOSC = () => {
   );
 };
 
-export default PRODUCTOSC;
+export default PRODUCTOSL;
 
