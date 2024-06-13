@@ -1,5 +1,5 @@
 import "./styles.css";
-import Product from "../componentes/Product";
+//import Product from "../componentes/Product";
 
 const PRODUCTOSC = () => {
   const header = {
@@ -67,9 +67,9 @@ const PRODUCTOSC = () => {
       <div className="cards-container">
         <div className="flex-column">
           <div className="tarjeta-productos">
-            {productos.map((p) => (
+           {/*  {productos.map((p) => (
               <Product {...p} />
-            ))}
+            ))} */}
           </div>
         </div>
       </div>
