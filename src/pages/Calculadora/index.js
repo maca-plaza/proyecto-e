@@ -11,6 +11,7 @@ const Calculadora = () => {
         Para determinar tu consumo energético, puedes revisar tu factura eléctrica
         mensual. Allí encontrarás información detallada sobre tu consumo de
         energía en kilovatios hora (kWh) y el monto total a pagar.
+        
         </p>
         <p>
         El consumo promedio diario se calcula dividiendo el total de kWh

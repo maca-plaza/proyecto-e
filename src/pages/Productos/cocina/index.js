@@ -5,7 +5,7 @@ const PRODUCTOSC = () => {
   const header = {
     title: "PRODUCTOS",
     title2: "SOSTENIBLES",
-    categories: "cocina",
+    categories: "cocina ",
   };
   const productos = [
     {
