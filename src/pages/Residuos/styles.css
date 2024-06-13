@@ -1,89 +1,67 @@
-
 /* Main */
+.container_img{
+  background-image: url("https://images.unsplash.com/photo-1510251197878-a2e6d2cb590c?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") ;
+  width: 100vw;
+  height: 100vh;
+  background-size: 100%;
+  background-repeat:no-repeat;
+  display: flex;
 
-section{
-    width: 100%;
-    margin: 0px 0px 30px 5px;
 }
+
 .gestion-de{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 20px;
- 
-
-}
-.gestion-de .image{
-  width: 100%;
-  height: 450px;
-
-}
-.gestion-de .text-wrapper {
-  position: absolute;
-  width: 624px;
-  top: 150px;
-  left: 300px;
+  width: 100vw;
+  height: 100vh;
   font-family: "Montserrat-SemiBold", Helvetica;
   font-weight: 600;
   color: #ffffff;
   font-size: 70px;
-  padding-top: 100px ;
-  
-  
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
 }
 
-.gestion-de .residuos{
-  position: absolute;
-  width: 624px;
-  top: 0px;
-  left: 380px;
+/* .text-wrapper {
+  width: 100vw;
+  height: 100vh;
   font-family: "Montserrat-SemiBold", Helvetica;
   font-weight: 600;
-  color: #fbd914;
+  color: #ffffff;
   font-size: 70px;
-  letter-spacing: 0;
-padding-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+} */
+.gestion-de .residuos-text{
+  color: #fbd914;
+  display: flex;
+  font-size: 100%;
+  margin-left: 10px;
+  }
+.container-xl{
+  width: 100vw;
+  height: 100%;
+  margin-left: 30px;
+  margin-top: 30px;
 }
 
-
-li::marker{
-    color: #FBD914;
-    font-size: 30px;
-}
-
-ul{
-    line-height: 40px;
-}
-
-
-.Conoces-la-diferencia-entre-basura-y-residuos- {
-  width: 763px;
-  height: 37px;
-  font-family: Montserrat;
-  font-size: 30px;
-  line-height: 4;
-  text-align: center;
+.Conoces-la-diferencia {
+  font-family: "Montserrat";
+  font-size: 40px;
   color: #000;
-  padding: 0 300px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  white-space: nowrap;
+  margin-left: 10px;
 }
 .text-style-1  {
   color: #fbd914;
-}
-.text-style-2 {
-  color: #fbd914;
-}
-
-
-.text-style-3 {
-  font-weight: bold;
-}
-
-.image-110 {
-  width: 517px;
-  height: 291px;
-  margin-right: 20px;
-
+  display: flex;
+  font-family: "Montserrat";
+  margin-left: 10px;
 }
 
 .basura-1{
@@ -91,10 +69,21 @@ ul{
   align-items: center;
   width: 100%;
   flex-direction: row-reverse;
+  margin-top: 10px;
+  font-family: "Monserrat";
+  font-size: 25px;
 }
 .basura{
   text-align: left;
-  margin-right: 20px;
+}
+.text-style-3 {
+  font-weight: bold;
+}
+
+.image-110 {
+  width: 600px;
+  height: 491px;  
+  display: flex;
 }
 
 .residuos-1{
@@ -105,141 +94,251 @@ ul{
 
 .residuos-2{
   text-align: left;
+  font-size: 25px;
+  margin-left: 10px;
 }
 .image-111 {
-  width: 517px;
-  height: 291px;
-  margin-right: 20px;
+  width: 600px;
+  height: 491px;
+  display: flex;  
+}
+
+.content_texto{
+  width: 100vw;
+  height: 100%;
+} 
+
+.Segn-sus-caractersticas {
+  width: 100%;
+  font-family: "Montserrat";
+  font-size: 40px;
+  color: #000000;
+  white-space: nowrap;
+  display: flex;
+  justify-content: center;
+}
+
+
+.Segn-su-origen {
+  width: 100%;
+  font-family: "Montserrat";
+  font-size: 40px;
+  color: #000000;
+  white-space: nowrap;
+  display: flex;
+  justify-content: center;
   
 }
 
+.text-style-4{
+  color: #FBD914;
+  font-family: "Montserrat";
+  margin-left: 10px;
 
-.Segn-sus-caractersticas {
-  width: 403px;
-  height: 37px;
-  flex-grow: 0;
-  margin: 100px 499px 26px 0px;
-  font-family: Montserrat;
-  font-size: 30px;
-  font-weight: 900;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 4;
-  letter-spacing: normal;
-  text-align: left;
-  color: #fbd914;
 }
-.Segn-sus-caractersticas .text-style-1 {
-  font-weight: normal;
-  color: #000;
+.residuos-textos{
+  display: flex;
+  width: 100%;
+  font-family: "Montserrat";
+  font-size: 25px;
+  white-space: nowrap;
+
+}
+.text-style-5{
+  font-weight: bold;
+  font-family: "Montserrat";
+  font-size: 25px;
+}
+.textos{
+  display: flex;
+  width: 100%;
+  font-family: "Montserrat";
+  font-size: 25px;
+  white-space: nowrap;
+  margin-left: 10px; 
 }
 
-.Segn-su-origen {
-  width: 429px;
-  height: 37px;
-  flex-grow: 0;
-  margin: 0 408px 56px 0;
-  font-family: Montserrat;
-  font-size: 30px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 4;
-  letter-spacing: normal;
-  text-align: left;
-  color: #000;
-}
-.Segn-su-origen .text-style-1 {
-  font-weight: 900;
-  color: #fbd914;
-}
+/*iconos*/
+
+.iconos{
+  display: flex;
+  justify-content: start;
+  font-size: 40px;
+  color: #FBD914;
+  }
+  /* .iconos .fa-solid{
+  font-size: 250px;
+  opacity: .6;
+  color: yellow;
+  } */
+
+
+
 
 /*imagenes*/
 
 
+
+
+
+.row{
+  width: 100vw;
+  margin: 30px 30px 30px 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 10px;
+}
+.col{
+  width: 310px;
+  height: 316px;
+  justify-content: space-between;
+}
+
 .gris-claro{
   width: 310px;
   height:316px ;
+  z-index: 1;
+  position: absolute;
   }
 .verde{
 width: 310px;
 height: 316px;
- }
+z-index: 1;
+position: absolute;
+}
 .beige{
 width: 310px;
 height:316px ;
+z-index: 1;
+position: absolute;
 }
 .azul{
 width: 310px;
- height:316px ;
+height:316px ;
+z-index: 1;
+position: absolute;
 }
 .rojo{
 width: 310px;
 height:316px ;
+z-index: 1;
+position: absolute;
 }
 .burdeos{
   width: 310px;
- height:316px ;
+  height:316px ;
+  z-index: 1;
+  position: absolute;
   }
 .gris-oscuro{
-width: 310px;
- height:316px ;
- }
+  width: 310px;
+  height:316px;
+  z-index: 1;
+  position: absolute;
+  }
 .amarillo{
- width: 310px;
- height:316px ;
+  width: 310px;
+  height:316px ;
+  position: absolute;
   }
 .cafe{
 width: 310px;
 height:316px ;
- }
+z-index: 1;
+position: absolute;
+  }
+
+.texto{
+  position:relative;
+  z-index: 1;
+  color: #ffffff;
+  font-size: 17px;
+  text-align: center;
+  vertical-align: middle;
+  margin-top: 120px;
+}
+button{
+  background-color: transparent; 
+  padding: 10px 20px; 
+  border: none; 
+  border-radius: 5px; 
+  margin-left: 100px;
+}
+button:hover{
+  background-color: #6e6d66;
+}
             
-/*iconos*/
-.icono_main
-.fa-regular{
-  font-size: 30px;
-  color:#000;
-}
-.fa-light{
-  font-size: 30px;
-  color: #000;
-}
-
-.fa-car-battery{
-  font-size: 30px;
-  color: black;
-}
-.fa-oil-can{
-  font-size: 30px;
-  color: black;
-}
-.fa-box-open{
-  font-size: 30px;
-  color: black;
-}
-.fa-trowel-bricks{
-  font-size: 30px;
-  color: black;
-}
-.fa-truck-moving{
-  font-size: 30px;
-  color: black;
-}
-.fa-trash-can{
-  font-size: 30px;
-  color: black;
-}
-.fa-industry{
-  font-size: 30px;
-  color: black;
-}
-.fa-person-digging{
-  font-size: 30px;
-  color: black;
-}
 
 
+/* Cuadros*/
+
+.cuadro-grande{
+  width: 700px;
+  height: 400px;
+  float: left;
+  background-color: #666262;
+  margin-bottom: 30px;
+  transform: translate(0%,0);
+}
+p{
+  text-align: left;
+  vertical-align: middle;
+  color: #ffffff;
+  font-size: 30px;
+  padding-top: 150px;
+  padding-left: 30px;
+
+}
+.cuadro-arriba{
+  width: 300px;
+  
+  float: left;
+  z-index: 1;
+} 
+.imagen-arriba{
+  width: 500px;
+  height: 200px;
+  position: absolute;
+
+}
+.boton-link-1{
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  text-align: center;
+  background-color: #FBD914;
+  padding: 10px 20px;
+  font-size: 17px;
+  border-radius: 10px;
+  transform: translate(50%, 150%);
+  
+}
+
+/* .cuadro-abajo{
+  width: 400px;
+  z-index: 1;
+  position: relative;
+  flex-direction: row-reverse;
+} */
+
+.imagen-abajo{
+  width: 500px;
+  height: 200px;
+  position: absolute;
+  transform: translate(0,0%);
+  /* flex-direction: row-reverse; */
+}
+
+.boton-link-2{
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  text-align: center;
+  background-color: #FBD914;
+  padding: 10px 20px;
+  font-size: 17px;
+  border-radius: 10px;
+  transform: translate(50%, 50%);
+}
 
 
-
-/* Cards*/
