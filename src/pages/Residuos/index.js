@@ -98,14 +98,14 @@ const Residuos = () => {
           </div>
           <div className="residuos-textos">
               <span className="text-style-5">Residuos NO peligrosos: </span>
-              Materiales desechados que no presentan riesgos significativos para la salud humana ni el medio ambiente, como residuos orgánicos o materiales reciclables.
+              <div className="textos"> Materiales desechados que no presentan riesgos significativos para la salud humana ni el medio ambiente, como residuos orgánicos o materiales reciclables.</div>
               </div>
             <div className="iconos">
             <FontAwesomeIcon icon={faWrench} />
           </div>
           <div className="residuos-textos">
               <span className="text-style-5">Residuos inertes: </span>
-              Desechos que no reaccionan químicamente ni biológicamente, como escombros de construcción y demolición, y que no presentan peligro para el entorno.
+              <div className="textos">Desechos que no reaccionan químicamente ni biológicamente, como escombros de construcción y demolición, y que no presentan peligro para el entorno.</div>
         </div>
         </div>
         <div className="content_texto">
