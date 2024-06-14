@@ -17,6 +17,7 @@ import Cocina from "./pages/Productos/Cocina";
 import Footer from "./components/Footer";
 import "./style.css";
 import Producto from "./pages/Producto";
+import Categoria from "./pages/Productos/Categoria";
 
 function App() {
   return (
@@ -34,9 +35,9 @@ function App() {
             <Route path="marina" element={<Marina />} />
             <Route path="solar" element={<Solar />} />
           </Route>
-          <Route path="productos" element={<Productos />}>
-            <Route path="cocina" element={<Cocina />} />
-          </Route>
+          <Route path="productos" element={<Productos />}></Route>
+          <Route path="productos/categoria/:category" element={<Categoria />} />
+
           <Route path="producto/:id" element={<Producto />} />
         </Routes>
         <Footer />
