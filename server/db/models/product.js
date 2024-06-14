@@ -2,7 +2,7 @@ import { Schema, model } from "mongoose";
 
 const productSchema = new Schema({
   productId: {
-    type: String,
+    type: Number,
     required: true,
     unique: true,
     trim: true,

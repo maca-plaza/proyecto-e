@@ -20,8 +20,18 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.delete("/:id", function(req, res) {
-  
+router.get("/:id", async (req, res) => {
+  try {
+    const id = req.params.id;
+    const product = await Product.findOne({ productId: id });
+    if (product) {
+      res.send(product);
+    } else {
+      res.status(404).send({ error: "not found" });
+    }
+  } catch (e) {
+    res.status(400).send(e);
+  }
 });
 
 export default router;
