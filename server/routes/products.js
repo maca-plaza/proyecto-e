@@ -34,4 +34,17 @@ router.get("/:id", async (req, res) => {
   }
 });
 
+router.get("/categoria/:categoria", async (req, res) => {
+  try {
+    const categoria = req.params.categoria;
+    const regex = new RegExp(categoria, "i");
+    const products = await Product.find({ category: regex });
+    if (products) {
+      res.send(products);
+    } else {
+      res.status(404).send({ error: "not found" });
+    }
+  } catch (e) {}
+});
+
 export default router;
