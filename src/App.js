@@ -16,6 +16,7 @@ import Productos from "./pages/Productos";
 import Cocina from "./pages/Productos/Cocina";
 import Footer from "./components/Footer";
 import "./style.css";
+import Producto from "./pages/Producto";
 
 function App() {
   return (
@@ -35,7 +36,8 @@ function App() {
           </Route>
           <Route path="productos" element={<Productos />}>
             <Route path="cocina" element={<Cocina />} />
-            </Route>
+          </Route>
+          <Route path="producto/:id" element={<Producto />} />
         </Routes>
         <Footer />
       </BrowserRouter>
@@ -43,4 +45,3 @@ function App() {
   );
 }
 export default App;
-
