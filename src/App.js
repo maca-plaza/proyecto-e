@@ -13,10 +13,9 @@ import Climatiza from "./pages/Energias/pages/Climatiza";
 import Marina from "./pages/Energias/pages/Marina";
 import Solar from "./pages/Energias/pages/Solar";
 import Productos from "./pages/Productos";
-import Cocina from "./pages/Productos/Cocina";
 import Footer from "./components/Footer";
 import "./style.css";
-import Producto from "./pages/Producto";
+import Producto from "./pages/Productos/Producto";
 import Categoria from "./pages/Productos/Categoria";
 
 function App() {
