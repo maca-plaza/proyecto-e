@@ -39,7 +39,7 @@ main {
   width: 100vw;
   height: auto;
   margin-left: -43px;
-  margin-top: -227px;
+  margin-top: -19px;
 }
 
 .contenedor img {
@@ -61,7 +61,7 @@ main {
   width: 100%;
   height: 100vh; 
   text-align: center;
-  margin-top: -350px;
+  margin-top: -150px;
   flex-direction: column;
 }
 
