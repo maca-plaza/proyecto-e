@@ -36,7 +36,6 @@ function App() {
           </Route>
           <Route path="productos" element={<Productos />}></Route>
           <Route path="productos/categoria/:category" element={<Categoria />} />
-
           <Route path="producto/:id" element={<Producto />} />
         </Routes>
         <Footer />

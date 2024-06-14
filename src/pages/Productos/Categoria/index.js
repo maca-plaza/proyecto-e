@@ -6,7 +6,6 @@ import styles from "./styles.module.css";
 const Categoria = () => {
   const [productos, setProductos] = useState(null);
   const { category } = useParams();
-  console.log(category);
 
   useEffect(() => {
     const fetchProductos = async () => {
