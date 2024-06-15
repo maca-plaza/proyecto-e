@@ -1,6 +1,6 @@
 import "./styles.css";
 import Header from "../../components/Header";
-import { Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
 const Productos = () => {
   const HEADER = [
@@ -32,7 +32,9 @@ const Productos = () => {
           <div className="text-wrapper-10">Nuestras Categorias</div>
           <div className="frame">
             <div className="frame-2">
-              <div className="text-wrapper-11">Cocina</div>
+              <div className="text-wrapper-11"><Link to ="/cocina">Cocina
+              </Link>
+              </div>
               <img
                 className="img"
                 src="https://images.unsplash.com/photo-1556037843-347ddff9f4b0?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
