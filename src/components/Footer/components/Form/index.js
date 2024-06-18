@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./styles.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSpinner } from "@fortawesome/free-solid-svg-icons";
@@ -11,7 +11,7 @@ const Form = () => {
 
   const [formData, setFormData] = useState({
     email: "",
-    message: "",
+    comment: "",
   });
 
   const [status, setStatus] = useState("p");
@@ -24,19 +24,34 @@ const Form = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Aquí puedes agregar la lógica para enviar el formulario, por ejemplo, usando fetch o axios
     setStatus("s");
+    const init = Date.now();
+    const request = await fetch("http://localhost:4200/contact", {
+      headers: {
+        "Content-Type": "application/json",
+      },
+      method: "POST",
+      body: JSON.stringify(formData),
+    });
+
+    const end = Date.now();
+
+    if (request.ok) {
+      setTimeout(() => {
+        setStatus("r");
+        setFormData({
+          email: "",
+          comment: "",
+        });
+      }, 2000 - (end - init));
+    } else {
+      setStatus("p");
+    }
+    // Aquí puedes agregar la lógica para enviar el formulario, por ejemplo, usando fetch o axios
 
     // Simulación de envío
-    setTimeout(() => {
-      setStatus("r");
-      setFormData({
-        email: "",
-        message: "",
-      });
-    }, 2000);
   };
 
   return (
@@ -68,10 +83,10 @@ const Form = () => {
             />
 
             <textarea
-              id="message"
-              name="message"
+              id="comment"
+              name="comment"
               placeholder="Cuéntanos sobre tu pyme"
-              value={formData.message}
+              value={formData.comment}
               onChange={handleChange}
               required
             />
@@ -81,7 +96,7 @@ const Form = () => {
               disabled={status !== "p"}
             >
               {status === "s" ? (
-                <FontAwesomeIcon icon={faSpinner} spin/>
+                <FontAwesomeIcon icon={faSpinner} spin />
               ) : (
                 "Enviar"
               )}

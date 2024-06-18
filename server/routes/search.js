@@ -9,7 +9,9 @@ router.get("/", async (req, res) => {
     if (word) {
       const regex = new RegExp(word, "i"); // 'i' hace que la búsqueda sea insensible a mayúsculas y minúsculas
 
-      const products = await Product.find({ name: regex });
+      const products = await Product.find({
+        $or: [{ name: regex }, { brand: regex }],
+      });
       const searches = await Search.find({ keyWords: regex });
       res.send(
         products
