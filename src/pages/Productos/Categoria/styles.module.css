@@ -1,3 +1,17 @@
+.category-title {
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.back-arrow {
+  display: block;
+  margin: 20px auto;
+  width: 30px; 
+  cursor: pointer;
+}
+
 .products-container {
   display: flex;
   flex-wrap: wrap;

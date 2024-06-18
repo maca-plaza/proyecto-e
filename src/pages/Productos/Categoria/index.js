@@ -22,18 +22,28 @@ const Categoria = () => {
     };
 
     fetchProductos();
-  }, []);
+  }, [category]);
 
   if (productos) {
     return (
-      <div className={styles["products-container"]}>
-        {productos.map((p) => (
-          <div className={styles["product-wrapper"]}>
-            <img src={p.imageUrl} alt={p.name} />
-            <p>{p.name}</p>
-            <p>{p.price}</p>
-          </div>
-        ))}
+      <div>
+        <a href="/">
+          <img
+            src="https://static.vecteezy.com/system/resources/previews/007/231/420/non_2x/arrow-back-icon-which-is-suitable-for-commercial-work-and-easily-modify-or-edit-it-vector.jpg"
+            alt="Back"
+            className={styles["back-arrow"]}
+          />
+        </a>
+        <h1 className={styles["category-title"]}>titulo de categoria</h1>
+        <div className={styles["products-container"]}>
+          {productos.map((p) => (
+            <div className={styles["product-wrapper"]} key={p.id}>
+              <img src={p.imageUrl} alt={p.name} />
+              <p>{p.name}</p>
+              <p>{p.price}</p>
+            </div>
+          ))}
+        </div>
       </div>
     );
   }
@@ -42,3 +52,4 @@ const Categoria = () => {
 };
 
 export default Categoria;
+
