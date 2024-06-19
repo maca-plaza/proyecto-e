@@ -12,6 +12,11 @@ const contactSchema = new Schema({
         type: String,
         required: [true, 'El comentario es requerido'],
         trim: true
+    },
+    leido: {
+        type: String,
+        required: [false, 'El comentario es requerido'],
+        trim: false
     }
 });
 
