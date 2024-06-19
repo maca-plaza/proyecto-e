@@ -1,18 +1,23 @@
 .category-title {
   font-size: 2em;
   color: #333;
-  margin-bottom: 20px;
-  text-align: center;
+  text-align: left; 
+  margin-left: 40px; 
+  padding-top: 0px; 
+  display: flex; 
+  align-items: center; 
+  margin-top: -30px;
 }
 
 .back-arrow {
-  display: block;
-  margin: 20px auto;
   width: 30px; 
-  cursor: pointer;
+  cursor: pointer; 
+  margin-left: 0px; 
+  margin-top: 60px; 
 }
 
 .products-container {
+  margin-top: -40px;
   display: flex;
   flex-wrap: wrap;
   padding: 2rem 4rem;
