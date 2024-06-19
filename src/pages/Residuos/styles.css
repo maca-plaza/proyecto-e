@@ -41,7 +41,7 @@
   justify-content: space-around;
 }
 
-.section {
+.section-basura {
   width: calc(100% - 50px);
   margin-bottom: 20px;
   border-radius: 5px;
@@ -54,14 +54,21 @@
   flex-direction: row; /* Imagen a la derecha */
 }
 
-.image {
+.title-1{
+  font-family: "Montserrat";
+  font-size: 30px;
+  color: #000000;
+  margin-right: 10px;
+  font-weight: bold;
+}
+.image-1 {
   width: 30%; /* Ajustar el tamaño de la imagen según sea necesario */
   height: auto;
   object-fit: cover;
   border-radius: 5%;
 }
 
-.content {
+.content-1 {
   padding: 20px;
   flex: 1;
   display: flex;
@@ -73,8 +80,6 @@
   color: #000000;
   margin-right: 10px;
   font-weight: bold;
-  
-  
 }
 
 .text-card {
@@ -91,13 +96,10 @@
   justify-content: center;
   justify-items: center;
   display: flex;
-
-  
-  
 }
 
-.description {
-  font-size: 1.5rem;
+.description-1 {
+  font-size: 1.2rem;
   color: #000000;
   line-height: 1.6;
   font-family: "Montserrat";
@@ -160,17 +162,22 @@
   margin-left: 10px;
   display: flex;
 }
-
-
+.icon-1 {
+  font-size: 40px;
+  color: #fbd914; 
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+}
 
 /*iconos*/
 
-.iconos {
+/* .iconos {
   display: flex;
   justify-content: start;
   font-size: 40px;
   color: #fbd914;
-}
+} */
 
 /*imagenes*/
 .container-cuadros {
@@ -195,13 +202,11 @@
   gap: 20px; /* Espacio entre las columnas */
 }
 
-.col {
+.col-1{
   position: relative;
   overflow: hidden;
   border-radius: 10px;
   width: 100%;
-
-
 }
 
 .cardi {
@@ -217,7 +222,7 @@
   border-radius: 10px;
 }
 
-.card-body {
+.card-body-1 {
   position: absolute;
   bottom: 10px;
   width: 100%;
@@ -236,8 +241,6 @@
   font-weight: bold;
   font-size: larger;
   transform: translate(0%,-300%);
-
-
 }
 
 .btnn-overlay:hover {
@@ -321,34 +324,28 @@
 
 /* Estilos para las tarjetas (cards) */
 
-.card-container {
+/* .card-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px; /* Espacio entre las tarjetas */
-}
+  gap: 20px; 
+} */
 
-.card {
-  flex: 1 1 calc(33.3% - 20px); /* Para tener tres tarjetas por fila */
-  max-width: calc(33.3% - 20px); /* Para mantener un tamaño máximo */
-  padding: 15px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  background-color: #f9f9f9;
-}
 
+/* 
 .card-header {
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 10px;
 }
 
-.icon {
+.icon-1 {
   font-size: 40px;
-  color: #fbd914; /* Color de los iconos */
+  color: #fbd914; 
   margin-bottom: 10px;
+  justify-items: center;
 }
 
-.card-content {
+.card-content-1 {
   margin-bottom: 15px;
 }
 
@@ -360,4 +357,4 @@
   margin-top: 5px;
   font-size: 14px;
   line-height: 1.6;
-}
+} */
