@@ -17,74 +17,74 @@ const Residuos = () => {
     titulo2: "RESIDUOS",
     info: "Es el conjunto de actividades necesarias para el tratamiento de los desechos, desde su generación, hasta su eliminación o reaprovechamiento",
   };
-  // const [showModal, setShowModal] = useState(false);
-  // const [modalContent, setModalContent] = useState({
-  //   imageSrc: "",
-  //   title: "",
-  //   description: "",
-  // });
-
-  // const openModal = (imageSrc, title, description) => {
-  //   setModalContent({ imageSrc, title, description });
-  //   setShowModal(true);
-  // };
+  
   // Listado de imágenes y textos superpuestos
   const coloresReciclaje = [
     {
       imageSrc:
         "https://lh3.google.com/u/0/d/1EvT5xp4gvG9dk6Y-niqcQRCJ0Su0NnSZ=w2560-h753-iv1",
       title: "Gris Claro",
-      overlayText: "Texto sobre Gris Claro",
+      overlayText: "En este se deben depositar las latas de conservas y de refrescos (Metales). Los cuales deben ser enjuagados y secados para su depósito en el contenedor ",
     },
     {
       imageSrc:
         "https://lh3.google.com/u/0/d/17Or6Gjft0MntfzMtRA-cyJRN63K6FiA7=w2560-h753-iv1",
       title: "Verde",
-      overlayText: "Texto sobre Verde",
+      overlayText: "En este contenedor se depositan envases de vidrio, como las botellas de bebidas alcohólicas, refresco y agua. Importante no utilizar estos contenedores verdes para cerámica o cristal.",
     },
     {
       imageSrc:
         "https://lh3.google.com/u/0/d/18rUFtBxa6H-aFOZQgUAcvVxO3TvdZPqH=w2560-h753-iv1",
       title: "Beige",
-      overlayText: "Texto sobre Beige",
+      overlayText: "Aquí se pueden depositar todos los envases de cartón (tetra pack) que contienen refrescos, leches, bebidas alcohólicas y alimentos.",
     },
     {
       imageSrc:
         "https://lh3.google.com/u/0/d/14c0hm-Lrz-MuFJo13afcEXdcys0-qdQl=w2560-h753-iv1",
       title: "Azul",
-      overlayText: "Texto sobre Azul",
+      overlayText: "El color azul en el sistema de reciclaje indica contenedores destinados a papel y cartón. Se deben depositar periódicos, revistas, cajas, envases de alimentos y otros productos de papel. Es recomendable plegar correctamente estos materiales para optimizar el espacio en el contenedor.",
     },
     {
       imageSrc:
         "https://lh3.google.com/u/0/d/1IQabauJRE_K9tNkhrKvdkzV3u6a_9vnv=w2560-h753-iv1",
       title: "Rojo",
-      overlayText: "Texto sobre Rojo",
+      overlayText: "Contenedores para residuos peligrosos como baterías, pilas y aceites. Su manejo está regulado por el Decreto Supremo Nº 148 del Ministerio de Salud.",
     },
     {
       imageSrc:
         "https://lh3.google.com/u/0/d/1nWbhlrLLfr1tjcgZh7uZfl1n0jGlgUKw=w2560-h753-iv1",
       title: "Burdeos",
-      overlayText: "Texto sobre Burdeos",
+      overlayText: "En este contendor se deben depositar Electrodomésticos voluminosos, Audio y video, Computación y Electrodomésticos pequeños.",
     },
     {
       imageSrc:
         "https://lh3.google.com/u/0/d/1e3aJX9z-vMZF6JIy5XsvDpm6rnACqVvy=w2560-h753-iv1",
       title: "Gris Oscuro",
-      overlayText: "Texto sobre Gris Oscuro",
+      overlayText: "En estos contenedores, se depositan los residuos que no pueden ser reciclados o que el mercado aún no está establecido y que deben ser dispuestos en rellenos sanitarios.",
     },
     {
       imageSrc:
         "https://lh3.google.com/u/0/d/19qJih_ll-mv4AXhceSOvWyWzWgvvv5mA=w2560-h753-iv1",
       title: "Amarillo",
-      overlayText: "Texto sobre Amarillo",
+      overlayText: "En este se deben depositar todo tipo de envases y productos fabricados con plásticos como botellas, envases de alimentación o bolsas. Las botellas y envases de alimentos deben ser enjuagados y entregados secos en los contenedores.",
     },
     {
       imageSrc:
         "https://lh3.google.com/u/0/d/1uJVCUKjDffHWY1rEpuOwrxxtI-10ZeN4=w2560-h753-iv1",
       title: "Café",
-      overlayText: "Texto sobre Café",
+      overlayText: "Restos de alimentos como pieles de frutas, espinas de pescado, plantas, cascaras de huevo o posos; o servilletas y papel de cocina usados.",
     },
   ];
+   const [showModal, setShowModal] = useState(false);
+  const [modalContent, setModalContent] = useState({
+    imageSrc: "",
+    overlayText: "",
+  });
+
+  const openModal = (imageSrc, overlayText) => {
+    setModalContent({ imageSrc, overlayText });
+    setShowModal(true);
+  };
 
 
     return (
@@ -223,7 +223,25 @@ const Residuos = () => {
             <span className="text-style-4"> reciclaje</span>
           </div>
           </div>
-        <div class="row row-cols-1 row-cols-md-3 g-3">
+
+          <div className="row row-cols-1 row-cols-md-3 g-3">
+          {coloresReciclaje.map((item, index) => (
+            <div className="col-1" key={index}>
+              <div className="cardi">
+                <img src={item.imageSrc} className="card-img-top" alt={item.title} />
+                <div className="card-body-1">
+                  <button className="btnn btnn-primary btnn-overlay" onClick={() => openModal(item.imageSrc, item.overlayText)}>
+                    {item.title}
+                  </button>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {showModal && <Modal imageSrc={modalContent.imageSrc} overlayText={modalContent.overlayText} closeModal={() => setShowModal(false)} />}
+        {/* <div class="row row-cols-1 row-cols-md-3 g-3">
             <div class="col-1">
                 <div class="cardi">
                     <img src="https://lh3.google.com/u/0/d/1EvT5xp4gvG9dk6Y-niqcQRCJ0Su0NnSZ=w2560-h753-iv1" class="card-img-top" alt="Gris claro"/>
@@ -297,7 +315,7 @@ const Residuos = () => {
                 </div>
             </div>
         </div>
-    </div>
+    </div> */}
     <div class="container-final">
     <div className="content_texto">
           <div className="Segn-sus-caractersticas">
