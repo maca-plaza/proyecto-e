@@ -1,0 +1,59 @@
+import { Router } from "express";
+import Contact from "../db/models/contact.js";
+const router = Router();
+
+router.post('/', async (req, res) => {
+    try {
+        const contact = new Contact(req.body);
+        await contact.save();
+        res.status(201).send(contact);
+    } catch (error) {
+        res.status(400).send(error);
+    }
+});
+
+router.get('/', async (req, res) => {
+    try {
+        const contacts = await Contact.find();
+        res.status(200).send(contacts);
+    } catch (error) {
+        res.status(500).send(error);
+    }
+});
+router.get('/:id', async (req, res) => {
+    try {
+        const contact = await Contact.findById(req.params.id);
+        if (!contact) {
+            return res.status(404).send();
+        }
+        res.status(200).send(contact);
+    } catch (error) {
+        res.status(500).send(error);
+    }
+});
+
+router.patch('/:id', async (req, res) => {
+    try {
+        const contact = await Contact.findByIdAndUpdate(req.params.id, req.body, { new: true, runValidators: true });
+        if (!contact) {
+            return res.status(404).send();
+        }
+        res.status(200).send(contact);
+    } catch (error) {
+        res.status(400).send(error);
+    }
+});
+
+router.delete('/:id', async (req, res) => {
+    try {
+        const contact = await Contact.findByIdAndDelete(req.params.id);
+        if (!contact) {
+            return res.status(404).send();
+        }
+        res.status(200).send(contact);
+    } catch (error) {
+        res.status(500).send(error);
+    }
+});
+
+export default router;

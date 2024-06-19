@@ -1,31 +1,43 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
+import styles from "./styles.module.css";
+
 const SearchBar = () => {
-  const data = [];
+  const [data, setData] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
-  const handleSearch = (e) => {
-    setSearchTerm(e.target.value);
-  };
-  const filteredResults = data.filter((item) =>
-    item.title.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+
+  useEffect(() => {
+    if (searchTerm !== "") {
+      const searchTime = setTimeout(() => {
+        fetch("http://localhost:4200/search?word=" + searchTerm)
+          .then((response) => response.json())
+          .then((data) => setData(data))
+          .catch((e) => console.error(e));
+      }, 2000);
+
+      return () => clearTimeout(searchTime);
+    }
+  }, [searchTerm]);
+
   return (
-    <div>
+    <div className={styles["search-container"]}>
       <input
         id="buscador"
         type="text"
         value={searchTerm}
-        onChange={handleSearch}
+        onChange={(e) => setSearchTerm(e.target.value)}
         placeholder="¿Qué estas buscando?"
       />
-      <ul>
-        {filteredResults.map((item) => (
-          <li key={item.id}>{item.title}</li>
+
+      <ul className={styles["barra-busqueda"]}>
+        {data.map((d, i) => (
+          <li key={i}>{d.name}</li>
         ))}
       </ul>
     </div>
+
     /* <div className="overlap-4"><SearchBar />
             <div className="cajabuscador">
               <div className="box">

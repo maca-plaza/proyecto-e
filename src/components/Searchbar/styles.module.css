@@ -20,7 +20,14 @@ header {
   left: 43px;
 } */
 
-#buscador{
-  border-radius: 50%;
-  color: red;
+.search-container {
+  position: relative;
+}
+.barra-busqueda {
+  position: absolute;
+  z-index: 90;
+  background-color: aliceblue;
+  width: 100%;
+  max-height: 50vh;
+  overflow-y: auto;
 }
