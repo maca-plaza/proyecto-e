@@ -27,20 +27,22 @@ const Categoria = () => {
   if (productos) {
     return (
       <div>
-        <a href="/">
-          <img
-            src="https://static.vecteezy.com/system/resources/previews/007/231/420/non_2x/arrow-back-icon-which-is-suitable-for-commercial-work-and-easily-modify-or-edit-it-vector.jpg"
-            alt="Back"
-            className={styles["back-arrow"]}
-          />
-        </a>
-        <h1 className={styles["category-title"]}>titulo de categoria</h1>
+        <div className={styles["arrow-title"]}>
+          <a href="/">
+            <img
+              src="https://static.vecteezy.com/system/resources/previews/007/231/420/non_2x/arrow-back-icon-which-is-suitable-for-commercial-work-and-easily-modify-or-edit-it-vector.jpg"
+              alt="Back"
+              className={styles["back-arrow"]}
+            />
+          </a>
+          <h1 className={styles["category-title"]}>{category}</h1>
+        </div>
         <div className={styles["products-container"]}>
           {productos.map((p) => (
             <div className={styles["product-wrapper"]} key={p.id}>
               <img src={p.imageUrl} alt={p.name} />
-              <p>{p.name}</p>
-              <p>{p.price}</p>
+              <p className={styles["products-parrafo"]}>{p.name}</p>
+              <p className={styles["products-precio"]}>$ {p.price}</p>
             </div>
           ))}
         </div>
@@ -52,4 +54,3 @@ const Categoria = () => {
 };
 
 export default Categoria;
-
