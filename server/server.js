@@ -1,7 +1,7 @@
 import express, { json } from "express";
 import { connect } from "mongoose";
 import productRouter from "./routes/products.js";
-import contactRouter from "./routes/contact.js";
+import contactRouter from "./routes/contact.js"
 import searchRouter from "./routes/search.js";
 import cors from "cors";
 
