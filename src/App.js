@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import Eficiencia from "./pages/Eficiencia";
 import Calculadora from "./pages/Calculadora";
 import Residuos from "./pages/Residuos";
+import Mail from "./pages/Mail";
 import Energias from "./pages/Energias";
 import Climatico from "./pages/Energias/pages/Climatico";
 import Climatiza from "./pages/Energias/pages/Climatiza";
@@ -27,6 +28,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="eficiencia" element={<Eficiencia />} />
           <Route path="calculadora" element={<Calculadora />} />
+          <Route path="mail" element={<Mail />} />
           <Route path="residuos" element={<Residuos />} />
           <Route path="energias" element={<Energias />}>
             <Route path="climatico" element={<Climatico />} />
