@@ -281,7 +281,6 @@
 .cuadro-abajo {
   flex: 1 1 48%; /* Cada cuadro ocupa el 48% del espacio disponible */
   max-width: 48%;
-  
   background-color: #f9f9f9;
   box-sizing: border-box; /* Ajusta el padding dentro del ancho */
   position: relative; /* Permite posicionar los botones */
@@ -322,6 +321,70 @@
 
 
 
+/* styles.css */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.795);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  /* background-color: rgba(255, 255, 255, 0.986); */
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  position: relative;
+  max-width: 40%;
+  width: 90%; /* Ajustando el ancho del modal para dispositivos móviles */
+  max-height: 90%; /* Limitando la altura máxima del modal */
+  overflow: auto; /* Añadiendo scroll si el contenido excede el tamaño del modal */
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.modal-image {
+  max-width: 100%;
+  max-height: 70vh;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%; /* Posiciona el texto verticalmente en el centro */
+  left: 50%; /* Posiciona el texto horizontalmente en el centro */
+  transform: translate(-50%, -50%); /* Centra el texto correctamente */
+  background-color: rgba(255, 255, 255, 0.774); /* Fondo semi-transparente */
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 1.4;
+  white-space: normal; /* Evita que el texto se rompa */
+  max-width: calc(100% - 20px); /* Ajusta el ancho máximo del texto para evitar que sea más ancho que la imagen */
+  overflow: hidden; /* Oculta cualquier exceso de texto */
+  text-overflow: ellipsis;
+  font-family: "Montserrat";
+  text-align: left; /* Agrega puntos suspensivos al final del texto si se recorta */
+}
+
+@media (min-width: 768px) {
+  .overlay-text {
+    font-size: 16px; /* Ajusta el tamaño del texto para dispositivos de tamaño mediano y grande */
+  }
+}
 /* Estilos para las tarjetas (cards) */
 
 /* .card-container {
