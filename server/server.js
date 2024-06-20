@@ -1,5 +1,5 @@
 import express, { json } from "express";
-import { connect } from "mongoose";
+import { connect, set } from "mongoose";
 import productRouter from "./routes/products.js";
 import contactRouter from "./routes/contact.js";
 import searchRouter from "./routes/search.js";
@@ -22,6 +22,7 @@ connect(
   .catch((err) => {
     console.error("Error al conectar a la base de datos", err);
   });
+set("debug", true);
 
 const app = express();
 app.use(json());
