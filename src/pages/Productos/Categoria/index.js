@@ -28,7 +28,7 @@ const Categoria = () => {
     return (
       <div>
         <div className={styles["arrow-title"]}>
-          <a href="/">
+          <a href="/Productos">
             <img
               src="https://static.vecteezy.com/system/resources/previews/007/231/420/non_2x/arrow-back-icon-which-is-suitable-for-commercial-work-and-easily-modify-or-edit-it-vector.jpg"
               alt="Back"

@@ -1,8 +1,26 @@
-.product-container {
-  display: flex;
+.product-page {
   width: 100%;
-  padding: 4rem 2rem;
-  gap: .5rem;
+  padding: 2rem;
+  margin-top: 30px;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+.back-arrow {
+  width: 30px;
+  cursor: pointer;
+  margin-top: 2px;
+}
+
+.product-container-22 {
+  display: flex;
+  gap: 2rem;
 }
 
 .product-image-container {
@@ -10,11 +28,56 @@
 }
 
 .product-image-container img {
-    width: 100%;
+  width: 100%;
+  margin-top: -20px;
 }
 
-.product-properties {
-  display: flex;
-  flex-direction: column;
+.product-details {
   width: 60%;
+}
+
+.product-details h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  margin-top: -20px;
+}
+
+.product-description {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.product-brand {
+  font-size: 2rem;
+  color: #F9A825; /* Color amarillo similar al de la imagen */
+  margin-bottom: 1rem;
+}
+
+.product-price {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none; 
+  color: inherit; 
+}
+
+/* styles.module.css */
+.product-brand-container {
+  margin-bottom: 1rem; /* Espacio alrededor del botón */
+}
+
+.product-brand-button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #F9A825; /* Color amarillo */
+  color: #FFFFFF; /* Color de texto blanco */
+  text-decoration: none; /* Elimina el subrayado del enlace */
+  border-radius: 4px; /* Bordes redondeados */
+  transition: background-color 0.3s ease; /* Transición suave del color de fondo */
+}
+
+.product-brand-button:hover {
+  background-color: #FFD54F; /* Color amarillo claro al pasar el mouse */
 }
