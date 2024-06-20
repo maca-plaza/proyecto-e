@@ -1,13 +1,21 @@
 import express, { json } from "express";
 import { connect } from "mongoose";
 import productRouter from "./routes/products.js";
-import contactRouter from "./routes/contact.js"
+import contactRouter from "./routes/contact.js";
 import searchRouter from "./routes/search.js";
 import cors from "cors";
+import { config as dotenvConfig } from "dotenv";
+
+dotenvConfig();
+
+const DB_USER = process.env.DB_USER;
+const DB_PASSWORD = process.env.DB_PASSWORD;
 
 const PORT = "4200";
 
-connect("mongodb+srv://macaplazasm:Qx9yToHD18tqQNxh@energizatech.iepoih0.mongodb.net/energizatech")
+connect(
+  `mongodb+srv://${DB_USER}:${DB_PASSWORD}@energizatech.iepoih0.mongodb.net/energizatech`
+)
   .then(() => {
     console.log("Conectado a la base de datos MongoDB");
   })
