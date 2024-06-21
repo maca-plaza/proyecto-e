@@ -76,10 +76,13 @@
 nav_toggle {
   display: none;
 }
+.login-icon {
+  font-size: 20px; /* Tamaño deseado para el icono */
+}
 
 /* responsive */
 
-@media (max-width: 950px) {
+@media (max-width: 950px){
   .nav_items {
     position: absolute;
     top: -1px;
@@ -110,33 +113,32 @@ nav_toggle {
     transform: translateX(0) !important;
   }
 
-  .nav_toggle {
-    display: flex !important;
-    flex-direction: column;
-    margin: 10px 25px;
-  }
-  .nav_toggle span {
-    width: 35px;
-    height: 6px;
-    background: #fff;
-    margin-bottom: 6px;
-    transform-origin: 5px 1px;
-    transition: all 0.3s linear;
-  }
-  .nav_toggle.open > span {
-    transform: rotate(45deg) translate(0px, 0px);
-  }
-  .nav_toggle.open > span:nth-child(2) {
-    display: none;
-  }
-  .nav_toggle.open > span:nth-child(3) {
-    transform: rotate(-45deg) translate(-5px, 1px);
-  }
-  .navbar-btn-contacto {
-    display: none;
-  }
-
-  .navbar-upper-container {
-    flex-direction: column;
-  }
+.nav_toggle{
+  display: flex!important;
+  flex-direction: column;                
+  margin: 10px 25px;
+}
+.nav_toggle span{
+  width: 35px;
+  height: 6px;
+  background: #fff;
+  margin-bottom: 6px;         
+  transform-origin: 5px 1px;
+  transition: all 0.3s linear;
+}
+.nav_toggle.open > span{
+  transform: rotate(45deg) translate(0px, 0px);
+}
+.nav_toggle.open > span:nth-child(2){
+  display: none;
+}
+.nav_toggle.open > span:nth-child(3){
+  transform: rotate(-45deg) translate(-5px, 1px);
+}
+.navbar-btn-contacto{
+  display: none;
+}
+.login-icon{
+  display: none ;
+}
 }
