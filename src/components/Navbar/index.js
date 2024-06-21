@@ -2,9 +2,15 @@ import { Link, Outlet } from "react-router-dom";
 import "./styles.css";
 import SearchBar from "../Searchbar";
 import React, {useState} from "react";
+import LoginButton from "../Login";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
+  const handleLoginClick = () => {
+    console.log('Redirigir a la página de inicio de sesión');
+  };
+
+
   return (
     <>
       <div className="header_nav">
@@ -27,6 +33,9 @@ const Navbar = () => {
           </div>
           <div className="navbar-contacto">
             <button className="navbar-btn-contacto">Contáctanos</button>
+          </div>
+          <div className="navbar-login-container">
+          <LoginButton onLoginClick={handleLoginClick} />
           </div>
           </div>
         </div>

@@ -76,6 +76,9 @@
 nav_toggle{
   display: none;
 }
+.login-icon {
+  font-size: 20px; /* Tamaño deseado para el icono */
+}
 
 
 /* responsive */
@@ -139,6 +142,10 @@ nav_toggle{
 .navbar-btn-contacto{
   display: none;
 }
+.login-icon{
+  display: none ;
+}
+
 }
 
 
