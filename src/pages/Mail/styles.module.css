@@ -67,3 +67,6 @@ span.comment {
 .comment {
   width: 70%;
 }
+.leido {
+  color: gray;
+}

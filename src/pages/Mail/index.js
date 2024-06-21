@@ -7,6 +7,7 @@ import {
   faEnvelopeOpen,
   faGreaterThan,
   faLessThan,
+  faSkull,
   faTrash,
 } from "@fortawesome/free-solid-svg-icons";
 import { faStar } from "@fortawesome/free-regular-svg-icons";
@@ -50,7 +51,7 @@ const Mail = () => {
     }
   };
 
-  const updateContacts = async (action) => {
+  const updateContacts = async (action, value = true) => {
     try {
       await Promise.all(selectedContacts.map(async (id) => {
         const response = await fetch(`http://localhost:4200/contact/${id}`, {
@@ -58,13 +59,13 @@ const Mail = () => {
           headers: {
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify({ [action]: true }),
+          body: JSON.stringify({ [action]: value }),
         });
         if (!response.ok) {
-          throw new Error(`Failed to update contact ${id}`);
+          throw new Error(`Fallo en actualizar mail ${id}`);
         }
       }));
-      setContacts(contacts.map(contact => selectedContacts.includes(contact._id) ? { ...contact, [action]: true } : contact));
+      setContacts(contacts.map(contact => selectedContacts.includes(contact._id) ? { ...contact, [action]: value } : contact));
       setSelectedContacts([]);
     } catch (e) {
       console.error(e);
@@ -72,23 +73,37 @@ const Mail = () => {
   };
 
   const handleDelete = () => {
-    updateContacts('eliminado');// Aquí iría la lógica para eliminar los contactos seleccionados
-    console.log('Eliminar contactos:', selectedContacts);
+    updateContacts('eliminado');
+  };
+
+  const handleDeletePermanently = async () => {
+    try {
+      await Promise.all(selectedContacts.map(async (id) => {
+        const response = await fetch(`http://localhost:4200/contact/${id}`, {
+          method: 'DELETE',
+        });
+        if (!response.ok) {
+          throw new Error(`Fallo en eliminar ${id}`);
+        }
+      }));
+      setContacts(contacts.filter(contact => !selectedContacts.includes(contact._id)));
+      setSelectedContacts([]);
+    } catch (e) {
+      console.error(e);
+    }
+  };
+
+  const handleMarkAsNew = () => {
+    updateContacts('leido', false);
   };
 
   const handleMarkAsRead = () => {
-    updateContacts('leido');// Aquí iría la lógica para marcar los contactos como leídos
-    console.log('Marcar como leído:', selectedContacts);
-  };
-  const handleMarkAsNew = () => {
-    updateContacts('no leido');// Aquí iría la lógica para marcar los contactos como leídos
-    console.log('Marcar como NO leído:', selectedContacts);
+    updateContacts('leido', true);
   };
 
   const handleAddToFavorites = () => {
     // Aquí iría la lógica para agregar los contactos a favoritos
     updateContacts('favorito');
-    console.log('Agregar a favoritos:', selectedContacts);
   };
 
   const toggleFavorite = async (id) => {
@@ -117,6 +132,7 @@ const Mail = () => {
       <div className={styles["contact-box"]}>
         <div className={styles["contact-sidebar"]}>
           <button onClick={() => setStatus("")}>Todos</button>
+          <button onClick={() => setStatus("no_leido")}>No Leído</button>
           <button onClick={() => setStatus("leido")}>Leído</button>
           <button onClick={() => setStatus("favorito")}>
             Importante
@@ -134,6 +150,12 @@ const Mail = () => {
                 <FontAwesomeIcon icon={faEnvelope} title={" NO leido"} onClick= {handleMarkAsNew} />
                 <FontAwesomeIcon icon={faEnvelopeOpen} title={"marcar leído"} onClick= {handleMarkAsRead}/>
                 <FontAwesomeIcon icon={faTrash} title={"Eliminar"} onClick= {handleDelete}/>
+                {status === 'eliminado' && (
+                  <FontAwesomeIcon 
+                    icon={faSkull} 
+                    title="Eliminar definitivamente" 
+                    onClick={handleDeletePermanently} />
+                  )}
                 <FontAwesomeIcon icon={faStar} title={"Marcar como Spam"} onClick={handleAddToFavorites}  />
               </div>
             </div>
