@@ -1,7 +1,26 @@
 .card-container {
-  max-width: 33%;
-  padding: 1rem;
+  max-width: 30%;
+  padding: 2rem;
+  /* background-color: #fbd814d6; */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 5%;
+  background-color: #ffffff;
+  margin: 50px 0;
+  box-shadow: 3px 6px 12px 0 #2d2d2d;
   
+}
+.card-container p{
+ text-align: justify;
+ color: #393939;
+ font-weight: 500;
+ 
+}
+.card-container h2{
+  text-align: center;
+  padding: 10px 0;
+  color: #000;
 }
 
 @media only screen and (max-width: 600px) {
