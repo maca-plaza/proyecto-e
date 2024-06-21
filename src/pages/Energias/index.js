@@ -24,7 +24,7 @@ export default function Energias() {
       ENVOLVED: "Involúcrate",
     },
     CARDS: {
-      TITLE: "Impulsando un Futuro Sosteniblee",
+      TITLE: "Impulsando un Futuro Sostenible",
       BADGE: "Beneficios de las Energías Renovables",
       DESCRIPTION:
         "Explora las diferentes tecnologías de energía renovable y cómo pueden impulsar un futuro sostenible.",
@@ -126,25 +126,30 @@ export default function Energias() {
         <div
           className={`${styles["cards-title-container"]} ${styles["flex-column"]}`}
         >
-          <span className={`${styles.button} ${styles["button-primary"]}`}>
+          {/* <span className={`${styles.button} ${styles["button-primary"]}`}>
             {constants.CARDS.BADGE}
-          </span>
+          </span> */}
           <h1 className={styles["cards-title"]}>{constants.CARDS.TITLE}</h1>
           <p>{constants.CARDS.DESCRIPTION}</p>
         </div>
-        <h1>Beneficios Ambientales:</h1>
         <div className={styles["cards-wrapper"]}>
+          <h1 className={`${styles["cards-subtitles"]}`}>
+            Beneficios Ambientales:
+          </h1>
           {cards.map((c) => (
             <Card {...c} />
           ))}
-
-          <h1>Beneficios Sociales:</h1>
+          <h1 className={`${styles["cards-subtitles"]}`}>
+            Beneficios Sociales:
+          </h1>
           <div className={styles["cards-wrapper"]}>
             {CARDS2.map((c) => (
               <Card {...c} />
             ))}
           </div>
-          <h1>Beneficios Económicos:</h1>
+          <h1 className={`${styles["cards-subtitles"]}`}>
+            Beneficios Económicos:
+          </h1>
           <div className={styles["cards-wrapper"]}>
             {CARDS3.map((c) => (
               <Card {...c} />
@@ -158,11 +163,13 @@ export default function Energias() {
         <div
           className={`${styles["cards-title-container"]} ${styles["flex-column"]}`}
         >
-          <span className={`${styles.button} ${styles["button-primary"]}`}>
+          {/* <span className={`${styles.button} ${styles["button-primary"]}`}>
             {constants.SUMMARY.BADGE}
-          </span>
+          </span> */}
           <h1 className={styles["cards-title"]}>{constants.SUMMARY.TITLE}</h1>
-          <p>{constants.SUMMARY.DESCRIPTION}</p>
+          <p className={styles["title-descripción"]}>
+            {constants.SUMMARY.DESCRIPTION}
+          </p>
         </div>
         <div className={styles["summary-container-other"]}>
           <div className={styles["summary-container-child"]}>
@@ -193,10 +200,11 @@ export default function Energias() {
           <div className={styles["summary-container-img"]}></div>
         </div>
       </div>
+
       <div className={`${styles["others-container"]} ${styles["flex-column"]}`}>
-        <span className={`${styles.button} ${styles["button-primary"]}`}>
+        {/* <span className={`${styles.button} ${styles["button-primary"]}`}>
           {"Involúcrate"}
-        </span>
+        </span> */}
         <h1>Únete a la revolución de las energías renovables</h1>
         <p>
           Si eres propietario de una vivienda, de un negocio o un líder
@@ -204,8 +212,8 @@ export default function Energias() {
           las energías renovables. Explora los recursos disponibles. Otros
           Enlaces de Interés
         </p>
-        <div className={styles["action-container"]}>
-          <button className={`${styles.button} ${styles["button-primary"]}`}>
+        <div className={styles["action-container2"]}>
+          <button className={`${styles.button} ${styles["button-primary2"]}`}>
             <a
               href="https://eolico.minenergia.cl/inicio"
               className="button-link"
@@ -213,17 +221,17 @@ export default function Energias() {
               Explorador Eólico
             </a>
           </button>
-          <button className={`${styles.button}${styles["button-primary"]}`}>
+          <button className={`${styles.button}${styles["button-primary2"]}`}>
             <a href="https://sit.conaf.cl/" className="button-link">
               Explorador de Bioenergía Forestal
             </a>
           </button>
-          <button className={`${styles.button} ${styles["button-primary"]}`}>
+          <button className={`${styles.button} ${styles["button-primary2"]}`}>
             <a href="https://energia.gob.cl/" className="button-link">
               Ministerio de Energía
             </a>
           </button>
-          <button className={`${styles.button}${styles["button-primary"]}`}>
+          <button className={`${styles.button}${styles["button-primary2"]}`}>
             <a href="https://www.cne.cl//" className="button-link">
               Comisión Nacional de Energía
             </a>
