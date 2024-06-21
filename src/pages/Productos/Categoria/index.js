@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams,Link } from "react-router-dom";
 
 import styles from "./styles.module.css";
 
@@ -40,9 +40,11 @@ const Categoria = () => {
         <div className={styles["products-container"]}>
           {productos.map((p) => (
             <div className={styles["product-wrapper"]} key={p.id}>
+              <Link to={"/producto/"+ p.productId} className={styles["product-link"]}>
               <img src={p.imageUrl} alt={p.name} />
               <p className={styles["products-parrafo"]}>{p.name}</p>
               <p className={styles["products-precio"]}>$ {p.price}</p>
+              </Link>
             </div>
           ))}
         </div>
