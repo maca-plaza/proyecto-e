@@ -3,10 +3,17 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 import styles from "./styles.module.css";
+import { Link } from "react-router-dom";
 
 const SearchBar = () => {
   const [data, setData] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
+
+  const clearSearch = () => {
+    setTimeout(() => {
+      setData([]);
+    }, 1000);
+  };
 
   useEffect(() => {
     if (searchTerm !== "") {
@@ -22,7 +29,7 @@ const SearchBar = () => {
   }, [searchTerm]);
 
   return (
-    <div className={styles["search-container"]}>
+    <div className={styles["search-container"]} onBlur={clearSearch}>
       <input
         id="buscador"
         type="text"
@@ -33,7 +40,9 @@ const SearchBar = () => {
 
       <ul className={styles["barra-busqueda"]}>
         {data.map((d, i) => (
-          <li key={i}>{d.name}</li>
+          <Link key={i} to={d.url}>
+            <li>{d.name}</li>
+          </Link>
         ))}
       </ul>
     </div>

@@ -17,15 +17,15 @@ router.get("/", async (req, res) => {
     const { leido, favorito, eliminado } = req.query;
     const query = {};
     if (leido) {
-      query.leido = true;
+      query.leido = leido;
     }
 
     if (favorito) {
-      query.favorito = true;
+      query.favorito = favorito;
     }
 
     if (eliminado) {
-      query.eliminado = true;
+      query.eliminado = eliminado;
     }
 
     const contacts = await Contact.find(query);

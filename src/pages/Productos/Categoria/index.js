@@ -39,7 +39,7 @@ const Categoria = () => {
         </div>
         <div className={styles["products-container"]}>
           {productos.map((p) => (
-            <div className={styles["product-wrapper"]} key={p.id}>
+            <div className={styles["product-wrapper"]} key={p._id}>
                 <img src={p.imageUrl} alt={p.name} />
                 <p className={styles["products-parrafo"]}>{p.name}</p>
                 <p className={styles["products-precio"]}>$ {p.price}</p>

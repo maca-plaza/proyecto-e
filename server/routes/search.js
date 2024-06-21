@@ -17,12 +17,20 @@ router.get("/", async (req, res) => {
         products
           .map((p) => {
             return {
-              url: "",
+              url: "/producto/" + p.productId,
               name: p.name,
+              type: "producto",
               keyWords: "",
             };
           })
-          .concat(searches)
+          .concat(
+            searches.map((s) => {
+              return {
+                ...s._doc,
+                type: "page",
+              };
+            })
+          )
       );
     } else {
       res.status(400).send("parámetro word es requerido");
