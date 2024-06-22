@@ -28,7 +28,7 @@ const Categoria = () => {
     return (
       <div>
         <div className={styles["arrow-title"]}>
-          <a href="/Productos">
+          <a href= "/Productos">
             <img
               src="https://static.vecteezy.com/system/resources/previews/007/231/420/non_2x/arrow-back-icon-which-is-suitable-for-commercial-work-and-easily-modify-or-edit-it-vector.jpg"
               alt="Back"
@@ -40,9 +40,11 @@ const Categoria = () => {
         <div className={styles["products-container"]}>
           {productos.map((p) => (
             <div className={styles["product-wrapper"]} key={p._id}>
+               <Link to={"/producto/"+ p.productId} className={styles["product-link"]}>
                 <img src={p.imageUrl} alt={p.name} />
                 <p className={styles["products-parrafo"]}>{p.name}</p>
                 <p className={styles["products-precio"]}>$ {p.price}</p>
+              </Link>
             </div>
           ))}
         </div>
