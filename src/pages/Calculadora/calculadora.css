@@ -1,3 +1,10 @@
+.navigation-back {
+  width: 35px;
+  cursor: pointer;
+  margin-left: 0px;
+  margin-top: -20px;
+} 
+
    .calculadora {
     position: relative;
     background: url("https://static.vecteezy.com/system/resources/previews/001/269/396/non_2x/close-up-of-person-using-calculator-free-photo.jpg") no-repeat center center;
