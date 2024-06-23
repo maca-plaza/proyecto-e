@@ -57,7 +57,7 @@ const Home = () => {
         <h1 className="inspirate-home">Inspírate y renueva tu casa</h1>
         <div className="images-home">
           <div className="imagenes-home">
-            <Link to="/Cuidado" className="imagen-cuidado-home"> 
+            <Link to="/Cuidadopersonal" className="imagen-cuidado-home"> 
               <img src="https://lh3.googleusercontent.com/u/0/d/1kMPfzK3qv8umxV8_0KVl5rZ8ONcM9AEL=w1020-h834-iv1" alt="Imagen cepillo Productos" />
             </Link>
           </div>
@@ -77,12 +77,12 @@ const Home = () => {
             </Link>
           </div>
           <div className="imagenes-home">
-            <Link to="" className="imagen-jardin-home">
-              <img src="https://lh3.googleusercontent.com/u/0/d/1_twNE5CrVJDnfLFhYVvmea4Zuz8Tfucq=w1020-h834-iv1" alt="Imagen jardin " />
+            <Link to="/Login" className="imagen-jardin-home">
+              <img src="https://lh3.googleusercontent.com/u/0/d/1JMm2EUKAB2tVDYokMqOsvwoIv15JyShl=w1020-h834-iv1" alt="Imagen jardin " />
             </Link>
           </div>
           <div className="imagenes-home">
-            <Link to="/Cocina" className="imagen-cocina-home">
+            <Link to="producto/Cocina" className="imagen-cocina-home">
               <img src="https://lh3.googleusercontent.com/u/0/d/1rxAAtR4ejNKp0z_JLWcBIsw8FKQ9fdtb=w1020-h834-iv1" alt="Imagen detergente cocina Productos" />
             </Link>
           </div>
@@ -132,18 +132,18 @@ const Home = () => {
       <div className="images-home-2">
           <div className="images-home-container">
             <Link to="/Energias" className="" style={{ color: 'inherit' }}> 
-              <img src="https://lh3.googleusercontent.com/u/0/d/1Qp0BSI6p73p1wtA2XiU6W5hQxD75lnSl=w1848-h858-iv1" alt="" />
+              <img src="https://lh3.googleusercontent.com/u/0/d/1Qp0BSI6p73p1wtA2XiU6W5hQxD75lnSl=w1848-h858-iv1" alt="energía" />
             </Link>
-            <Link to="" className="" style={{ color: 'inherit' }}> 
-              <img src="https://lh3.googleusercontent.com/u/0/d/1FETp8FrApInge-2d0vuvwNv-BuMNpvuD=w1020-h834-iv1" alt="" />
+            <Link to="/Eficiencia" className="" style={{ color: 'inherit' }}> 
+              <img src="https://lh3.googleusercontent.com/u/0/d/1zWdkLtTyozaN5wQqx6Ikr1nrcjwfCNIM=w1848-h858-iv1" alt="energia" />
             </Link>
           </div>
           <div className="images-home-container2">
-            <Link to="/Residuos" className="" style={{ color: 'inherit' }}> 
-              <img src="https://lh3.googleusercontent.com/u/0/d/1ZdemYeLJSpSOVpsiNeifwghDh_GWT4Yg=w1020-h834-iv1" alt="" />
+            <Link to="/residuos" className="" style={{ color: 'inherit' }}> 
+              <img src="https://lh3.googleusercontent.com/u/0/d/1ZdemYeLJSpSOVpsiNeifwghDh_GWT4Yg=w1020-h834-iv1" alt="residuos" />
             </Link>
-            <Link to="/Mascotas" className="" style={{ color: 'inherit' }}> 
-              <img src="https://lh3.googleusercontent.com/u/0/d/1jjTp3m7ozt3_aFbVILAnwNHGK5c-Jy6P=w1020-h834-iv1" alt="" />
+            <Link to="/productos/Mascotas" className="" style={{ color: 'inherit' }}> 
+              <img src="https://lh3.googleusercontent.com/u/0/d/1jjTp3m7ozt3_aFbVILAnwNHGK5c-Jy6P=w1020-h834-iv1" alt="productosmascota" />
             </Link>
           </div>
         </div>
@@ -157,7 +157,7 @@ const Home = () => {
   </div>
   </div>
 </div>
-      </>
+</>
     );
 };
 
