@@ -20,7 +20,7 @@ import Producto from "./pages/Productos/Producto";
 import Categoria from "./pages/Productos/Categoria";
 import LoginButton from "./components/LoginButton";
 import Login from "./pages/Login";
-import Register from "./components/Register";
+import Register from "./pages/Register";
 
 
 function App() {

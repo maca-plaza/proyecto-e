@@ -39,6 +39,7 @@ const Register = () => {
   };
 
   return (
+    <body className="Fondo-register">
     <div className="register-container">
       <h2 className="crear-cuenta-register">Crear Cuenta</h2>
       {error && <p className="error-message-register">{error}</p>}
@@ -93,6 +94,7 @@ const Register = () => {
       )}
       <Link to="/wishlist" className="button-register">Registrarse</Link>
     </div>
+    </body>
   );
 };
 

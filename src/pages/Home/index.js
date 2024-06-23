@@ -77,7 +77,7 @@ const Home = () => {
             </Link>
           </div>
           <div className="imagenes-home">
-            <Link to="/wishlist" className="imagen-jardin-home">
+            <Link to="/Login" className="imagen-jardin-home">
               <img src="https://lh3.googleusercontent.com/u/0/d/1JMm2EUKAB2tVDYokMqOsvwoIv15JyShl=w1020-h834-iv1" alt="Imagen jardin " />
             </Link>
           </div>
