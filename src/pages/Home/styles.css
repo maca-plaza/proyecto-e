@@ -116,6 +116,7 @@ main{
 
 .content-imagen-home {
   width: 50%;
+  border-radius: 50px;
 }
 
 .boton-Home {
@@ -175,7 +176,8 @@ main{
   overflow: hidden;
   width: 300px; 
   height: 400px; 
-  margin: 0 auto; 
+  margin: 0 auto;
+  border-radius: 40px;
 }
 
 .imagenes-home img {

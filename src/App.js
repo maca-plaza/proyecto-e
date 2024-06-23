@@ -18,6 +18,10 @@ import Footer from "./components/Footer";
 import "./style.css";
 import Producto from "./pages/Productos/Producto";
 import Categoria from "./pages/Productos/Categoria";
+import LoginButton from "./components/LoginButton";
+import Login from "./pages/Login";
+import Register from "./components/Register";
+
 
 function App() {
   return (
@@ -40,6 +44,11 @@ function App() {
           <Route path="productos/categoria/:category" element={<Categoria />} />
           <Route path="producto/:id" element={<Producto />} />
         </Routes>
+        <Routes>
+        <Route path="/" element={<LoginButton />} />
+        <Route path="/Login" element={<Login />} />
+        <Route path="/Register" element={<Register />}/>
+      </Routes>
         <Footer />
       </BrowserRouter>
     </div>

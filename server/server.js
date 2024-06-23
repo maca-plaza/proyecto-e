@@ -32,6 +32,7 @@ app.use(cors());
 app.use("/products", productRouter);
 app.use("/search", searchRouter);
 app.use("/contact", contactRouter);
+app.use("/users", contactRouter);
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);

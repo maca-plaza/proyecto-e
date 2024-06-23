@@ -4,11 +4,12 @@
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    background-color: #f9f9f9;
+    background-color: #e9c7b3;
+    margin-top: 80px;
   }
-
-  h2 {
+  .inicio-sesion-login {
     text-align: center;
+    font-family: "Montserrat", sans-serif;
   }
   
   .form-group {
@@ -29,18 +30,24 @@
     border-radius: 4px;
   }
   
-  button {
+  .button-login {
     width: 100%;
     padding: 10px;
     font-size: 18px;
-    background-color: #4caf50;
+    background-color: #dc521b;
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    font-weight: 400;
+    flex-wrap:center ;
   }
   
-  button:hover {
-    background-color: #45a049;
+  .button-login:hover {
+    background-color: #ffffff;
+    color: rgb(180, 82, 6);
   }
   
+  .button-register1{
+    background-color: none;
+  }

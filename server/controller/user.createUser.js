@@ -1,32 +1,16 @@
-const User = require("../models/user.model.js");
+const User = require("../db/models/user.model.js");
 const bcrypt = require("bcrypt");
 const response = require("../res/response.js");
 
+
 const crearUsuario = async (req, res) => {
-  const { name, lastName, email, password } = req.body;
-
-  //agregar un paso para poder encriptar la contraseña
-  const salt = bcrypt.genSaltSync();
-  const passwordEncripted = bcrypt.hashSync(password, salt);
-
   try {
-    const checkPreviousUser = await User.findOne({ email: email });
-
-    if (checkPreviousUser) {
-      return response(res, 400, null, "El email ya está registrado");
-    }
-
-    const user = await User.create({
-      name: name,
-      lastName: lastName,
-      email: email,
-      password: passwordEncripted,
-    });
-
-    response(res, 201, user._id, "Usuario creado con éxito");
-  } catch {
-    response(res, 500, null, "Error en el servidor");
-    console.log(error);
+    const { name, lastName, email, password, rut, google } = req.body;
+    const newUser = new User({ name, lastName, email, password, rut, google });
+    await newUser.save();
+    res.status(201).json({ message: 'Usuario creado', user: newUser });
+  } catch (error) {
+    res.status(500).json({ message: 'Error al crear el usuario', error });
   }
 };
 

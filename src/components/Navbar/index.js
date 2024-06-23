@@ -2,7 +2,7 @@ import { Link, Outlet } from "react-router-dom";
 import "./styles.css";
 import SearchBar from "../Searchbar";
 import React, {useState} from "react";
-import LoginButton from "../Login";
+import LoginButton from "../LoginButton";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)

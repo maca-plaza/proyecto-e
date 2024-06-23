@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 const LoginButton = () => {
     return (
-      <Link to="/Inicio" className="login-button">
+      <Link to="/Login" className="login-button">
         <span className="login-icon">
           <FontAwesomeIcon icon={faUser} />
         </span>
