@@ -156,11 +156,36 @@ const Mail = () => {
     return (
       <div className={styles["contact-box"]}>
         <div className={styles["contact-sidebar"]}>
-          <button onClick={() => setStatus("")}>Todos</button>
-          <button onClick={() => setStatus("leido=false")}>No Leído</button>
-          <button onClick={() => setStatus("leido")}>Leído</button>
-          <button onClick={() => setStatus("favorito")}>Importante</button>
-          <button onClick={() => setStatus("eliminado")}>Eliminado</button>
+          <button
+            className={styles["boton-contacto"]}
+            onClick={() => setStatus("")}
+          >
+            Todos
+          </button>
+          <button
+            className={styles["boton-contacto"]}
+            onClick={() => setStatus("leido=false")}
+          >
+            No Leído
+          </button>
+          <button
+            className={styles["boton-contacto"]}
+            onClick={() => setStatus("leido")}
+          >
+            Leído
+          </button>
+          <button
+            className={styles["boton-contacto"]}
+            onClick={() => setStatus("favorito")}
+          >
+            Importante
+          </button>
+          <button
+            className={styles["boton-contacto"]}
+            onClick={() => setStatus("eliminado")}
+          >
+            Eliminado
+          </button>
         </div>
         <div className={styles["contacts-container"]}>
           <div className={styles["first-row"]}>
@@ -203,8 +228,14 @@ const Mail = () => {
             </div>
             <div className={styles["container-paginador"]}>
               <span>1-20</span>
-              <FontAwesomeIcon icon={faLessThan} />
-              <FontAwesomeIcon icon={faGreaterThan} />
+              <FontAwesomeIcon
+                className={styles["paginador-icon"]}
+                icon={faLessThan}
+              />
+              <FontAwesomeIcon
+                className={styles["paginador-icon"]}
+                icon={faGreaterThan}
+              />
             </div>
           </div>
           <div className={styles["contacts-wrapper"]}>
@@ -212,6 +243,7 @@ const Mail = () => {
               <div className={styles["contact-wrapper"]} key={c._id}>
                 <span className={styles["actions-contact"]}>
                   <input
+                    className={styles["actions-caja"]}
                     type="checkbox"
                     checked={selectedContacts.includes(c._id)}
                     onChange={() => handleSelect(c._id)}
