@@ -37,7 +37,7 @@ textarea::placeholder {
 
 .form-container textarea {
   resize: none;
-  height: 8vw;
+  height: 12vw;
   margin-bottom: 19px;
   width: 100%;
 }
@@ -50,7 +50,7 @@ textarea::placeholder {
   border-radius: 50px;
   background-color: #fbd914;
   justify-content: center;
-  height: 40px;
+  height: 45px;
   width: 100%;
 }
 
@@ -62,4 +62,16 @@ textarea::placeholder {
 
 #email {
   margin-bottom: 12px;
+}
+
+@media (max-width: 1130px){
+  .form-container textarea {
+    height: 15vw;
+  }
+}
+
+@media (max-width: 665px){
+  .form-container textarea {
+    height: 22vw;
+  }
 }

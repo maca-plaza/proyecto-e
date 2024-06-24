@@ -27,12 +27,8 @@ const Footer = () => {
         <div className="logo">
           <div>
             <img
-              src="https://lh3.google.com/u/0/d/1T-YLlloczjmODB8o49LDnCdhthxtUn5P=w1439-h753-iv1"
+              src="https://lh3.google.com/u/0/d/1oES-BoTwkflgUIBH7v4kjH4V0Kvg31v9=w1438-h752-iv1"
               alt="logo"
-            />
-            <img
-              src="https://lh3.google.com/u/0/d/1d2-SX2Karlmc9AI3FDqmVLN98FGLLpd5=w1439-h460-iv1"
-              alt="Energiza Tech"
             />
           </div>
         </div>
@@ -54,9 +50,9 @@ const Footer = () => {
             <p>© 2024 Energiza Tech. Todos los derechos reservados</p>
           </div>
         </div>
-        <div className="flecha">
+        {/* <div className="flecha">
           <i className="fa-solid fa-circle-arrow-up"></i>
-        </div>
+        </div> */}
       </footer>
     </>
   );
