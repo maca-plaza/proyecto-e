@@ -3,27 +3,22 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
-    padding: 0px 40px;
     justify-content: center;
     font-family: "Montserrat", sans-serif;
 }
-
-/* .fondo{
-    background-size: 100%;
-    background-repeat:no-repeat;
-} */
-
 .titulo{
     font-size: 55px;
     font-weight: 400;
     color: #fff;
     margin-bottom: -20px;
+    padding: 0px 40px;
 }
 
 .titulo2{
     color: #FBD914;
     font-weight: 700;
     font-size: 55px;
+    padding: 0px 40px;
 }
 
 .info{
@@ -33,4 +28,24 @@
     font-weight: 400;
     margin-top: 15px;
     color: #fff;
+    padding: 0px 40px;
+}
+
+/*Responsive*/
+@media (max-width: 800px){
+    .header{
+        width: 100vw;
+        height: auto; 
+        background-size: cover;
+        background-repeat: no-repeat;  
+    }
+    .titulo{
+        font-size: 45px;
+    }
+    .titulo2{
+        font-size: 40px ;
+    }
+    .info{
+        width: 100%;
+    }
 }

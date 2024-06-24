@@ -4,11 +4,12 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  padding: 76px 0px 74px;
+  /* padding: 76px 0px 74px; */
+  padding: 4.5rem 4rem;
+  gap: 20px;
 }
 .logo img {
-  width: 250px;
+  width: 230px;
 }
 .subtitulo_formulario h1 {
   font-size: 25px;
@@ -43,6 +44,9 @@ button.btn:hover {
   text-decoration: underline;
   padding-bottom: 20px;
   font-size: 25px;
+}
+.contacto{
+  margin-left: 20px;
 }
 
 .redes_contacto {
@@ -87,3 +91,25 @@ button.btn:hover {
 #exampleFormControlInput1:focus {
   box-shadow: 0 0 5px #fbd914;
 }
+
+/*Responsive*/
+/* @media (max-width: 1450px){
+  footer{
+    padding: 4.5rem 2rem;
+    display: flex;
+    gap: 20px;
+  }
+  .logo img {
+    width: 170px;
+    display: flex;
+  }
+}
+@media (max-width: 1025px){
+  footer{
+    height: auto;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 20px;
+    padding: 0;
+  }
+} */
