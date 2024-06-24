@@ -1,12 +1,24 @@
 .contact-box {
-  display: flex;
-  padding: 4rem;
   width: 100%;
+  display: flex;
+  padding: 5.5rem 3rem;
+  gap: 10px;
 }
 .contact-sidebar {
   display: flex;
   flex-direction: column;
-  width: 20%;
+  width: 16%;
+  margin-top: 46px; 
+}
+.contact-sidebar .boton-contacto{
+  padding: 5px;
+  border: none;
+  text-align: justify;
+  background-color: #fff;
+}
+.contact-sidebar .boton-contacto:hover{
+  font-weight: 600;
+  background-color: #ebebeb;
 }
 
 .contacts-container {
@@ -18,8 +30,8 @@
 .contact-wrapper {
   display: flex;
   flex-direction: row;
-  min-height: 2em;
-  align-items: center;
+  min-height: 2.5em;
+  align-items: center; 
 }
 
 .contact-wrapper:nth-child(odd) {
@@ -29,6 +41,8 @@
 .icon-container {
   display: flex;
   align-items: center;
+  gap: 15px;
+  color: #5c5c5c;
 }
 .first-row {
   display: flex;
@@ -38,10 +52,19 @@
 
 .title-icon-container {
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
 }
+
 .container-paginador {
   align-self: flex-end;
+}
+.container-paginador  span{
+  padding-right: 20px;
+}
+.paginador-icon{
+  font-size: 20px;
+  color: #5b5b5b;
+  margin-right: 10px;
 }
 
 .info-container {
@@ -51,6 +74,13 @@
 
 .actions-contact {
   width: 6%;
+  display: flex;
+  justify-content: flex-start;
+  gap: 15px;
+  font-size: 18px;
+}
+span .actions-contact {
+  font-size: 20px;
 }
 
 span.email,
@@ -69,4 +99,39 @@ span.comment {
 }
 .leido {
   color: gray;
+}
+
+@media (max-width: 1110px){
+  .contact-sidebar{
+    display: none;
+  }
+  .contacts-container{
+    width: 100%;
+  }
+  .email {
+    width: 40%;
+  }
+  
+  .comment {
+    width: 50%;
+  }
+  .info-container{
+    margin-left: 1.5rem;
+  }
+}
+@media (max-width: 700px){
+  .email {
+    width: 30%;
+  }
+  
+  .comment {
+    width: 50%;
+  }
+  .contacts-container{
+    width: 90vw;
+  }
+  .contact-wrapper {
+    display: flex;
+    gap: 20px; 
+  }
 }
