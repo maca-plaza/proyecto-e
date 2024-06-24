@@ -58,11 +58,6 @@
   font-weight: bold;
 }
 
-a {
-  text-decoration: none; 
-  color: inherit; 
-}
-
 /* styles.module.css */
 .product-brand-container {
   margin-bottom: 1rem; /* Espacio alrededor del botón */

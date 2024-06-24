@@ -1,37 +1,29 @@
+.calculadora {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+  background: url("https://lh3.googleusercontent.com/fife/ALs6j_Hl7L8H9YUULcHKqoGTUtlXwYHifGH2mLgqpNcz8N4u-c8UfCJtSfk1w-BwrPN9XjVlVJq_ELLdqY5uTBiFeOlizBrc4MTxutqd7VyzhloJ-B1iZDvAJnEQq3nSaVXDhamlJFE5TQeIhNG0T2EpIj1G0GLnjYhXvLOw8d15lZ35AT2892M_Dup7Ivs7wAmf_pXuuiZK1K7LjGY2BamdsHaTFnFE8uWpemPbab05ovpaMRD4At553XNxqNn3bg-Bqt1RxeCCcvTLOjb2qNZVQxVnaeocUvvMGnlkxetIJ0Osz46zyb7IfVr8MYs43qs4jsuB_2glVKpyYWzPxUK4sMj6HnCxGDuhEIatqtztBBcz1AYsJGrD2nerpB1OZ7wHQ3WeU-TiHpIGa-F0Ds8AugyXrPDv9nV_KZcUNMnCCVXUk5g6nRO8ndkcqXXGPlPjlLfnActryFKViUhrj3zCgcYJE8zZEbTsdIzfWGyjaKBbBw4e0BJ28ocjjLsjBnuhWBa6hrjIgXQ2jdatarJ5g-7qN2ts-jDK1xBIy4HHX6GMFSZGZA_pQXsBIVEzZZxkUDEkjR-hCmj2vCGHctMVzvr7jjJRqIx2ZkugqyLuy16GBRovba6iPPWWwfO6hBqk-wFm9MANY7cYq4R80MnEFqzFCgH68E61rT4F7cxl-e79cnoegp2GiLe7_1dChQG56WTNSKVGf38-4cPFoFWr5XIon1HsFzwO4IUTuiEyZNWo-ReDNcnm8MnMRuceQAq7J-znsLqLUYjO58rRj6VO1dNsURitDJMNmgP3iA_mFfHEVQBcMhREbXTn5kzP9GaLI0-WvszjgW7JxgCPN0T0DUeaenedx1GmDVTTWKHN1kc7gjn_ib9YCA_IIaDzKeJm8OQCn_ofns_NpgCBYtPzOgSCX7HjmDWA3J6l07CdpHJhz-pR72B7KFXBFtfPl_krhJ13myljFoqi7J8LZQJR9s3nURG5OJvUwnx2EHMsrUMFyo7dzbL4Mp6ez1mh2d-fl4RK5HTdlWu3FqothThcu3nRnix9FOm5q5UFLA6uXzqTtFKKKU7Uvo4L35cUxdgw_DC4uJ6vknoxSB1NIdlID0XXEyH7EAj8F1am6q7xWskRgv5t35ri0jqSd93sCANMoMLjpS53r0GMDnmDupGpCIYjTk3TEhwinzsrMyCPrlqlP1oQE18prsmeGgcAFAuRHp0f4Z6iQJXZBX-nh2gIV4D5Lobsz8FDSyfPKtTiwUeUA-Z2qYzUNGfuEINugylGRJcp7FzgIb3we7dzwysemxXlEx0Ab7028YPfV6kKTElOHhswPSw6p1DJNCyKfkCjgqLwKOC2LkGgT-AAWr_qXbFFzGKaToQx-sGHulaTsqlOJ0LcMAZT7PuayiPWUkBGK5vrMLusTCTYGxP__XWiJGC15aJ4cr_cOQ0_IkSVmxoPgs0-nb8_MbpsrcqKk81fk4vdDP54-z2KR-I05tVMAT8GBZynpbHnv6apULzKv4ZmROOI63srsQ6NTE2B2GS4P-Q4-0Gez01_GdtMTzpJX8Mx_60oQISkSPgKcpsVPRvg836VFIs_NT-pLasPUaBWmx2318iuK5LRgj6Y6mhEmVedvoxHbAmwtCn6YBbYuy0nSGpnxkq6IgUFkZvboxGx5KDCe-lzXOnV0fQ2Xyst-gUgyEtxTQ=w2000-h1250") center;
+  background-size: cover;
+  color: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.header-container {
+  max-height: 200px; 
+  overflow-y: auto; 
+  flex-shrink: 0; 
+}
+
+.content {
+  flex: 1; 
+  overflow-y: auto; 
+}
+
 .navigation-back {
   width: 35px;
   cursor: pointer;
   margin-left: 0px;
-  margin-top: -20px;
-} 
-
-   .calculadora {
-    position: relative;
-    background: url("https://static.vecteezy.com/system/resources/previews/001/269/396/non_2x/close-up-of-person-using-calculator-free-photo.jpg") no-repeat center center;
-    background-size: cover;
-    color: #fff;
-    padding: 20px;
-    max-height: 1075px;
-    margin-top: 55px;
-  }
-   
-  .calculadora::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); 
-  }
-  
-  .calculadora > * {
-    position: relative;
-    z-index: 2;
-  }
-  
-  .header {
-    padding: 20px;
-    margin-bottom: 50px;
-  }
-  
+  margin-top: 40px;
+}
