@@ -15,32 +15,12 @@ const Eficiencia = () => {
   return (
     <div>
       <body>
-      <main>
+        <main>
           <div>
             {HEADER.map((c) => (
               <Header {...c} />
             ))}
           </div>
-
-          {/* <div className="info_main">
-          <h1 className="title">
-            EFICIENCIA <br />
-            <b className="yellow"> ENERGETICA</b>
-          </h1>
-          <p className="intro">
-            El concepto de uso eficiente de la energía hace referencia a la
-            capacidad para obtener los mejores resultados en cualquier actividad
-            empleando la menor cantidad posible de recursos energéticos. Nos
-            permite reducir el consumo de cualquier tipo de energía y con ello
-            los posibles impactos ambientales asociados a ella. Esto es
-            aplicable desde la generación de dicha energía hasta su consumo
-            final.
-          </p>
-        </div> */}
-
-          {/* <div className="icono_main">
-            <FontAwesomeIcon icon={faLightbulb} className="icon_main" />
-          </div> */}
         </main>
 
         <section className="container-xxl">
@@ -226,10 +206,6 @@ const Eficiencia = () => {
             </div>
           </div>
         </div>
-
-        {/* <div className="calculator">
-        <button></button>
-      </div> */}
       </body>
     </div>
   );
