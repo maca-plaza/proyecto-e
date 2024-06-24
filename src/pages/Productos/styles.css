@@ -112,15 +112,13 @@
   left: 0;
 }
 
-.productos .text-wrapper-11 {
+.productos .text-wrapper-11 a {
   position: absolute;
   width: 125px;
   top: 263px;
   left: 54px;
   text-shadow: 0px 4px 4px #00000040;
-  font-family: "Montserrat-Regular", Helvetica;
   font-weight: 400;
-  color: #000000;
   font-size: 24px;
   text-align: center;
   letter-spacing: 0;
@@ -144,7 +142,7 @@
   left: 275px;
 }
 
-.productos .text-wrapper-12 {
+.productos .text-wrapper-12 a {
   position: absolute;
   width: 98px;
   top: 267px;
@@ -175,7 +173,7 @@
   left: 825px;
 }
 
-.productos .text-wrapper-13 {
+.productos .text-wrapper-13 a {
   position: absolute;
   width: 152px;
   top: 262px;
@@ -206,7 +204,7 @@
   left: 550px;
 }
 
-.productos .text-wrapper-14 {
+.productos .text-wrapper-14 a {
   position: absolute;
   width: 152px;
   top: 265px;
@@ -228,7 +226,7 @@
   left: 1100px;
 }
 
-.productos .text-wrapper-15 {
+.productos .text-wrapper-15 a {
   position: absolute;
   width: 224px;
   top: 260px;
@@ -250,7 +248,7 @@
   left: 1390px;
 }
 
-.productos .text-wrapper-16 {
+.productos .text-wrapper-16 a {
   position: absolute;
   width: 152px;
   top: 265px;
@@ -281,7 +279,7 @@
   left: 1665px;
 }
 
-.productos .text-wrapper-17 {
+.productos .text-wrapper-17 a {
   position: absolute;
   width: 206px;
   top: 264px;
