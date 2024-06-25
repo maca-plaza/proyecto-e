@@ -25,7 +25,7 @@ const Vista = () => {
         <div className="div">
           <div>
             {HEADER.map((c) => (
-              <Header {...HEADER} />
+              <Header {...c} />
             ))}
           </div>
         </div>
