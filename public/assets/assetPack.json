@@ -1,0 +1,27 @@
+{
+    "pack": {
+      "files": [
+        {
+          "type": "image",
+          "key": "map",
+          "url": "assets/map.png"
+        },
+        {
+          "type": "image",
+          "key": "solarTower",
+          "url": "assets/solar_tower.png"
+        },
+        {
+          "type": "image",
+          "key": "windTower",
+          "url": "assets/wind_tower.png"
+        },
+        {
+          "type": "image",
+          "key": "enemy",
+          "url": "assets/enemy.png"
+        }
+      ]
+    }
+  }
+  

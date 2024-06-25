@@ -17,7 +17,7 @@ const Productos = () => {
         <div className="div">
           <div>
             {HEADER.map((c) => (
-              <Header key={c.titulo} {...c} />
+              <Header {...HEADER} />
             ))}
           </div>
         </div>
