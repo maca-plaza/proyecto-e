@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from "../../../components/Header";
 import "../../Calculadora/calculadora.css";
 import PhaserGame from '../../../components/PhaserGame/PhaserGame';
@@ -11,6 +11,12 @@ const Vista = () => {
       info: "Pendiente ",
     },
   ];
+  const [life, setLife] = useState(100);
+  const [money, setMoney] = useState(500);
+  const [upgrades, setUpgrades] = useState([
+    { name: 'Torre Solar', cost: 100 },
+    { name: 'Parque Eólico', cost: 200 }
+  ]);
 
   return (
     <>

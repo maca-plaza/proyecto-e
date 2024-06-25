@@ -17,7 +17,7 @@ const Wishlist = () => {
   useEffect(() => {
     const fetchProductos = async () => {
       try {
-        const response = await fetch("http://localhost:4200/users" + wishlist);
+        const response = await fetch("http://localhost:4200/users" );
         if (response.ok) {
           setProductos(await response.json());
         }
@@ -26,7 +26,7 @@ const Wishlist = () => {
       }
     };
     fetchProductos();
-  }, [wishlist]);
+  }, []);
 
   if (productos) {
     return (
