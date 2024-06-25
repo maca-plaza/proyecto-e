@@ -54,8 +54,11 @@ const Login = () => {
         </div>
         <Link to="/wishlist" className="button-login" type="submit">Iniciar sesión</Link>
       </form>
+      <div class="botones-container">
       <Link to="/Register" className="button-register1">Crear Usuario</Link>
-    </div>
+      <Link to="../Mail/" className="button-register2">Ingreso Administrador</Link>
+      </div>    
+      </div>
   );
 };
 

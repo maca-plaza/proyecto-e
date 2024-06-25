@@ -3,7 +3,7 @@ const logOut = async (req, res) => {
     req.session.destroy(err => {
         if (err) {
           // manejar error
-          console.log(err);
+        console.log(err);
         }
     })
 
@@ -17,4 +17,4 @@ const logOut = async (req, res) => {
 
     }
 
-module.exports = logOut;
+    export default logOut;

@@ -45,7 +45,7 @@ function App() {
           <Route path="producto/:id" element={<Producto />} />
         </Routes>
         <Routes>
-        <Route path="/" element={<LoginButton />} />
+        <Route path="/LoginButton" element={<LoginButton />} />
         <Route path="/Login" element={<Login />} />
         <Route path="/Register" element={<Register />}/>
       </Routes>
