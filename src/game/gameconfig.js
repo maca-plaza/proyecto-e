@@ -74,7 +74,16 @@ function create() {
 
   // Recursos de sostenibilidad
   this.sustainabilityPoints = 0;
+  this.experiencePoints = 0;
   this.sustainabilityText = this.add.text(16, 16, 'Puntos de Sostenibilidad: 0', { fontSize: '32px', fill: '#fff' });
+
+  this.time.addEvent({
+    delay: 60000,
+    callback: () => {
+        this.experiencePoints += 10;
+    },
+    loop: true
+});
 }
 
 function update(time, delta) {
@@ -90,9 +99,17 @@ function update(time, delta) {
     // Lógica de ataque de las torres a los enemigos
     towersArray.forEach((tower) => {
       attackEnemy(tower, enemiesArray, this);
-    });
+  });
+
+  towersArray.forEach((tower) => {
+      if (this.experiencePoints >= 100) {
+          tower.level += 1;
+          this.experiencePoints -= 100;
+      }
+  });
   
     // Otra lógica de actualización del juego según sea necesario
+    this.sustainabilityText.setText('Puntos de Sostenibilidad: ' + this.sustainabilityPoints);
     // Por ejemplo, verificar colisiones, actualizar estados, etc.
   }
 
@@ -115,17 +132,31 @@ function moveEnemy(enemy, path) {
   }
 
 function attackEnemy(tower, enemiesArray, context) {
-    const range = 100;
-
-    enemiesArray.forEach((enemy) => {
-        if (Phaser.Math.Distance.Between(tower.x, tower.y, enemy.x, enemy.y) < range) {
-          // Lógica de ataque
-          enemy.tint = 0xff0000; // Cambiar color del enemigo al ser atacado (solo como ejemplo)
-          context.sustainabilityPoints += 10; // Ganar puntos de sostenibilidad
-          context.sustainabilityText.setText(`Puntos de Sostenibilidad: ${context.sustainabilityPoints}`);
-          enemy.destroy(); // Eliminar enemigo del grupo
-        } else {
-          enemy.tint = 0xffffff; // Resetear color si no está dentro del rango
-        }
+          const range = 100; // Rango de ataque de la torre
+      const damage = 10 * tower.level; // Daño basado en el nivel de la torre
+  
+      enemiesArray.forEach((enemy) => {
+          if (Phaser.Math.Distance.Between(tower.x, tower.y, enemy.x, enemy.y) < range) {
+              // Crear un proyectil
+              const projectile = context.add.sprite(tower.x, tower.y, 'projectile');
+              context.physics.moveTo(projectile, enemy.x, enemy.y, 300);
+  
+              // Agregar evento para manejar colisión del proyectil con el enemigo
+              context.time.addEvent({
+                  delay: 500, // Tiempo estimado para que el proyectil llegue al enemigo
+                  callback: () => {
+                      // Verificar si el proyectil está cerca del enemigo
+                      if (Phaser.Math.Distance.Between(projectile.x, projectile.y, enemy.x, enemy.y) < 10) {
+                          enemy.health -= damage; // Reducir la salud del enemigo
+                          if (enemy.health <= 0) {
+                              enemy.destroy(); // Destruir el enemigo
+                              context.sustainabilityPoints += 10; // Ganar puntos de sostenibilidad
+                              context.sustainabilityText.setText(`Puntos de Sostenibilidad: ${context.sustainabilityPoints}`);
+                          }
+                      }
+                      projectile.destroy(); // Destruir el proyectil
+                  }
+              });
+          }
       });
-    }
+  }
