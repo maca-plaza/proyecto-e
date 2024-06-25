@@ -1,5 +1,6 @@
 import { Router } from "express";
 import Contact from "../db/models/contact.js";
+
 const router = Router();
 
 router.post("/", async (req, res) => {
