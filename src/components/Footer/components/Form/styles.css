@@ -75,3 +75,16 @@ textarea::placeholder {
     height: 22vw;
   }
 }
+
+@media (max-width: 440px){
+  .form-container textarea {
+    height: 25vw;
+  }
+  .form-title {
+    margin: 10px 15px;
+  }
+  
+  .form-subtitle {
+    margin: 10px 15px;
+  }
+}
