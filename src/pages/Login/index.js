@@ -55,10 +55,13 @@ const Login = () => {
         <Link to="/wishlist" className="button-login" type="submit">Iniciar sesión</Link>
       </form>
 
-      <div class="botones-container">
-        <di>Si aún no tienes una cuenta, </di>
-      <Link to="/Register" className="button-register1">regístrate aquí</Link>
-      <Link to="../Mail/" className="button-register2">Ingreso Administrador</Link>
+      <div className="Ingresos-usuarios-login">
+        <di>Si aún no tienes una cuenta,</di>
+        <Link to="/Register" className="button-register1">regístrate aquí</Link>
+      </div>
+      <div className="Ingresos-usuarios-login">
+        <di>¿Eres parte de Energizatech?</di>
+        <Link to="../Mail/" className="button-register2">Ingresa aquí</Link>
       </div>    
       </div>
 

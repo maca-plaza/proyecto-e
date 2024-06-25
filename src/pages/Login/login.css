@@ -56,12 +56,12 @@
   color:#f2e07a ;
   }
   
-  .botones-container {
-    display: flex;
-    justify-content: space-between; /* Esto distribuye los elementos a los extremos */
+  .Ingresos-usuarios-login{
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+
   }
   .button-register1, .button-register2 {
-    /* Estilos comunes para ambos botones */
     padding: 10px 20px;
     background-color: none;
     margin-top: 10px;
