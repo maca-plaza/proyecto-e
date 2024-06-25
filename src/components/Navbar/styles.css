@@ -77,8 +77,13 @@ nav_toggle {
   display: none;
 }
 .login-icon {
-  font-size: 20px; /* Tamaño deseado para el icono */
+  font-size: 30px;
+  color: #ffcb13; /* Tamaño deseado para el icono */
 }
+
+.login-icon :hover{
+  color: #bd9f35;
+  }
 
 /* responsive */
 

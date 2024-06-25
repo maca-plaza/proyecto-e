@@ -47,7 +47,7 @@ const Register = () => {
       {!registered && (
         <form onSubmit={handleSubmit}>
           <div className="form-group-register">
-            <label>Nombre</label>
+            <label>Nombre*</label>
             <input
               type="text-register"
               value={name}
@@ -56,7 +56,7 @@ const Register = () => {
             />
           </div>
           <div className="form-group-register">
-            <label>Apellido</label>
+            <label>Apellido*</label>
             <input
               type="text-register"
               value={lastName}
@@ -65,7 +65,7 @@ const Register = () => {
             />
           </div>
           <div className="form-group-register">
-            <label>Email</label>
+            <label>Email*</label>
             <input
               type="email-register"
               value={email}
@@ -74,7 +74,7 @@ const Register = () => {
             />
           </div>
           <div className="form-group-register">
-            <label>Contraseña</label>
+            <label>Contraseña*</label>
             <input
             type="password"
             value={password}
@@ -82,14 +82,7 @@ const Register = () => {
             required
           />
           </div>
-          <div className="form-group-register">
-            <label>RUT</label>
-            <input
-              type="text-register"
-              value={rut}
-              onChange={(e) => setRut(e.target.value)}
-            />
-          </div>
+          *campos obligatorios
         </form>
       )}
       <Link to="/wishlist" className="button-register">Registrarse</Link>

@@ -1,6 +1,5 @@
-const User = require("../db/models/user.model.js");
-const bcrypt = require("bcrypt");
-const response = require("../res/response.js");
+import User from "../db/models/user.js";
+
 
 
 const crearUsuario = async (req, res) => {
@@ -14,4 +13,4 @@ const crearUsuario = async (req, res) => {
   }
 };
 
-module.exports = crearUsuario;
+export default crearUsuario;
