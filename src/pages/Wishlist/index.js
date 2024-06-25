@@ -11,9 +11,7 @@ function Wishlist() {
       titulo2: "de favoritos",
       info: "",
     },
-  ];
-  
-        
+  ];  
         
   const [productos, setProductos] = useState([]);
 /* Falta el url de la api del backend
