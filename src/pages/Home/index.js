@@ -57,7 +57,7 @@ const Home = () => {
         <h1 className="inspirate-home">Inspírate y renueva tu casa</h1>
         <div className="images-home">
           <div className="imagenes-home">
-            <Link to="/Cuidadopersonal" className="imagen-cuidado-home"> 
+            <Link to="/productos/categoria/Cuidado personal" className="imagen-cuidado-home"> 
               <img src="https://lh3.googleusercontent.com/u/0/d/1kMPfzK3qv8umxV8_0KVl5rZ8ONcM9AEL=w1020-h834-iv1" alt="Imagen cepillo Productos" />
             </Link>
           </div>
@@ -67,12 +67,12 @@ const Home = () => {
             </Link>
           </div>
           <div className="imagenes-home">
-            <Link to="/Lavanderia" className="imagen-detergente-home">
+            <Link to="/productos/categoria/Lavanderia" className="imagen-detergente-home">
               <img src="https://lh3.googleusercontent.com/u/0/d/1Jmp1g97dONz9SsTLA_Rpvzbnc8lpc4FE=w1020-h834-iv1" alt="Imagen detergente Productos" />
             </Link>
           </div>
           <div className="imagenes-home">
-            <Link to="/Baño" className="imagen-paños-home">
+            <Link to="/productos/categoria/Baño" className="imagen-paños-home">
               <img src="https://lh3.googleusercontent.com/u/0/d/1YG5sONRbeG6DkD_L1b-aojp-rE7p8Ljo=w1848-h858-iv1" alt="Imagen paños Productos" />
             </Link>
           </div>
@@ -82,7 +82,7 @@ const Home = () => {
             </Link>
           </div>
           <div className="imagenes-home">
-            <Link to="producto/Cocina" className="imagen-cocina-home">
+            <Link to="/productos/categoria/Cocina" className="imagen-cocina-home">
               <img src="https://lh3.googleusercontent.com/u/0/d/1rxAAtR4ejNKp0z_JLWcBIsw8FKQ9fdtb=w1020-h834-iv1" alt="Imagen detergente cocina Productos" />
             </Link>
           </div>

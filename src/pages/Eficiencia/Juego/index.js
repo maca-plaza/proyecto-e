@@ -5,7 +5,7 @@ const Juego = () => {
 
     return (
       <div className="app-container">
-        <h1>Emulador de Android</h1>
+        <h1>Juego Tower Defense de Sosten</h1>
         <iframe
           title="Emulador de Android"
           width="100%"
