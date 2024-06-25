@@ -1,13 +1,10 @@
 .wishlist-Principal{
   background-image: url(https://lh3.googleusercontent.com/u/0/d/1KxfyKadHEoLSDS6C-ChtaXhAwddwmhoC=w1020-h834-iv1);
-  position: relative;
-  min-height: calc(100vh - 200px);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  align-items: center;
-  overflow: hidden;
+  width: 100vw;
+  height: 100vh; 
+  background-size: 100%;
+  background-repeat: no-repeat;
+  
 }
 .wishlist-Principal.div {
     width: 100%;
@@ -20,9 +17,10 @@
   }
   
   .wishlist-Principal .wishlist-image {
-    width: 100%;
-    height: 406px;
-    object-fit: cover;
+    width: 100vw;
+    height: 100vh; 
+    background-size: 100%;
+    background-repeat: no-repeat;
   }
   
   .wishlist-Principal .text-wrapper-wishlist {

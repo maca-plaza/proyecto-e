@@ -1,57 +1,56 @@
-// Importar Express y MongoDB
-const express = require('express');
-const mongoose = require('mongoose');
+import express from 'express';
+import auth from '../Middlewares/validar-jwt.js'; // Middleware para autenticación JWT
+import User from '../db/models/user.js';
+import Product from "../db/models/Product.js";
 
+const router = express.Router();
 // Configurar Express
-const app = express();
-app.use(express.json());
+router.post('/add', auth, async (req, res) => {
+    const { productId } = req.body;
+    const userId = req.user.id; // Desde el middleware de autenticación
 
-const productoSchema = new mongoose.Schema({
-    nombre: String,
-    precio: Number,
-    imagen: String
-});
-
-// Definir el modelo de los productos
-const Producto = mongoose.model('Producto', productoSchema);
-
-// Ruta para obtener la wishlist de un usuario
-app.get('/wishlist/:usuarioId', async (req, res) => {
-    const usuarioId = req.params.usuarioId;
     try {
-        const wishlist = await Producto.find({ usuario: usuarioId });
-        res.json(wishlist);
+        const user = await User.findById(userId);
+        if (!user) {
+            return res.status(404).json({ error: 'Usuario no encontrado.' });
+        }
+
+        const product = await Product.findById(productId);
+        if (!product) {
+            return res.status(404).json({ error: 'Producto no encontrado.' });
+        }
+
+        // Verificar si el producto ya está en la wishlist
+        if (user.wishlist.includes(productId)) {
+            return res.status(400).json({ message: 'El producto ya está en la wishlist.' });
+        }
+
+        // Agregar producto a la wishlist del usuario
+        user.wishlist.push(productId);
+        await user.save();
+
+        res.json({ message: 'Producto añadido a la wishlist correctamente.' });
     } catch (error) {
-        res.status(500).json({ message: error.message });
+        console.error('Error al añadir producto a la wishlist:', error.message);
+        res.status(500).json({ error: 'Error en el servidor.' });
     }
 });
 
-// Ruta para agregar un producto a la wishlist
-app.post('/wishlist/:usuarioId/agregar', async (req, res) => {
-    const usuarioId = req.params.usuarioId;
-    const { nombre, precio, imagen } = req.body;
+// Obtener wishlist del usuario
+router.get('/', auth, async (req, res) => {
+    const userId = req.user.id; // Desde el middleware de autenticación
+
     try {
-        const producto = new Producto({ nombre, precio, imagen, usuario: usuarioId });
-        await producto.save();
-        res.status(201).json(producto);
+        const user = await User.findById(userId).populate('wishlist');
+        if (!user) {
+            return res.status(404).json({ error: 'Usuario no encontrado.' });
+        }
+
+        res.json(user.wishlist);
     } catch (error) {
-        res.status(400).json({ message: error.message });
+        console.error('Error al obtener wishlist:', error.message);
+        res.status(500).json({ error: 'Error en el servidor.' });
     }
 });
 
-// Ruta para eliminar un producto de la wishlist
-app.delete('/wishlist/:usuarioId/eliminar/:productoId', async (req, res) => {
-    const usuarioId = req.params.usuarioId;
-    const productoId = req.params.productoId;
-    try {
-        await Producto.findOneAndDelete({ _id: productoId, usuario: usuarioId });
-        res.status(204).end();
-    } catch (error) {
-        res.status(500).json({ message: error.message });
-    }
-});
-
-// Iniciar el servidor
-app.listen(3000, () => {
-    console.log('Servidor iniciado en el puerto 3000');
-});
+export default router;
