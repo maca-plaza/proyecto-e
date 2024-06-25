@@ -1,3 +1,6 @@
+*{
+  font-family: "Montserrat", sans-serif;   
+}
 .Fondo-register{
   background-color: white;
 }
@@ -7,18 +10,23 @@
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  background-color: #f9f9f9;
+  background-color: #f2e07a;
   margin-top: 60px;
+  margin-bottom: 50px;
 }
 
 .crear-cuenta-register {
   text-align: center;
   margin-bottom: 20px;
-  color: #333;
+  color: #ffffff;
+  font-weight: bold;
+  margin-left: -10px;
 }
 
 .form-group-register {
   margin-bottom: 15px;
+  color:white;
+  font-size: 14px;
 }
 
 .form-group-register label {
@@ -44,16 +52,18 @@
   display: block;
   width: 100%;
   padding: 10px;
-  background-color: #ffe100;
+  background-color: #f2e07a;
   color: #fff;
   text-align: center;
   text-decoration: none;
   border: none;
   border-radius: 3px;
   cursor: pointer;
+  font-size:20px;
 }
 
 .button-register:hover {
-  background-color: #000000;
-  color:#ffe100 ;
+  background-color: #ffffff;
+  color:#f2e07a ;
+  font-size: 20px;
 }

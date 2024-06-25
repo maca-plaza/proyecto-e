@@ -3,11 +3,16 @@ import "./styles.css";
 import SearchBar from "../Searchbar";
 import React, {useState} from "react";
 import LoginButton from "../LoginButton";
+import HeartButton from "../Wishlist";
+
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
   const handleLoginClick = () => {
     console.log('Redirigir a la página de inicio de sesión');
+  };
+  const handleHeartClick =() => {
+    console.log('Redirigir a la página de productos guardados');
   };
 
 
@@ -33,6 +38,9 @@ const Navbar = () => {
           </div>
           <div className="navbar-contacto">
             <button className="navbar-btn-contacto">Contáctanos</button>
+          </div>
+          <div className="navbar-login-container">
+            <HeartButton onHeartClick={handleHeartClick} />
           </div>
           <div className="navbar-login-container">
           <LoginButton onLoginClick={handleLoginClick} />

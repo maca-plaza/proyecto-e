@@ -22,6 +22,8 @@ import Categoria from "./pages/Productos/Categoria";
 import LoginButton from "./components/LoginButton";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import Wishlist from "./pages/Wishlist";
+import HeartButton from "./components/Wishlist";
 
 
 function App() {
@@ -50,6 +52,10 @@ function App() {
         <Route path="/LoginButton" element={<LoginButton />} />
         <Route path="/Login" element={<Login />} />
         <Route path="/Register" element={<Register />}/>
+      </Routes>
+      <Routes>
+      <Route path="/"  element={<HeartButton/>}/>
+      <Route path="/Wishlist" element={<Wishlist />} />
       </Routes>
         <Footer />
       </BrowserRouter>
