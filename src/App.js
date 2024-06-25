@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Eficiencia from "./pages/Eficiencia";
 import Calculadora from "./pages/Calculadora";
+import Vista from "./pages/Eficiencia/Vista";
 import Residuos from "./pages/Residuos";
 import Mail from "./pages/Mail";
 import Energias from "./pages/Energias";
@@ -32,6 +33,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="eficiencia" element={<Eficiencia />} />
           <Route path="calculadora" element={<Calculadora />} />
+          <Route path="juego" element={<Vista />} />
           <Route path="mail" element={<Mail />} />
           <Route path="residuos" element={<Residuos />} />
           <Route path="energias" element={<Energias />}>

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import styles from "./styles.module.css";
+import Buttonmail from "../../components/Buttonmail";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCheckSquare,
@@ -156,36 +157,7 @@ const Mail = () => {
     return (
       <div className={styles["contact-box"]}>
         <div className={styles["contact-sidebar"]}>
-          <button
-            className={styles["boton-contacto"]}
-            onClick={() => setStatus("")}
-          >
-            Todos
-          </button>
-          <button
-            className={styles["boton-contacto"]}
-            onClick={() => setStatus("leido=false")}
-          >
-            No Leído
-          </button>
-          <button
-            className={styles["boton-contacto"]}
-            onClick={() => setStatus("leido")}
-          >
-            Leído
-          </button>
-          <button
-            className={styles["boton-contacto"]}
-            onClick={() => setStatus("favorito")}
-          >
-            Importante
-          </button>
-          <button
-            className={styles["boton-contacto"]}
-            onClick={() => setStatus("eliminado")}
-          >
-            Eliminado
-          </button>
+          <Buttonmail />
         </div>
         <div className={styles["contacts-container"]}>
           <div className={styles["first-row"]}>

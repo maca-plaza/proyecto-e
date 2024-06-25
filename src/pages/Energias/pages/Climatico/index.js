@@ -1,12 +1,9 @@
 import React from "react";
-import Stepper from "../../../../components/Stepper";
-
 const Climatico = () => {
   return (
     <body>
       
       <h2>Cambio climatico</h2>
-      <Stepper />
 
       <iframe
         src="https://cambioclimatico.minenergia.cl/"
