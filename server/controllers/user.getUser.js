@@ -1,6 +1,6 @@
-const User = require("../models/user.model.js");
-const response = require("../res/response.js");
-const generarJWT = require("../services/generar-jwt.js");
+import User from "../db/models/user.js";
+import response from "../res/response.js";
+import generarJWT from "../services/generar-jwt.js";
 
 const getUser = async (req, res) => { 
 
@@ -34,4 +34,4 @@ const getUser = async (req, res) => {
 
 }
 
-module.exports = getUser;
+export default getUser;

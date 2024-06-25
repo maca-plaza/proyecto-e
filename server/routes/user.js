@@ -1,15 +1,13 @@
-
-const express = require('express');
-const router = express.Router();
-
-const  listarUsuarios  = require("../controllers/user.getAllUser.js");
-const actualizarUsuario = require('../controllers/user.Update.js');
-const crearUsuario = require("../controllers/user.createUser.js");
-const {login, googleLogin}= require('../controllers/login.user.js');
-const isAuth = require('../middlewares/validar-jwt.js');
-const logOut = require('../controllers/user.logOut.js');
-const getUser = require('../controllers/user.getUser.js');
-const { validarRegistro, validarLogin, validarGoogle } = require('../middlewares/validations.js');
+import { Router } from "express";
+import listarUsuarios from "../controllers/user.getAllUser.js";
+import actualizarUsuario from '../controllers/user.Update.js';
+import crearUsuario from "../controllers/user.createUser.js";
+import login from '../controllers/login.user.js';
+import isAuth from '../middlewares/validar-jwt.js';
+import logOut from '../controllers/user.logOut.js';
+import getUser from '../controllers/user.getUser.js';
+import { validarRegistro, validarLogin, validarGoogle} from '../Middlewares/validations.js';
+const router = Router();
 
 //listar usuarios
 router.get("/", listarUsuarios);
@@ -22,7 +20,7 @@ router.post("/login", validarLogin, login);
 
 //login google
 
-router.post("/google-in", validarGoogle, googleLogin)
+router.post("/google-in", validarGoogle)
 
 //get usuario
 router.get("/get-usuario", isAuth, getUser);
@@ -50,11 +48,10 @@ router.get("/ruta-protegida", isAuth, (req, res) => {
             msg: "Error en el servidor"
         })
     }
-   
 }
 );
 
 router.post("/logout", logOut);
 
 
-module.exports = router;
+export default router;

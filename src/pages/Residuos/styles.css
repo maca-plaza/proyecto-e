@@ -16,7 +16,6 @@
 }
 
 .Conoces-la-diferencia {
-  font-family: "Montserrat";
   font-size: 40px;
   color: #000;
   justify-content: center;
@@ -25,10 +24,16 @@
   white-space: nowrap;
   margin-left: 10px;
 }
+@media (max-width: 768px) {
+  .Conoces-la-diferencia {
+    flex-direction: column;
+    width: 100%;
+  }
+}
 .text-style-1 {
   color: #fbd914;
   display: flex;
-  font-family: "Montserrat";
+  
   margin-left: 10px;
 }
 
@@ -55,7 +60,7 @@
 }
 
 .title-1{
-  font-family: "Montserrat";
+  
   font-size: 30px;
   color: #000000;
   margin-right: 10px;
@@ -91,7 +96,7 @@
 .label-title {
   font-weight: bold;
   text-align: center;
-  font-family: "Montserrat";
+  
   font-size:1.5rem;
   justify-content: center;
   justify-items: center;
@@ -102,7 +107,7 @@
   font-size: 1.2rem;
   color: #000000;
   line-height: 1.6;
-  font-family: "Montserrat";
+
 }
 
 @media (max-width: 768px) {
@@ -138,7 +143,7 @@
 
 .Segn-sus-caractersticas {
   width: 100%;
-  font-family: "Montserrat";
+  
   font-size: 40px;
   color: #000000;
   white-space: nowrap;
@@ -148,7 +153,7 @@
 
 .Segn-su-origen {
   width: 100%;
-  font-family: "Montserrat";
+  
   font-size: 40px;
   color: #000000;
   white-space: nowrap;
@@ -158,7 +163,7 @@
 
 .text-style-4 {
   color: #fbd914;
-  font-family: "Montserrat";
+  
   margin-left: 10px;
   display: flex;
 }
@@ -170,14 +175,6 @@
   justify-content: center;
 }
 
-/*iconos*/
-
-/* .iconos {
-  display: flex;
-  justify-content: start;
-  font-size: 40px;
-  color: #fbd914;
-} */
 
 /*imagenes*/
 .container-cuadros {
@@ -192,7 +189,7 @@
   justify-content: center;
   position: relative;
   display: flex;
-  font-family: "Montserrat";
+  
   font-size: 30px;
   margin-bottom: 30px;
 }
@@ -237,7 +234,7 @@
   padding: 8px 16px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  font-family: "Montserrat";
+  
   font-weight: bold;
   font-size: larger;
   transform: translate(0%,-300%);
@@ -269,7 +266,7 @@
 .titulo1 {
   text-align: center; /* Centra el texto del título */
   margin-bottom: 20px;
-  font-family: "Montserrat"; /* Espacio entre el título y los cuadros */
+   /* Espacio entre el título y los cuadros */
 }
 
 .cuadros-paralelos {
@@ -309,7 +306,6 @@
   text-decoration: none;
   border-radius: 5px;
   transition: background-color 0.3s ease;
-  font-family: "Montserrat";
   font-size: larger;
   font-weight: bold;
 }
@@ -376,7 +372,6 @@
   max-width: calc(100% - 20px); /* Ajusta el ancho máximo del texto para evitar que sea más ancho que la imagen */
   overflow: hidden; /* Oculta cualquier exceso de texto */
   text-overflow: ellipsis;
-  font-family: "Montserrat";
   text-align: left; /* Agrega puntos suspensivos al final del texto si se recorta */
 }
 
@@ -385,39 +380,3 @@
     font-size: 16px; /* Ajusta el tamaño del texto para dispositivos de tamaño mediano y grande */
   }
 }
-/* Estilos para las tarjetas (cards) */
-
-/* .card-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px; 
-} */
-
-
-/* 
-.card-header {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.icon-1 {
-  font-size: 40px;
-  color: #fbd914; 
-  margin-bottom: 10px;
-  justify-items: center;
-}
-
-.card-content-1 {
-  margin-bottom: 15px;
-}
-
-.label {
-  font-weight: bold;
-}
-
-.text {
-  margin-top: 5px;
-  font-size: 14px;
-  line-height: 1.6;
-} */

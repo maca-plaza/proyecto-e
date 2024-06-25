@@ -1,5 +1,5 @@
-const User = require("../models/user.model.js");
-const response = require("../res/response.js");
+import User from "../db/models/user.js";
+import response from "../res/response.js";
 
 const actualizarUsuario = async (req, res) => {
   const { id } = req.params;
@@ -33,4 +33,4 @@ const actualizarUsuario = async (req, res) => {
   }
 };
 
-module.exports = actualizarUsuario;
+export default actualizarUsuario;
