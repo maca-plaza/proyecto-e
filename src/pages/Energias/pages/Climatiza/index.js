@@ -1,10 +1,7 @@
 import React from "react";
-import Stepper from "../../../../components/Stepper";
-
 const Climatiza = () => {
   return (
     <body>
-      <Stepper />
       <h2>Climatiza tu Hogar</h2>
       <iframe
         src="https://climatizatuhogar.cl/"

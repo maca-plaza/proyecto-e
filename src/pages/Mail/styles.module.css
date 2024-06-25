@@ -1,25 +1,3 @@
-.contact-box {
-  width: 100%;
-  display: flex;
-  padding: 5.5rem 3rem;
-  gap: 10px;
-}
-.contact-sidebar {
-  display: flex;
-  flex-direction: column;
-  width: 16%;
-  margin-top: 46px; 
-}
-.contact-sidebar .boton-contacto{
-  padding: 5px;
-  border: none;
-  text-align: justify;
-  background-color: #fff;
-}
-.contact-sidebar .boton-contacto:hover{
-  font-weight: 600;
-  background-color: #ebebeb;
-}
 
 .contacts-container {
   display: flex;

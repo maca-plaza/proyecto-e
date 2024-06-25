@@ -47,27 +47,12 @@ const SearchBar = () => {
       </ul>
     </div>
 
-    /* <div className="overlap-4"><SearchBar />
-            <div className="cajabuscador">
-              <div className="box">
-                <input
-                  className="buscador"
-                  type="text"
-                  placeholder="¿Qué estás buscando?"
-                  required
-                />
-              </div>
-              <div className="search">
+    /*               <div className="search">
                 <FontAwesomeIcon icon={faSearch} />
               </div>
             </div>
           </div> */
-    /* <div className="overlap-group-wrapper">
-            <div className="overlap-group-2">
-              <div className="text-wrapper-8">Contáctanos</div>
-              <div className="rectangle"></div>
-            </div>
-          </div> */
+    
   );
 };
 export default SearchBar;

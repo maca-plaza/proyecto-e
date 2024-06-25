@@ -2,6 +2,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLightbulb } from "@fortawesome/free-solid-svg-icons";
 import "./styles.css";
 import Header from "../../components/Header";
+import { Link } from "react-router-dom";
+
 
 const Eficiencia = () => {
   const HEADER = [
@@ -172,12 +174,15 @@ const Eficiencia = () => {
           <div className="card_info">
             <FontAwesomeIcon icon={faLightbulb} className="icon" />
             <div className="card_body">
+            <Link to="/juego">
               <h3>Ahorro de energía y costes</h3>
               <p className="card_text">
                 Al utilizar menos recursos para llevar a cabo una actividad
                 contribuimos al ahorro energético. Además, un menor gasto de
                 energía se traduce en una reducción en la factura energética.
+            
               </p>
+              </Link>
             </div>
           </div>
 
