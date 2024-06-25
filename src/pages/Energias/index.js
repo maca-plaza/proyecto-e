@@ -16,6 +16,7 @@ import {
 import styles from "./styles.module.css";
 import Card from "./components/Card";
 import Header from "../../components/Header";
+import Climatico from "./pages/Climatico";
 
 export default function Energias() {
   const constants = {
@@ -118,7 +119,7 @@ export default function Energias() {
             <Link to="/calculadora">{constants.ACTIONS.LEARN_MORE}</Link>
           </button>
           <button className={`${styles.button}`}>
-            {constants.ACTIONS.ENVOLVED}
+          <Link to="/clima">{constants.ACTIONS.ENVOLVED}</Link>
           </button>
         </div>
       </div>

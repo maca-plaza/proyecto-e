@@ -24,6 +24,7 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Wishlist from "./pages/Wishlist";
 import HeartButton from "./components/Wishlist";
+import Clima from "./pages/Clima";
 
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="eficiencia" element={<Eficiencia />} />
           <Route path="calculadora" element={<Calculadora />} />
+          <Route path="clima" element={<Clima />} />
           <Route path="juego" element={<Vista />} />
           <Route path="mail" element={<Mail />} />
           <Route path="residuos" element={<Residuos />} />
