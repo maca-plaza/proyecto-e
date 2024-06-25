@@ -31,3 +31,10 @@ header {
   max-height: 50vh;
   overflow-y: auto;
 }
+
+/*Responsive*/
+@media (max-width: 570px){
+  .search-container{
+    display: none;
+  }
+}
