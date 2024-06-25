@@ -1,3 +1,6 @@
+*{
+  
+}
 .title-container {
   background: url("https://lh3.google.com/u/0/d/1TZFnlIMstBMQ73aMKJ5XgcJD6q3L7799=w1437-h752-iv1");
   background-size: 100%;
@@ -203,5 +206,67 @@
     padding: 15px;
     font-size: 14px;
   }
+}
+@media (max-width: 440px){
+  .action-container{
+    bottom: 10px;
+  }
+  .action-container .button{
+    width: 130px;
+    height: 50px;
+    text-align: center;
+    
+  }
+  .action-container a{
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .cards-subtitles{
+    width: 90%;
+    font-size: 30px;
+  }
+  .summary-container {
+    padding: 1.5rem 2rem 1rem 0; 
+  }
+  .cards-title-container h1{
+    font-size: 28px;
+  }
+  .cards-title-container p{
+    font-size: 18px;
+  }
   
+  .summary-container-other {
+    width: 100%;
+    padding: 0; 
+  }
+  .summary-container-child{
+    gap: 20px;
+  }
+  .summary-container-child h1{
+    font-size: 28px;
+    font-weight: 600;
+  }
+  .summary-container-child p{
+    font-size: 18px;
+  }
+  .others-container{
+    padding: 4.5rem 2rem;
+    gap: 10px;
+  }
+  .others-container h1{
+    font-size: 26px;
+    margin: 0 12px;
+  }
+  .others-container p{
+    font-size: 17px;
+    text-align: justify;
+  }
+  .action-container2 button{
+    width: 170px;
+    height: 68px;
+  }
+  .button-primary2 button-link, a {
+    font-size: 14px;
+    font-weight: 500;
+  }
 }
