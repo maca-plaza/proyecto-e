@@ -136,6 +136,7 @@ main{
   cursor: pointer;
   text-align: center;
   line-height: 50px; 
+  border: none;
 }
 
 .boton-home-productos .click {
