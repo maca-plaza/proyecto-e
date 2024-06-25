@@ -3,21 +3,12 @@ import { Schema, model } from "mongoose";
 
 // schema
 const userSchema = new Schema({
-    name: String,
-    lastName: String,
-    email: {
-        type: String,
-        required: true,
-        unique: true
-    },
-    password: {
-        type: String,
-        required: true,
-        default: "123456789"
-    },
-    rut: String,
-    google: Boolean
+    name: { type: String, required: true },
+    lastName: { type: String, required: true },
+    email: { type: String, required: true, unique: true },
+    password: { type: String, required: true },
+    wishlist: [{ type: Schema.Types.ObjectId, ref: 'Product' }]
 });
-const user = model("User", userSchema);
+const User = model("User", userSchema);
 
-export default user;
+export default User;

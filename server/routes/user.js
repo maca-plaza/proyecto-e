@@ -1,57 +1,60 @@
 import { Router } from "express";
-import listarUsuarios from "../controllers/user.getAllUser.js";
-import actualizarUsuario from '../controllers/user.Update.js';
-import crearUsuario from "../controllers/user.createUser.js";
-import login from '../controllers/login.user.js';
-import isAuth from '../middlewares/validar-jwt.js';
-import logOut from '../controllers/user.logOut.js';
-import getUser from '../controllers/user.getUser.js';
-import { validarRegistro, validarLogin, validarGoogle} from '../Middlewares/validations.js';
+import bcrypt from 'bcrypt';
+import jwt from 'jsonwebtoken';
+import User from '../db/models/user.js';
+
 const router = Router();
 
-//listar usuarios
-router.get("/", listarUsuarios);
-
-//crear usuario
-router.post("/crear-usuario", validarRegistro, crearUsuario);
-
-//login
-router.post("/login", validarLogin, login);
-
-//login google
-
-router.post("/google-in", validarGoogle)
-
-//get usuario
-router.get("/get-usuario", isAuth, getUser);
-
-//actualizar usuario
-router.put("/actualizar-usuario/:id", actualizarUsuario);
-
-//borrar usuario
-router.delete("/eliminar-usuario", (req, res) => {
-    res.send("Ruta DELETE gestionada");
-});
-
-router.get("/ruta-protegida", isAuth, (req, res) => {
+// Registro de usuario
+router.post('/', async (req, res) => {
+    const { name, lastName, email, password } = req.body;
 
     try {
-        res.status(200).json({
-        code: 200,
-        msg: "Ruta protegida"
-    })
+        // Verificar si el usuario ya existe
+        let user = await User.findOne({ email });
+        if (user) {
+            return res.status(400).json({ error: 'El correo electrónico ya está registrado.' });
+        }
 
+        // Hash de la contraseña
+        const hashedPassword = await bcrypt.hash(password, 10);
+
+        // Crear nuevo usuario
+        user = new User({ name, lastName, email, password: hashedPassword });
+        await user.save();
+
+        res.status(201).json({ message: 'Usuario registrado correctamente.' });
     } catch (error) {
-        console.log(error);
-        res.status(500).json({
-            code: 500,
-            msg: "Error en el servidor"
-        })
+        console.error('Error en el registro:', error.message);
+        res.status(500).json({ error: 'Error en el servidor.' });
     }
-}
-);
+});
 
-router.post("/logout", logOut);
+// Inicio de sesión
+router.post('/', async (req, res) => {
+    const { email, password } = req.body;
 
+    try {
+        // Verificar si el usuario existe
+        const user = await User.findOne({ email });
+        if (!user) {
+            return res.status(404).json({ error: 'Usuario no encontrado.' });
+        }
+
+        // Verificar la contraseña
+        const isMatch = await bcrypt.compare(password, user.password);
+        if (!isMatch) {
+            return res.status(401).json({ error: 'Credenciales incorrectas.' });
+        }
+
+        // Generar token JWT
+        const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: '1h' });
+
+        res.json({ token });
+    } catch (error) {
+        console.error('Error en el inicio de sesión:', error.message);
+        res.status(500).json({ error: 'Error en el servidor.' });
+    }
+});
 
 export default router;
