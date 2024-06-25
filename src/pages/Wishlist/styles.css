@@ -1,6 +1,6 @@
 .wishlist-Principal{
-    background-image: url(https://lh3.googleusercontent.com/u/0/d/1KxfyKadHEoLSDS6C-ChtaXhAwddwmhoC=w1020-h834-iv1);
-    position: relative;
+  background-image: url(https://lh3.googleusercontent.com/u/0/d/1KxfyKadHEoLSDS6C-ChtaXhAwddwmhoC=w1020-h834-iv1);
+  position: relative;
   min-height: calc(100vh - 200px);
   display: flex;
   flex-direction: column;

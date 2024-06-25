@@ -12,14 +12,7 @@ function Wishlist() {
       info: "",
     },
   ];
-  {/* <div className="info-wishlist">
-            <img
-              className="wishlist-image"
-              src=""
-            />
-            <div className="text-wrapper-wishlist">Visita tu lista</div>
-            <div className="text-wrapper-2-wishlist">de favoritos</div>
-          </div> */}
+  
         
         
   const [productos, setProductos] = useState([]);
