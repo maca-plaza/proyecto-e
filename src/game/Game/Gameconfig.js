@@ -7,7 +7,7 @@ const gameConfig = (setLife, setMoney) => ({
   type: Phaser.AUTO,
   width: 800,
   height: 600,
-  parent: 'phaser-game',
+  parent: 'game-container',
   physics: {
     default: 'arcade',
     arcade: {
