@@ -3,6 +3,7 @@ import create from "./Create";
 import preload from "./Preload";
 import update from "./Update";
 
+
 const gameConfig = (setLife, setMoney) => ({
   type: Phaser.AUTO,
   width: 800,
