@@ -11,12 +11,13 @@ const create = (setLife, setMoney) => function() {
   setLife(100);
   setMoney(500);
   this.projectiles = this.add.group(); // Grupo para proyectiles
+  
 
   this.towers = this.add.group(); // Grupo para almacenar las torres
 
   // Crea sprites de ubicaciones de torres (invisibles, solo para detectar clics)
   towerLocations.forEach((location) => {
-    const locationSprite = this.add.rectangle(location.x, location.y, 64, 64, 0xffffd5, 0.5);
+    const locationSprite = this.add.rectangle(location.x, location.y, 64, 64, 0xffffd5, 0.45);
     locationSprite.setInteractive();
     locationSprite.on("pointerdown", () => {
       // Verificar si ya se colocó una torre en esta ubicación
@@ -39,6 +40,9 @@ const create = (setLife, setMoney) => function() {
   for (let i = 0; i < 5; i++) {
     let enemy = this.add.sprite(0, i * 100, "enemy");
     enemy.setScale(0.15);
+    enemy.health = 100; // Inicializar salud del enemig
+    this.physics.add.existing(enemy); // Añadir cuerpo físico al enemigo
+    enemy.body.setCollideWorldBounds(true);
     this.enemies.add(enemy);
   }
 
