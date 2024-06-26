@@ -4,8 +4,8 @@ const create = (setLife, setMoney) => function() {
     setLife(100);
     setMoney(500);
   
-    this.solarTower = this.add.sprite(20, 100, 'solarTower');
-    this.solarTower.setScale(0.1);
+    this.solarTower = this.add.sprite(400, 250, 'solarTower');
+    this.solarTower.setScale(0.15);
   
     this.towers = this.add.group();
     
@@ -33,12 +33,17 @@ const create = (setLife, setMoney) => function() {
     }
   
     this.enemyPath = [
-      { x: 100, y: 100 },
-      { x: 300, y: 100 },
-      { x: 300, y: 300 },
+      { x: 50, y: 400 },
+      { x: 100, y: 400 },
+      { x: 200, y: 400 },
+      { x: 300, y: 400 },
+      { x: 340, y: 300 },
+      { x: 340, y: 200 },
+      { x: 450, y: 200 },
+      { x: 470, y: 310 },
       { x: 500, y: 300 },
-      { x: 500, y: 500 },
-      { x: 700, y: 500 },
+      { x: 600, y: 350 },
+      { x: 700, y: 400 },
     ];
   
     this.sustainabilityPoints = 0;

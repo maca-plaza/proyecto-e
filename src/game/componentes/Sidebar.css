@@ -3,9 +3,8 @@
     padding: 20px;
     background-color: #f4f4f4;
     border-left: 1px solid #ddd;
-    position: fixed;
+    position: relative;
     right: 0;
-    top: 0;
     height: 100%;
   }
   
