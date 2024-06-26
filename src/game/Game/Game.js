@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import Phaser from 'phaser';
-import gameConfig from './GameConfig'; // Ajusta la ruta según la ubicación exacta
+import gameConfig from "./Gameconfig"; // Ajusta la ruta según la ubicación exacta
 
 const Game = ({ setLife, setMoney }) => {
   useEffect(() => {
@@ -15,10 +15,11 @@ const Game = ({ setLife, setMoney }) => {
   }, [setLife, setMoney]);
 
   return (
-    <div id="game-container">
-      {/* Elemento donde se renderizará el juego */}
+    <div id="game-container" style={{ width: '800px', height: '600px' }}>
     </div>
   );
 };
 
 export default Game;
+
+
