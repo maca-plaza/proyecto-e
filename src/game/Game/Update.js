@@ -1,3 +1,5 @@
+
+
 import { moveEnemy, attackEnemy } from './Helpers';
 
 const update = (setLife, setMoney) => function(time, delta) {
