@@ -1,8 +1,14 @@
-
 .contacts-container {
   display: flex;
   flex-direction: column;
-  width: 80%;
+  margin: 110px 0;
+}
+.contact-box{
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  height: 80vh;
+  gap: 30px;
 }
 
 .contact-wrapper {
@@ -10,6 +16,9 @@
   flex-direction: row;
   min-height: 2.5em;
   align-items: center; 
+  justify-content: flex-start;
+  width: 69%;
+  padding-left: 13px;
 }
 
 .contact-wrapper:nth-child(odd) {
@@ -25,7 +34,7 @@
 .first-row {
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  width: 69%;
 }
 
 .title-icon-container {
@@ -47,14 +56,14 @@
 
 .info-container {
   display: flex;
-  width: 90%;
+  width: 86%;
 }
 
 .actions-contact {
-  width: 6%;
+  width: 5%;
   display: flex;
   justify-content: flex-start;
-  gap: 15px;
+  gap: 18px;
   font-size: 18px;
 }
 span .actions-contact {
@@ -69,11 +78,11 @@ span.comment {
 }
 
 .email {
-  width: 30%;
+  width: 45%;
 }
 
 .comment {
-  width: 70%;
+  width: 100%;
 }
 .leido {
   color: gray;
