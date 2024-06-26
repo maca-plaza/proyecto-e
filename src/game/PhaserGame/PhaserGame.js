@@ -1,8 +1,8 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import Phaser from 'phaser';
-import gameConfig from '../game/GameConfig'; // Ajusta la ruta según la ubicación exacta
+import gameConfig from '../gameconfig'; // Ajusta la ruta según la ubicación exacta
 
-const Game = ({ setLife, setMoney }) => {
+const PhaserGame = ({ setLife, setMoney }) => {
   useEffect(() => {
     const config = gameConfig(setLife, setMoney);
 
@@ -20,5 +20,4 @@ const Game = ({ setLife, setMoney }) => {
     </div>
   );
 };
-
-export default Game;
+export default PhaserGame;

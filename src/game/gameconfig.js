@@ -12,21 +12,29 @@ export const gameconfig = {
     }
   },
   scene: {
-    preload: preload,
-    create: create,
-    update: update
+    preload: preload(setLife, setMoney),
+    create: create(setLife, setMoney),
+    update: update(setLife, setMoney)
+
   }
 };
 
-function preload() {
+function preload(setLife, setMoney) {
+  return function() {
   // Cargar recursos (torres, enemigos, mapa)
   this.load.pack('assetPack', 'assets/assetPack.json', 'pack');
   this.load.spritesheet('enemy', 'assets/enemy_spritesheet.png', { frameWidth: 64, frameHeight: 64 });
+  this.load.image('background', 'assets/sprites/background.png');
 }
-
-function create() {
+}
+function create(setLife, setMoney) {
+  return function() {
   // Crear el mapa, torres, enemigos
-  this.add.image(400, 300, 'map'); // Añade el mapa
+  this.add.image(400, 300, 'background'); // Añade el mapa
+
+  // Lógica inicial para la vida y el dinero
+  setLife(100);
+  setMoney(500);
   
   // Cargar la torre solar con un tamaño personalizado
   this.solarTower = this.add.sprite(20, 100, 'solarTower'); // Ajusta x e y según tu diseño
@@ -86,32 +94,48 @@ function create() {
 });
 }
 
-function update(time, delta) {
-    // Obtener arrays de enemigos y torres
-    const enemiesArray = this.enemies.getChildren();
-    const towersArray = this.towers.getChildren();
+    
+  function update(setLife, setMoney) {
+    return function(time, delta) {
+      // Obtener arrays de enemigos y torres
+      const enemiesArray = this.enemies.getChildren();
+      const towersArray = this.towers.getChildren();
   
-    // Mover enemigos a lo largo del camino definido
-    enemiesArray.forEach((enemy) => {
-      moveEnemy(enemy, this.enemyPath);
-    });
+      // Mover enemigos a lo largo del camino definido
+      enemiesArray.forEach((enemy) => {
+        moveEnemy(enemy, this.enemyPath);
+      });
   
-    // Lógica de ataque de las torres a los enemigos
-    towersArray.forEach((tower) => {
-      attackEnemy(tower, enemiesArray, this);
-  });
-
-  towersArray.forEach((tower) => {
-      if (this.experiencePoints >= 100) {
-          tower.level += 1;
-          this.experiencePoints -= 100;
+      // Lógica de ataque de las torres a los enemigos
+      function update(setLife, setMoney) {
+        return function(time, delta) {
+          // Obtener arrays de enemigos y torres
+          const enemiesArray = this.enemies.getChildren();
+          const towersArray = this.towers.getChildren();
+      
+          // Lógica para cada torre
+          towersArray.forEach((tower) => {
+            // Atacar enemigos si están en rango
+            attackEnemy(tower, enemiesArray, this);
+      
+            // Mejorar la torre si cumple con la condición
+            if (this.experiencePoints >= 100) {
+              tower.level += 1;
+              this.experiencePoints -= 100;
+            }
+          });
+      
+          // Otra lógica de actualización del juego si es necesario
+          // Por ejemplo, verificar colisiones, actualizar estado, etc.
+        };
       }
-  });
   
-    // Otra lógica de actualización del juego según sea necesario
-    this.sustainabilityText.setText('Puntos de Sostenibilidad: ' + this.sustainabilityPoints);
-    // Por ejemplo, verificar colisiones, actualizar estados, etc.
+      // Otra lógica de actualización del juego si es necesario
+      this.sustainabilityText.setText('Puntos de Sostenibilidad: ' + this.sustainabilityPoints);
+      // Por ejemplo, verificar colisiones, actualizar estado, etc.
+    };
   }
+
 
 function moveEnemy(enemy, path) {
     if (!enemy.pathIndex) enemy.pathIndex = 0;
@@ -160,3 +184,4 @@ function attackEnemy(tower, enemiesArray, context) {
           }
       });
   }
+}
