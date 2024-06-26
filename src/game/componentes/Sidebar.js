@@ -3,21 +3,37 @@ import './Sidebar.css';
 
 const questions = [
   {
-    question: "¿Cuál es la capital de Francia?",
-    options: ["Madrid", "Paris", "Berlín", "Lisboa"],
-    correct: "Paris"
+    question: "¿En qué país se construyó la primera máquina a vapor atmosférica, que impulsó la Revolución Industrial?",
+    options: ["Francia", "Inglaterra", "Alemania", "Italia"],
+    correct: "Inglaterra"
   },
   {
-    question: "¿Cuál es el río más largo del mundo?",
-    options: ["Amazonas", "Nilo", "Yangtsé", "Mississippi"],
-    correct: "Amazonas"
+    question: "En China, monjes taoístas que se encontraban buscando el elixir de la inmortalidad elaboraron accidentalmente la pólvora",
+    options: ["Verdadero", "Falso"],
+    correct: "Verdadero"
   },
   {
-    question: "¿Cuál es el planeta más cercano al sol?",
-    options: ["Tierra", "Venus", "Marte", "Mercurio"],
-    correct: "Mercurio"
+    question: "¿Qué personaje desarrolla la Teoría de la Relatividad?",
+    options: ["Nikola Tesla", "Thomas Alva Edison", "Antoine Lavoisier", "Albert Einstein"],
+    correct: "Albert Einstein"
+  },
+  {
+    question: "¿Qué país es el productor número uno de Energía Solar?",
+    options: ["Argentina", "Brasil", "Chile", "Colombia"],
+    correct: "Chile"
+  },
+  {
+    question: "¿Qué color no representa los colores del reciclaje?",
+    options: ["Gris Claro", "Verde", "Rojo", "Blanco"],
+    correct: "Blanco"
+  },
+  {
+    question: "¿Qué término se utiliza para describir el consumo de electricidad por parte de dispositivos electrónicos cuando están apagados pero aún enchufados?",
+    options: ["Consumo silencioso", "Consumo vampiro", "Consumo discreto", "Consumo invisible"],
+    correct: "Consumo vampiro"
   }
 ];
+
 
 const Sidebar = ({ life, money, upgrades, addMoney }) => {
   const [buttonsEnabled, setButtonsEnabled] = useState([false, false, false]);
