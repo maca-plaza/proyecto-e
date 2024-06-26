@@ -29,6 +29,7 @@ set("debug", true);
 
 const app = express();
 app.use(json());
+app.use(express.json());
 app.use(cors());
 
 //rutas
@@ -36,7 +37,7 @@ app.use("/products", productRouter);
 app.use("/search", searchRouter);
 app.use("/contact", contactRouter);
 app.use("/users", userRouter);
-app.use('/wishlist', wishlistRouter)
+app.use("/wishlist", wishlistRouter)
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
