@@ -7,7 +7,7 @@ const Cambio = () => {
   const HEADER = {
     titulo: "Cambio Climático",
     titulo2: "¿Qué acciones hacer para contaminar menos?",
-    info: "El cambio climático es uno de los mayores desafíos que enfrenta la humanidad. A continuación, se presentan algunas acciones que podemos tomar para reducir nuestra huella de carbono y ayudar a combatir el cambio climático: ",
+    info: "El cambio climático es uno de los mayores desafíos que enfrenta la humanidad. A continuación, se presentan algunas acciones que podemos tomar para reducir nuestra huella de carbono y ayudar a combatir el cambio climático: Adoptar energías renovables, como la solar y la eólica, puede disminuir nuestra dependencia de los combustibles fósiles. Además, es importante promover la eficiencia energética en nuestros hogares y lugares de trabajo. Finalmente, reducir el consumo de plásticos de un solo uso y optar por medios de transporte sostenibles son pasos clave hacia un futuro más verde y sostenible.  ",
   };
 
   return (

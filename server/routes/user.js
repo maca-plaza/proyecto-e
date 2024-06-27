@@ -6,7 +6,7 @@ import User from '../db/models/user.js';
 const router = Router();
 
 // Registro de usuario
-router.post('/', async (req, res) => {
+router.post('/register', async (req, res) => {
     const { name, lastName, email, password } = req.body;
 
     try {
@@ -31,7 +31,7 @@ router.post('/', async (req, res) => {
 });
 
 // Inicio de sesión
-router.post('/', async (req, res) => {
+router.post('/login', async (req, res) => {
     const { email, password } = req.body;
 
     try {
