@@ -28,29 +28,48 @@ export function attackEnemy(tower, enemiesArray, scene) {
     damage = 15 * tower.level; // Ajusta esto según tus necesidades
   }
 
-  enemiesArray.forEach((enemy) => {
-    if (
-      Phaser.Math.Distance.Between(tower.x, tower.y, enemy.x, enemy.y) < range
-    ) {
-      const projectile = scene.add.sprite(tower.x, tower.y, "projectile");
-      scene.physics.moveTo(projectile, enemy.x, enemy.y, 300);
+  // Añadir un temporizador para controlar la frecuencia de disparo de la torre
+  if (!tower.nextShotTime) {
+    tower.nextShotTime = 0;
+  }
 
-      scene.time.addEvent({
-        delay: 500,
-        callback: () => {
-          if (projectile && enemy && Phaser.Math.Distance.Between(projectile.x, projectile.y, enemy.x, enemy.y) < 10) {
-            enemy.health -= damage;
-            if (enemy.health <= 0) {
-              enemy.destroy();
-              scene.sustainabilityPoints += 10;
-              scene.sustainabilityText.setText(`Puntos de Sostenibilidad: ${scene.sustainabilityPoints}`);
+  if (scene.time.now >= tower.nextShotTime) {
+    let shotDelay = 500; // Retardo entre disparos inicial
+    const speed = 200; // Velocidad de movimiento del proyectil
+
+    enemiesArray.forEach((enemy) => {
+      if (enemy.active && Phaser.Math.Distance.Between(tower.x, tower.y, enemy.x, enemy.y) < range) {
+        const projectile = scene.add.sprite(tower.x, tower.y, "projectile");
+        projectile.setScale(0.05); // Ajusta la escala del proyectil según tus necesidades
+        scene.physics.add.existing(projectile); // Asegúrate de agregar el cuerpo físico al proyectil
+        projectile.body.setCollideWorldBounds(true);
+        
+        scene.physics.moveTo(projectile, enemy.x, enemy.y, speed);
+
+        scene.time.addEvent({
+          delay: 500,
+          callback: () => {
+            if (projectile.active && Phaser.Math.Distance.Between(projectile.x, projectile.y, enemy.x, enemy.y) < 10) {
+              if (enemy.active) {
+                enemy.health -= damage;
+                if (enemy.health <= 0) {
+                  enemy.destroy();
+                  scene.sustainabilityPoints += 10;
+                  scene.sustainabilityText.setText(
+                    `Puntos de Sostenibilidad: ${scene.sustainabilityPoints}`
+                  );
+                }
+              }
             }
-          }
-          if (projectile) {
             projectile.destroy();
-          }
-        },
-      });
-    }
-  });
+          },
+          callbackScope: scene
+        });
+
+        // Establecer el tiempo para el próximo disparo de la torre
+        tower.nextShotTime = scene.time.now + shotDelay; // Ajusta el intervalo de disparo (1000 ms = 1 segundo)
+        shotDelay += 200; // Incrementa el retardo para el próximo proyectil
+      }
+    });
+  }
 }
