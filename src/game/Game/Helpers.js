@@ -21,25 +21,20 @@ export function attackEnemy(tower, enemiesArray, scene) {
   const range = 100;
   let damage = 0;
   
-  // Calcular el daño basado en el tipo y nivel de la torre
-  if (tower.type === 'solar') {
-    damage = 10 * tower.level; // Ajusta esto según tus necesidades
-  } else if (tower.type === 'wind') {
-    damage = 15 * tower.level; // Ajusta esto según tus necesidades
-  }
-
   // Añadir un temporizador para controlar la frecuencia de disparo de la torre
   if (!tower.nextShotTime) {
     tower.nextShotTime = 0;
   }
 
   if (scene.time.now >= tower.nextShotTime) {
+    const range = tower.range || 100;
+    const damage = tower.damage || (tower.type === 'solar' ? 10 * tower.level : 15 * tower.level);
     let shotDelay = 500; // Retardo entre disparos inicial
     const speed = 200; // Velocidad de movimiento del proyectil
 
     enemiesArray.forEach((enemy) => {
       if (enemy.active && Phaser.Math.Distance.Between(tower.x, tower.y, enemy.x, enemy.y) < range) {
-        const projectile = scene.add.sprite(tower.x, tower.y, "projectile");
+        const projectile = scene.physics.add.sprite(tower.x, tower.y, "projectile");
         projectile.setScale(0.05); // Ajusta la escala del proyectil según tus necesidades
         scene.physics.add.existing(projectile); // Asegúrate de agregar el cuerpo físico al proyectil
         projectile.body.setCollideWorldBounds(true);
@@ -55,9 +50,7 @@ export function attackEnemy(tower, enemiesArray, scene) {
                 if (enemy.health <= 0) {
                   enemy.destroy();
                   scene.sustainabilityPoints += 10;
-                  scene.sustainabilityText.setText(
-                    `Puntos de Sostenibilidad: ${scene.sustainabilityPoints}`
-                  );
+                  
                 }
               }
             }
@@ -72,4 +65,10 @@ export function attackEnemy(tower, enemiesArray, scene) {
       }
     });
   }
+}
+
+export function levelUpTower(tower) {
+  tower.level += 1;
+  tower.damage = tower.type === 'solar' ? 10 * tower.level : 15 * tower.level;
+  tower.range = 100 + (tower.level - 1) * 20; // Aumentar el rango con cada nivel
 }
