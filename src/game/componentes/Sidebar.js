@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCoins, faHeart, faSkull } from "@fortawesome/free-solid-svg-icons";
 import { levelUpTower } from "../Game/Helpers";
 
-const RESET_TIME = 20;
+const RESET_TIME = 10;
 
 const questions = {
   sostenibilidad: [
