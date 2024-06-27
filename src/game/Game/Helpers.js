@@ -34,16 +34,16 @@ export function attackEnemy(tower, enemiesArray, scene) {
   }
 
   if (scene.time.now >= tower.nextShotTime) {
-    let shotDelay = 20; // Ajusta el retardo entre disparos
+    let shotDelay = 500; // Retardo entre disparos inicial
+    const speed = 200; // Velocidad de movimiento del proyectil
 
     enemiesArray.forEach((enemy) => {
       if (enemy.active && Phaser.Math.Distance.Between(tower.x, tower.y, enemy.x, enemy.y) < range) {
         const projectile = scene.add.sprite(tower.x, tower.y, "projectile");
-        projectile.setScale(0.3); // Ajusta la escala del proyectil según tus necesidades
+        projectile.setScale(0.05); // Ajusta la escala del proyectil según tus necesidades
         scene.physics.add.existing(projectile); // Asegúrate de agregar el cuerpo físico al proyectil
         projectile.body.setCollideWorldBounds(true);
         
-        const speed = 50; // Ajusta esta velocidad para hacer que el proyectil se mueva más lento
         scene.physics.moveTo(projectile, enemy.x, enemy.y, speed);
 
         scene.time.addEvent({
@@ -67,8 +67,8 @@ export function attackEnemy(tower, enemiesArray, scene) {
         });
 
         // Establecer el tiempo para el próximo disparo de la torre
-        tower.nextShotTime = scene.time.now + 10; // Ajusta el intervalo de disparo (1000 ms = 1 segundo)
-        shotDelay += 2; // Incrementa el retardo para el próximo proyectil
+        tower.nextShotTime = scene.time.now + shotDelay; // Ajusta el intervalo de disparo (1000 ms = 1 segundo)
+        shotDelay += 200; // Incrementa el retardo para el próximo proyectil
       }
     });
   }

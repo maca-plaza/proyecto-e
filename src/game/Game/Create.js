@@ -2,7 +2,7 @@ const towerLocations = [
   { x: 265, y: 320 },
   { x: 400, y: 250 },
   { x: 540, y: 270 },
-  { x: 565, y: 370 },
+  { x: 565, y: 385 },
 ]; // Añadir ubicaciones predefinidas para las torres
 
 const create = (setLife, setMoney) => function() {
@@ -17,7 +17,7 @@ const create = (setLife, setMoney) => function() {
 
   // Crea sprites de ubicaciones de torres (invisibles, solo para detectar clics)
   towerLocations.forEach((location) => {
-    const locationSprite = this.add.rectangle(location.x, location.y, 64, 64, 0xffffd5, 0.45);
+    const locationSprite = this.add.rectangle(location.x, location.y, 40, 40, 0xffffd5, 0.45);
     locationSprite.setInteractive();
     locationSprite.on("pointerdown", () => {
       // Verificar si ya se colocó una torre en esta ubicación
@@ -96,7 +96,7 @@ function placeTower(scene, x, y, type, level) {
 
   // Crear la torre en la ubicación seleccionada
   let towerSprite = scene.add.sprite(x, y, `${type}Tower`);
-  towerSprite.setScale(0.15);
+  towerSprite.setScale(0.05);
   towerSprite.type = type;
   towerSprite.level = level;
   scene.towers.add(towerSprite);
