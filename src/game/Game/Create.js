@@ -15,7 +15,7 @@ const create = (setLife, setMoney, setTowers) =>
     this.add.image(400, 300, "background");
 
     setLife(100);
-    setMoney(500);
+    setMoney(200);
     this.projectiles = this.add.group(); // Grupo para proyectiles
 
     this.towers = this.add.group(); // Grupo para almacenar las torres
