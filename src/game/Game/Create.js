@@ -1,8 +1,8 @@
 const towerLocations = [
-  { x: 265, y: 320 },
-  { x: 400, y: 250 },
-  { x: 540, y: 270 },
-  { x: 565, y: 370 },
+  { x: 267, y: 335 },
+  { x: 400, y: 255 },
+  { x: 537, y: 285 },
+  { x: 565, y: 385 },
 ]; // Añadir ubicaciones predefinidas para las torres
 
 const create = (setLife, setMoney) => function() {
