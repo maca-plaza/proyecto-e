@@ -34,6 +34,7 @@ const Producto = () => {
     category,
     productUrl,
     brand,
+    
   } = producto;
 
   return (

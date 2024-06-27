@@ -29,6 +29,7 @@
   flex-direction: column;
   padding: 2rem;
   width: 25%;
+  
 }
 
 .product-link {
@@ -36,4 +37,17 @@
   flex-direction: column;
   width: 100%;
   text-align: center;
+  border: 1px solid #ffcb14;
+}
+
+
+.corazon-icon {
+  font-size: 1.5rem; 
+  color: #ffcc145b; 
+  transition: color 0.3s ease;
+
+}
+
+.corazon-icon:hover {
+  color:#ffcb14 ; 
 }

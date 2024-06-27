@@ -1,56 +1,60 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom'; // Importa useNavigate
-import './styles.css'; 
-import Header from "../../components/Header";
-import axios from "axios";
+import { useEffect, useState } from "react";
+import { useParams,Link } from "react-router-dom";
+import styles from "./styles.css";
 
-function Wishlist() {
-  const HEADER = [
-    {
-      titulo: "Visita tu lista",
-      titulo2: "de favoritos",
-      info: "",
-    },
-  ];  
-        
-  const [productos, setProductos] = useState([]);
-  
-    useEffect(() => {
-        
-        axios.get('/server/db/models/wishlist.js')
-            .then(response => {
-                setProductos(response.data);
-            })
-            .catch(error => {
-                console.error('Error fetching wishlist:', error);
-            });
-    }, []);
+const Categoria = () => {
+  const [productos, setProductos] = useState(null);
+  const { wishlist } = useParams();
+  const [status, setStatus] = useState(null);
 
-    return (
-    <div className="wishlist-body">
-    <div className="wishlist-Principal">
-      <div className="wishlist-image">
-      <div className="div">
-      <div className="wishlist-image">
-        <div>
+  useEffect(() => {
+    const fetchProductos = async () => {
+      try {
+        const response = await fetch(
+          "http://localhost:4200/products/wishlist/status=true" 
+        );
           
-          {HEADER.map((c) => (
-            <Header {...c} />
+      
+        if (response.ok) {
+          setProductos(await response.json());
+        }
+      } catch (e) {
+        console.error(e);
+      }
+    };
+
+    fetchProductos();
+  }, [status]);
+
+  if (productos) {
+    return (
+      <div>
+        <div className={styles["arrow-title"]}>
+          <a href= "/Productos">
+            <img
+              src="https://static.vecteezy.com/system/resources/previews/007/231/420/non_2x/arrow-back-icon-which-is-suitable-for-commercial-work-and-easily-modify-or-edit-it-vector.jpg"
+              alt="Back"
+              className={styles["back-arrow"]}
+            />
+          </a>
+          <h1 className={styles["category-title"]}>{wishlist}</h1>
+        </div>
+        <div className={styles["products-container"]}>
+          {productos.map((p) => (
+            <div className={styles["product-wrapper"]} key={p._id}>
+               <Link to={"/producto/"+ p.productId} className={styles["product-link"]}>
+                <img src={p.imageUrl} alt={p.name} />
+                <p className={styles["products-parrafo"]}>{p.name}</p>
+                <p className={styles["products-precio"]}>$ {p.price}</p>
+              </Link>
+            </div>
           ))}
         </div>
-    </div>
-    </div>
-        <div className="wishlist-usuarios">
-          <div>Visita tu lista de favoritos</div>
-            <div className="container-list-wishlist">
-           
-            </div>
       </div>
-    </div>
-    </div>
-    </div>
     );
-}
+  }
 
-export default Wishlist;
-  
+  return <div>404</div>;
+};
+
+export default Categoria;

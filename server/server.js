@@ -6,7 +6,7 @@ import searchRouter from "./routes/search.js";
 import cors from "cors";
 import { config as dotenvConfig } from "dotenv";
 import userRouter from "./routes/user.js";
-import wishlistRouter from './routes/wishlist.js';
+
 
 
 dotenvConfig();
@@ -36,7 +36,7 @@ app.use("/products", productRouter);
 app.use("/search", searchRouter);
 app.use("/contact", contactRouter);
 app.use("/users", userRouter);
-app.use('/wishlist', wishlistRouter)
+
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);

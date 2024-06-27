@@ -38,6 +38,10 @@ const productSchema = new Schema({
     type: String,
     trim: true,
   },
+  wishlist:{
+    type: Boolean,
+    required: false,
+  }
 });
 
 const Product = model("Product", productSchema);

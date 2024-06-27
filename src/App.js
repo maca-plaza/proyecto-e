@@ -22,7 +22,7 @@ import Categoria from "./pages/Productos/Categoria";
 import LoginButton from "./components/LoginButton";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-import Wishlist from "./pages/Wishlist";
+import Wishlist from "./pages/Productos/Wishlist";
 import HeartButton from "./components/Wishlist";
 import Clima from "./pages/Clima";
 
@@ -57,7 +57,7 @@ function App() {
       </Routes>
       <Routes>
       <Route path="/"  element={<HeartButton/>}/>
-      <Route path="/Wishlist" element={<Wishlist />} />
+      <Route path="/wishlist" element={<Wishlist />} />
       </Routes>
         <Footer />
       </BrowserRouter>

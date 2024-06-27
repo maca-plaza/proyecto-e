@@ -20,6 +20,14 @@ router.get("/", async (req, res) => {
   }
 });
 
+router.get("/wishlist", async (req, res) => {
+  try {
+    const wishlistProducts = await Product.find({ wishlist: true });
+    res.status(200).send(wishlistProducts);
+  } catch (error) {
+    res.status(500).send(error);
+  }
+});
 router.get("/:id", async (req, res) => {
   try {
     const id = req.params.id;
@@ -46,5 +54,6 @@ router.get("/categoria/:categoria", async (req, res) => {
     }
   } catch (e) {}
 });
+
 
 export default router;
