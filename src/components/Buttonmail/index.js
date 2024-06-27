@@ -1,74 +1,43 @@
-import { useEffect, useState } from "react";
 import styles from "./styles.module.css";
 
-const Buttonmail = () => {
-  const [contacts, setContacts] = useState([]);
-  const [status, setStatus] = useState(null);
-
-  useEffect(() => {
-    const fetchContacts = async () => {
-      try {
-        const response = await fetch(
-          "http://localhost:4200/contact" +
-            (status
-              ? status.includes("=")
-                ? `?${status}`
-                : `?${status}=true`
-              : "")
-        );
-
-        if (response.ok) {
-          setContacts(await response.json());
-        }
-      } catch (e) {
-        console.error(e);
-      }
-    };
-
-    fetchContacts();
-  }, [status]);
-
-  
-
-
-  if (contacts) {
-    return (
-      <div className={styles["contact-box"]}>
-        <div className={styles["contact-sidebar"]}>
+const Buttonmail = ({ setStatus }) => {
+  const buttons = [
+    {
+      label: "Todos",
+      status: "",
+    },
+    {
+      label: "No Leído",
+      status: "leido=false",
+    },
+    {
+      label: "Leído",
+      status: "leido",
+    },
+    {
+      label: "Importante",
+      status: "favorito",
+    },
+    {
+      label: "Eliminado",
+      status: "eliminado",
+    },
+  ];
+  return (
+    <div className={styles["contact-box"]}>
+      <div className={styles["contact-sidebar"]}>
+        {buttons.map((b, i) => (
           <button
+            key={i}
             className={styles["boton-contacto"]}
-            onClick={() => setStatus("")}
+            onClick={() => setStatus(b.status)}
           >
-            Todos
+            {b.label}
           </button>
-          <button
-            className={styles["boton-contacto"]}
-            onClick={() => setStatus("leido=false")}
-          >
-            No Leído
-          </button>
-          <button
-            className={styles["boton-contacto"]}
-            onClick={() => setStatus("leido")}
-          >
-            Leído
-          </button>
-          <button
-            className={styles["boton-contacto"]}
-            onClick={() => setStatus("favorito")}
-          >
-            Importante
-          </button>
-          <button
-            className={styles["boton-contacto"]}
-            onClick={() => setStatus("eliminado")}
-          >
-            Eliminado
-          </button>
-        </div>
+        ))}
       </div>
-    );
-  }
+    </div>
+  );
 };
 
 export default Buttonmail;

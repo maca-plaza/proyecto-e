@@ -153,96 +153,95 @@ const Mail = () => {
     }
   };
 
-  if (contacts.length > 0) {
-    return (
-      <div className={styles["contact-box"]}>
-        <div className={styles["contact-sidebar"]}>
-          <Buttonmail />
+  return (
+    <div className={styles["contact-box"]}>
+      <div className={styles["contact-sidebar"]}>
+        <Buttonmail setStatus={setStatus} />
+      </div>
+      <div className={styles["contacts-container"]}>
+        <div className={styles["first-row"]}>
+          <div className={styles["title-icon-container"]}>
+            <h2>Mensajes</h2>
+            <div className={styles["icon-container"]}>
+              <FontAwesomeIcon
+                icon={faCheckSquare}
+                title={"marcar todos"}
+                onClick={toggleSelectAll}
+              />
+              <FontAwesomeIcon
+                icon={faEnvelope}
+                title={" NO leido"}
+                onClick={handleMarkAsNew}
+              />
+              <FontAwesomeIcon
+                icon={faEnvelopeOpen}
+                title={"marcar leído"}
+                onClick={handleMarkAsRead}
+              />
+              <FontAwesomeIcon
+                icon={faTrash}
+                title={"Eliminar"}
+                onClick={handleDelete}
+              />
+              {status === "eliminado" && (
+                <FontAwesomeIcon
+                  icon={faSkull}
+                  title="Eliminar definitivamente"
+                  onClick={handleDeletePermanently}
+                />
+              )}
+              <FontAwesomeIcon
+                icon={faStar}
+                title={"Marcar como Spam"}
+                onClick={handleAddToFavorites}
+              />
+            </div>
+          </div>
+          <div className={styles["container-paginador"]}>
+            <span>1-20</span>
+            <FontAwesomeIcon
+              className={styles["paginador-icon"]}
+              icon={faLessThan}
+            />
+            <FontAwesomeIcon
+              className={styles["paginador-icon"]}
+              icon={faGreaterThan}
+            />
+          </div>
         </div>
-        <div className={styles["contacts-container"]}>
-          <div className={styles["first-row"]}>
-            <div className={styles["title-icon-container"]}>
-              <h2>Mensajes</h2>
-              <div className={styles["icon-container"]}>
-                <FontAwesomeIcon
-                  icon={faCheckSquare}
-                  title={"marcar todos"}
-                  onClick={toggleSelectAll}
+        <div className={styles["contacts-wrapper"]}>
+          {contacts.map((c) => (
+            <div className={styles["contact-wrapper"]} key={c._id}>
+              <span className={styles["actions-contact"]}>
+                <input
+                  className={styles["actions-caja"]}
+                  type="checkbox"
+                  checked={selectedContacts.includes(c._id)}
+                  onChange={() => handleSelect(c._id)}
                 />
-                <FontAwesomeIcon
-                  icon={faEnvelope}
-                  title={" NO leido"}
-                  onClick={handleMarkAsNew}
-                />
-                <FontAwesomeIcon
-                  icon={faEnvelopeOpen}
-                  title={"marcar leído"}
-                  onClick={handleMarkAsRead}
-                />
-                <FontAwesomeIcon
-                  icon={faTrash}
-                  title={"Eliminar"}
-                  onClick={handleDelete}
-                />
-                {status === "eliminado" && (
-                  <FontAwesomeIcon
-                    icon={faSkull}
-                    title="Eliminar definitivamente"
-                    onClick={handleDeletePermanently}
-                  />
-                )}
                 <FontAwesomeIcon
                   icon={faStar}
-                  title={"Marcar como Spam"}
-                  onClick={handleAddToFavorites}
+                  style={{ color: c.favorito ? "yellow" : "gray" }}
+                  onClick={() => toggleFavorite(c._id)}
                 />
-              </div>
-            </div>
-            <div className={styles["container-paginador"]}>
-              <span>1-20</span>
-              <FontAwesomeIcon
-                className={styles["paginador-icon"]}
-                icon={faLessThan}
-              />
-              <FontAwesomeIcon
-                className={styles["paginador-icon"]}
-                icon={faGreaterThan}
-              />
-            </div>
-          </div>
-          <div className={styles["contacts-wrapper"]}>
-            {contacts.map((c) => (
-              <div className={styles["contact-wrapper"]} key={c._id}>
-                <span className={styles["actions-contact"]}>
-                  <input
-                    className={styles["actions-caja"]}
-                    type="checkbox"
-                    checked={selectedContacts.includes(c._id)}
-                    onChange={() => handleSelect(c._id)}
-                  />
-                  <FontAwesomeIcon
-                    icon={faStar}
-                    style={{ color: c.favorito ? "yellow" : "gray" }}
-                    onClick={() => toggleFavorite(c._id)}
-                  />
+              </span>
+              <div className={styles["info-container"]}>
+                <span title={c.email} className={styles.email}>
+                  {c.email}
                 </span>
-                <div className={styles["info-container"]}>
-                  <span title={c.email} className={styles.email}>
-                    {c.email}
-                  </span>
-                  <span title={c.comment} className={styles.comment}>
-                    {c.comment}
-                  </span>
-                </div>
+                <span title={c.comment} className={styles.comment}>
+                  {c.comment}
+                </span>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
+          {contacts.length <= 0 && (
+            <span>No hay mensajes</span>
+          )}
         </div>
       </div>
-    );
-  }
-
-  return <div>404</div>;
+    </div>
+  );
 };
 
 export default Mail;
