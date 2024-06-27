@@ -10,7 +10,7 @@ const towerLocations = [
 let towerCount = 0;
 let selectedTowerType = null; // Tipo de torre seleccionada por defecto
 
-const create = (setLife, setMoney) =>
+const create = (setLife, setMoney, setTowers) =>
   function () {
     this.add.image(400, 300, "background");
 
@@ -37,7 +37,7 @@ const create = (setLife, setMoney) =>
           // Lógica para colocar una torre en la ubicación clicada
           const type =
             selectedTowerType || (towerCount % 2 === 0 ? "solar" : "wind");
-          placeTower(this, location.x, location.y, type, 1); // Ejemplo: Coloca una torre solar de nivel 1
+          placeTower(this, location.x, location.y, type, 1, setTowers); // Ejemplo: Coloca una torre solar de nivel 1
           towerCount++;
         }
       });
@@ -90,7 +90,7 @@ const create = (setLife, setMoney) =>
       { x: 470, y: 300 },
       { x: 500, y: 320 },
       { x: 600, y: 340 },
-      { x: 700, y: 400 },
+      { x: 700, y: 400, damage: true },
       { x: 750, y: 500 },
       { x: 650, y: 500 },
       { x: 550, y: 500 },
@@ -122,16 +122,15 @@ const create = (setLife, setMoney) =>
   };
 
 // Función para verificar si ya se colocó una torre en la ubicación específica
-function isTowerPlaced( x, y) {
+function isTowerPlaced(x, y) {
   return (
     this.towers &&
     this.towers.getChildren().some((tower) => tower.x === x && tower.y === y)
   );
 }
 
-
 // Función para colocar una torre en la posición específica
-function placeTower(scene, x, y, type, level) {
+function placeTower(scene, x, y, type, level, setTowers) {
   // Verificar si ya hay una torre en esta ubicación
   const existingTower = scene.towers
     .getChildren()
@@ -140,15 +139,23 @@ function placeTower(scene, x, y, type, level) {
 
   // Crear la torre en la ubicación seleccionada
   let towerSprite = scene.add.sprite(x, y, `${type}Tower`);
-  let scale = type === 'solar' ? 0.05 : 0.2; // Ajusta la escala según el tipo de torre
+  let scale = type === "solar" ? 0.05 : 0.2; // Ajusta la escala según el tipo de torre
   towerSprite.setScale(scale);
   towerSprite.type = type;
   towerSprite.level = level;
-  towerSprite.range = type === 'solar' ? 100 : 150; // Ajuste del rango según el tipo de torre
+  towerSprite.range = type === "solar" ? 100 : 150; // Ajuste del rango según el tipo de torre
   towerSprite.damage = type === "solar" ? 10 * level : 15 * level;
   scene.towers.add(towerSprite);
-}
 
+  setTowers({
+    id: `${x}-${y}`,
+    level: level,
+    type: type,
+    x: x,
+    y: y,
+    tower: towerSprite,
+  });
+}
 
 /* function levelUpTower(tower) {
   tower.level += 1;

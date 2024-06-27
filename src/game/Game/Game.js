@@ -12,7 +12,7 @@ const Game = ({ setLife, setMoney, setTowers }) => {
       // Limpia los recursos del juego al desmontar el componente
       game.destroy(true);
     };
-  }, [setLife, setMoney]);
+  }, [setMoney]);
 
   return (
     <div id="game-container" style={{ width: "800px", height: "600px" }}></div>

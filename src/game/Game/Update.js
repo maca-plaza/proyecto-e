@@ -9,7 +9,7 @@ const update = (setLife, setMoney) => function(time, delta) {
 
   // Mover enemigos a lo largo del camino definido
   enemiesArray.forEach((enemy) => {
-    moveEnemy(enemy, this.enemyPath);
+    moveEnemy(enemy, this.enemyPath, setLife);
   });
   // Lógica de ataque de las torres a los enemigos
   towersArray.forEach((tower) => {
