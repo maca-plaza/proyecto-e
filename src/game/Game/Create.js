@@ -8,7 +8,7 @@ const towerLocations = [
 ]; // Añadir ubicaciones predefinidas para las torres
 
 let towerCount = 0;
-let selectedTowerType = "solar"; // Tipo de torre seleccionada por defecto
+let selectedTowerType = null; // Tipo de torre seleccionada por defecto
 
 const create = (setLife, setMoney) =>
   function () {
@@ -140,10 +140,11 @@ function placeTower(scene, x, y, type, level) {
 
   // Crear la torre en la ubicación seleccionada
   let towerSprite = scene.add.sprite(x, y, `${type}Tower`);
-  towerSprite.setScale(0.05);
+  let scale = type === 'solar' ? 0.05 : 0.2; // Ajusta la escala según el tipo de torre
+  towerSprite.setScale(scale);
   towerSprite.type = type;
   towerSprite.level = level;
-  towerSprite.range = 100;
+  towerSprite.range = type === 'solar' ? 100 : 150; // Ajuste del rango según el tipo de torre
   towerSprite.damage = type === "solar" ? 10 * level : 15 * level;
   scene.towers.add(towerSprite);
 }
