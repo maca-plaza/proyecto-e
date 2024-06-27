@@ -1,3 +1,5 @@
+import { levelUpTower } from "./Helpers";
+
 const towerLocations = [
   { x: 267, y: 335 },
   { x: 400, y: 255 },
@@ -5,93 +7,135 @@ const towerLocations = [
   { x: 565, y: 385 },
 ]; // Añadir ubicaciones predefinidas para las torres
 
-const create = (setLife, setMoney) => function() {
-  this.add.image(400, 300, "background");
+let towerCount = 0;
+let selectedTowerType = "solar"; // Tipo de torre seleccionada por defecto
 
-  setLife(100);
-  setMoney(500);
-  this.projectiles = this.add.group(); // Grupo para proyectiles
-  
+const create = (setLife, setMoney) =>
+  function () {
+    this.add.image(400, 300, "background");
 
-  this.towers = this.add.group(); // Grupo para almacenar las torres
+    setLife(100);
+    setMoney(500);
+    this.projectiles = this.add.group(); // Grupo para proyectiles
 
-  // Crea sprites de ubicaciones de torres (invisibles, solo para detectar clics)
-  towerLocations.forEach((location) => {
-    const locationSprite = this.add.rectangle(location.x, location.y, 40, 40, 0xffffd5, 0.45);
-    locationSprite.setInteractive();
-    locationSprite.on("pointerdown", () => {
-      // Verificar si ya se colocó una torre en esta ubicación
-      if (!isTowerPlaced(this, location.x, location.y)) {
-        // Lógica para colocar una torre en la ubicación clicada
-        placeTower(this, location.x, location.y, "solar", 1); // Ejemplo: Coloca una torre solar de nivel 1
-      }
+    this.towers = this.add.group(); // Grupo para almacenar las torres
+
+    // Crea sprites de ubicaciones de torres (invisibles, solo para detectar clics)
+    towerLocations.forEach((location) => {
+      const locationSprite = this.add.rectangle(
+        location.x,
+        location.y,
+        40,
+        40,
+        0xffffd5,
+        0.45
+      );
+      locationSprite.setInteractive();
+      locationSprite.on("pointerdown", () => {
+        // Verificar si ya se colocó una torre en esta ubicación
+        if (!isTowerPlaced.call(this, location.x, location.y)) {
+          // Lógica para colocar una torre en la ubicación clicada
+          const type =
+            selectedTowerType || (towerCount % 2 === 0 ? "solar" : "wind");
+          placeTower(this, location.x, location.y, type, 1); // Ejemplo: Coloca una torre solar de nivel 1
+          towerCount++;
+        }
+      });
     });
-  });
+    // Añadir botones para seleccionar el tipo de torre
+    const solarButton = this.add.text(700, 50, "Solar", {
+      fontSize: "32px",
+      fill: "#fff",
+    });
+    solarButton.setInteractive();
+    solarButton.on("pointerdown", () => {
+      selectedTowerType = "solar";
+    });
 
-  this.enemies = this.add.group();
+    const windButton = this.add.text(700, 100, "Wind", {
+      fontSize: "32px",
+      fill: "#fff",
+    });
+    windButton.setInteractive();
+    windButton.on("pointerdown", () => {
+      selectedTowerType = "wind";
+    });
 
-  this.anims.create({
-    key: "move",
-    frames: this.anims.generateFrameNumbers("enemy", { start: 0, end: 3 }),
-    frameRate: 10,
-    repeat: -1,
-  });
+    this.enemies = this.add.group();
 
-  for (let i = 0; i < 5; i++) {
-    let enemy = this.add.sprite(0, i * 100, "enemy");
-    enemy.setScale(0.15);
-    enemy.health = 100; // Inicializar salud del enemig
-    this.physics.add.existing(enemy); // Añadir cuerpo físico al enemigo
-    enemy.body.setCollideWorldBounds(true);
-    this.enemies.add(enemy);
-  }
+    this.anims.create({
+      key: "move",
+      frames: this.anims.generateFrameNumbers("enemy", { start: 0, end: 3 }),
+      frameRate: 10,
+      repeat: -1,
+    });
 
-  this.enemyPath = [
-    { x: 50, y: 400 },
-    { x: 100, y: 400 },
-    { x: 200, y: 400 },
-    { x: 300, y: 400 },
-    { x: 340, y: 300 },
-    { x: 340, y: 200 },
-    { x: 450, y: 200 },
-    { x: 470, y: 300 },
-    { x: 500, y: 320 },
-    { x: 600, y: 340 },
-    { x: 700, y: 400 },
-    { x: 750, y: 500 },
-    { x: 650, y: 500 },
-    { x: 550, y: 500 },
-  ];
+    for (let i = 0; i < 5; i++) {
+      let enemy = this.add.sprite(0, i * 100, "enemy");
+      enemy.setScale(0.15);
+      enemy.health = 100; // Inicializar salud del enemig
+      this.physics.add.existing(enemy); // Añadir cuerpo físico al enemigo
+      enemy.body.setCollideWorldBounds(true);
+      this.enemies.add(enemy);
+    }
 
-  this.sustainabilityPoints = 0;
-  this.experiencePoints = 0;
-  this.sustainabilityText = this.add.text(16, 16, "Puntos de Sostenibilidad: 0", {
-    fontSize: "32px",
-    fill: "#fff",
-  });
+    this.enemyPath = [
+      { x: 50, y: 400 },
+      { x: 100, y: 400 },
+      { x: 200, y: 400 },
+      { x: 300, y: 400 },
+      { x: 340, y: 300 },
+      { x: 340, y: 200 },
+      { x: 450, y: 200 },
+      { x: 470, y: 300 },
+      { x: 500, y: 320 },
+      { x: 600, y: 340 },
+      { x: 700, y: 400 },
+      { x: 750, y: 500 },
+      { x: 650, y: 500 },
+      { x: 550, y: 500 },
+    ];
 
-  this.time.addEvent({
-    delay: 60000,
-    callback: () => {
-      // Verificar si se ha colocado al menos una torre antes de comenzar el ataque
-      if (this.towers.getLength() > 0) {
-        this.experiencePoints += 10;
-        // Lógica de ataque de los enemigos aquí
+    this.sustainabilityPoints = 0;
+    this.experiencePoints = 0;
+    this.sustainabilityText = this.add.text(
+      16,
+      16,
+      "Puntos de Sostenibilidad: 0",
+      {
+        fontSize: "32px",
+        fill: "#fff",
       }
-    },
-    loop: true,
-  });
-};
+    );
+
+    this.time.addEvent({
+      delay: 60000,
+      callback: () => {
+        // Verificar si se ha colocado al menos una torre antes de comenzar el ataque
+        if (this.towers.getLength() > 0) {
+          this.experiencePoints += 10;
+          // Lógica de ataque de los enemigos aquí
+        }
+      },
+      loop: true,
+    });
+  };
 
 // Función para verificar si ya se colocó una torre en la ubicación específica
-function isTowerPlaced(scene, x, y) {
-  return scene.towers.getChildren().some((tower) => tower.x === x && tower.y === y);
+function isTowerPlaced( x, y) {
+  return (
+    this.towers &&
+    this.towers.getChildren().some((tower) => tower.x === x && tower.y === y)
+  );
 }
+
 
 // Función para colocar una torre en la posición específica
 function placeTower(scene, x, y, type, level) {
   // Verificar si ya hay una torre en esta ubicación
-  const existingTower = scene.towers.getChildren().find((tower) => tower.x === x && tower.y === y);
+  const existingTower = scene.towers
+    .getChildren()
+    .find((tower) => tower.x === x && tower.y === y);
   if (existingTower) return;
 
   // Crear la torre en la ubicación seleccionada
@@ -99,7 +143,16 @@ function placeTower(scene, x, y, type, level) {
   towerSprite.setScale(0.05);
   towerSprite.type = type;
   towerSprite.level = level;
+  towerSprite.range = 100;
+  towerSprite.damage = type === "solar" ? 10 * level : 15 * level;
   scene.towers.add(towerSprite);
 }
+
+
+/* function levelUpTower(tower) {
+  tower.level += 1;
+  tower.damage = tower.type === "solar" ? 10 * tower.level : 15 * tower.level;
+  tower.range = 100 + (tower.level - 1) * 20; // Aumentar el rango con cada nivel
+} */
 
 export default create;
