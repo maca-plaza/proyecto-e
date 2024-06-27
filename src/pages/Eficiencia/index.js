@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLightbulb } from "@fortawesome/free-solid-svg-icons";
+import { faLightbulb, faGamepad } from "@fortawesome/free-solid-svg-icons";
 import "./styles.css";
 import Header from "../../components/Header";
 import { Link } from "react-router-dom";
@@ -173,18 +173,29 @@ const Eficiencia = () => {
           <div className="card_info">
             <FontAwesomeIcon icon={faLightbulb} className="icon_cardd" />
             <div className="card_body">
-              <Link to="/juego">
                 <h3>Ahorro de energía y costes</h3>
                 <p className="card_text">
                   Al utilizar menos recursos para llevar a cabo una actividad
                   contribuimos al ahorro energético. Además, un menor gasto de
                   energía se traduce en una reducción en la factura energética.
                 </p>
-              </Link>
+              
             </div>
           </div>
+            <div className="card_info">
+              <FontAwesomeIcon icon={faGamepad} className="icon_cardd" />
+                <div className="card-body">
+                    <Link to="/juego">
+                      <h3>¿Quieres aprender jugando?</h3>
+                      <p className="card-text">
+                        Juego interactivo de Tower Defense para aprender más sobre eficiencia energetica
+                      </p>
+                    
+                    </Link>
+                </div>
+              </div>
 
-          <div className="card_info">
+            <div className="card_info">
             <FontAwesomeIcon icon={faLightbulb} className="icon_cardd" />
             <div className="card-body">
               <h3>Mejoras para el medioambiente</h3>
@@ -193,18 +204,6 @@ const Eficiencia = () => {
                 invernadero. Con el uso responsable de la energía se consumen
                 menos recursos, lo que contribuye a reducir la huella de
                 carbono.
-              </p>
-            </div>
-          </div>
-
-          <div className="card_info">
-            <FontAwesomeIcon icon={faLightbulb} className="icon_cardd" />
-            <div className="card-body">
-              <h3>Mejoras en el abastecimiento</h3>
-              <p className="card-text">
-                La eficiencia energética nos permite optimizar el uso de
-                recursos naturales y crear economía de proximidad, fomentando
-                con ello el consumo responsable.
               </p>
             </div>
           </div>

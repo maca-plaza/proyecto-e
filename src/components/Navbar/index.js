@@ -52,9 +52,7 @@ const Navbar = () => {
             <li className="inicio">
               <Link to="/">Inicio </Link>
             </li>
-            <li className="energetica">
-              <Link to="/eficiencia">Eficiencia Energética </Link>
-            </li>
+            
             <li className="residuos">
               <Link to="/residuos"> Gestión de Residuos </Link>
             </li>
@@ -63,6 +61,9 @@ const Navbar = () => {
             </li>
             <li className="sostenibles">
               <Link to="/productos">Productos Sostenibles </Link>
+            </li>
+            <li className="energetica">
+              <Link to="/eficiencia">Eficiencia Energética </Link>
             </li>
           </ul>
           <div className={`nav_toggle ${isOpen &&"open"}`} onClick={() => setIsOpen(!isOpen)}>
