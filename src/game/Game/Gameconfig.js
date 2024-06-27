@@ -17,7 +17,7 @@ const gameConfig = (setLife, setMoney, setTowers) => ({
   },
   scene: {
     preload: preload(setLife, setMoney),
-    create: create(setLife, setMoney),
+    create: create(setLife, setMoney, setTowers),
     update: update(setLife, setMoney)
   }
 });

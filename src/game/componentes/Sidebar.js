@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import "./Sidebar.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCoins, faHeart, faSkull } from "@fortawesome/free-solid-svg-icons";
+import { levelUpTower } from "../Game/Helpers";
+
+const RESET_TIME = 30;
 
 const questions = {
   sostenibilidad: [
@@ -35,7 +38,7 @@ const questions = {
       correct: "Chile",
     },
     {
-      question: "¿Qué color no representa los colores del reciclaje?",
+      question: "¿Qué color NO representa los colores del reciclaje?",
       options: ["Gris Claro", "Verde", "Rojo", "Blanco"],
       correct: "Blanco",
     },
@@ -56,13 +59,12 @@ const questions = {
 const Sidebar = ({
   life,
   money,
+  setMoney,
   upgrades,
-  addMoney,
-  upgradeSolarTower,
-  upgradeWindTower,
+  towers
 }) => {
   const [buttonsEnabled, setButtonsEnabled] = useState([false, false]);
-  const [timer, setTimer] = useState(120);
+  const [timer, setTimer] = useState(RESET_TIME);
   const [currentQuestion, setCurrentQuestion] = useState(null);
   const [showQuestion, setShowQuestion] = useState(false);
   const [category, setCategory] = useState("");
@@ -103,17 +105,17 @@ const Sidebar = ({
 
   const handleAnswerClick = (answer) => {
     if (answer === currentQuestion.correct) {
-      addMoney(100); // Agrega $100 si la respuesta es correcta
+      setMoney(money + 100); // Agrega $100 si la respuesta es correcta
     }
     setShowQuestion(false);
     setCurrentQuestion(null);
     setButtonsEnabled([false, false]);
-    resetTimers(120);
+    resetTimers();
   };
 
   const resetTimers = () => {
     const timers = buttonsEnabled.map((enabled, index) =>
-      setTimeout(() => enableButton(index), (index + 1) * 120000)
+      setTimeout(() => enableButton(index), (index + 1) * RESET_TIME * 1000)
     );
 
     return () => {
@@ -152,9 +154,12 @@ const Sidebar = ({
           ))}
         </ul>
         <h3>Subir Nivel de Torres</h3>
+        {towers.map((t, i) => (
+          <button key={i} onClick={() => levelUpTower(t.tower, money, setMoney)}>Subir de nivel torre {t.type} - {t.id}</button>
+        ))}
 
-        <button onClick={upgradeSolarTower}>Subir Nivel de Torre Solar</button>
-        <button onClick={upgradeWindTower}>Subir Nivel de Torre Eólica</button>
+        {/* <button onClick={upgradeSolarTower}>Subir Nivel de Torre Solar</button>
+        <button onClick={upgradeWindTower}>Subir Nivel de Torre Eólica</button> */}
       </div>
       <div className="buttons">
         <button

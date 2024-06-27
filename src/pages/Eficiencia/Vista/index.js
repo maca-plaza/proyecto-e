@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../../../components/Header";
 import "../Vista/vista.css";
 import Game from "../../../game/Game/Game";
@@ -16,6 +16,10 @@ const Vista = () => {
   const [money, setMoney] = useState(0);
 
   const [towers, setTowers] = useState([]);
+
+  const setTower = (tower) => {
+    setTowers((p) => p.concat([tower]));
+  };
 
   const upgrades = [
     { name: "Mejora de Torre Solar", cost: 100 },
@@ -38,9 +42,15 @@ const Vista = () => {
       ))}
 
       <div className="game-container">
-        <Game setLife={setLife} setMoney={setMoney} setTowers={setTowers} />
+        <Game setLife={setLife} setMoney={setMoney} setTowers={setTower} />
         <div className="sidebar-container">
-          <Sidebar life={life} money={money} upgrades={upgrades} />
+          <Sidebar
+            life={life}
+            money={money}
+            setMoney={setMoney}
+            upgrades={upgrades}
+            towers={towers}
+          />
         </div>
       </div>
     </div>
