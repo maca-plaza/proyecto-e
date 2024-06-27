@@ -27,8 +27,6 @@ export function attackEnemy(tower, enemiesArray, scene) {
   }
 
   if (scene.time.now >= tower.nextShotTime) {
-    const range = tower.range || 100;
-    const damage = tower.damage || (tower.type === 'solar' ? 10 * tower.level : 15 * tower.level);
     let shotDelay = 500; // Retardo entre disparos inicial
     const speed = 200; // Velocidad de movimiento del proyectil
 
@@ -68,7 +66,9 @@ export function attackEnemy(tower, enemiesArray, scene) {
 }
 
 export function levelUpTower(tower) {
-  tower.level += 1;
+  if (tower.level < 5) { // Suponer que el nivel máximo es 5
+    tower.level++;
   tower.damage = tower.type === 'solar' ? 10 * tower.level : 15 * tower.level;
   tower.range = 100 + (tower.level - 1) * 20; // Aumentar el rango con cada nivel
+}
 }
