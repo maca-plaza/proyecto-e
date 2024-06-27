@@ -1,51 +1,58 @@
 .sidebar {
-    width: 250px;
-    padding: 30px;
-    background-color: rgba(153, 238, 160, 0.138);
-    /* border-left: 1px solid #ddd; */
-    border-radius: 25px;
-    /* position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+
+  padding: 30px;
+  background-color: rgba(153, 238, 160, 0.138);
+  /* border-left: 1px solid #ddd; */
+  border-radius: 25px;
+  /* position: relative;
     right: 0; */
-    height: 100%;
-  }
+  height: 100%;
+}
 
-  .sidebar h2, .sidebar h3 {
-    /* margin-top: 0; */
-    color: yellow; 
-  }
+.sidebar-gamestatus {
 
-  .sidebar ul {
-    list-style-type: none;
-    color: yellow;
-    padding: 0;
-  }
-  .sidebar li {
-    /* margin-bottom: 10px; */
-    color: #fff;
-  }
-  .sidebar-puntos{
-    padding-bottom: 10px;
-    color: #ffffff;
-  }
-  .sidebar-puntos strong{
-    padding-left: 10px;
-  }
-  .sidebar-icon{
-    color: red;
-    font-size: 20px;
-  }
-  .sidebar-icon2{
-    color: yellow;
-    font-size: 20px;
-  }
-  .sidebar-icon3{
-    color: rgb(0, 0, 0);
-    font-size: 20px;
-  }
+}
+
+.sidebar h2,
+.sidebar h3 {
+  /* margin-top: 0; */
+  color: yellow;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  color: yellow;
+  padding: 0;
+}
+.sidebar li {
+  /* margin-bottom: 10px; */
+  color: #fff;
+}
+.sidebar-puntos {
+  padding-bottom: 10px;
+  color: #ffffff;
+}
+.sidebar-puntos strong {
+  padding-left: 10px;
+}
+.sidebar-icon {
+  color: red;
+  font-size: 20px;
+}
+.sidebar-icon2 {
+  color: yellow;
+  font-size: 20px;
+}
+.sidebar-icon3 {
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+}
 .butttons {
   margin: 0 auto;
 }
-.buttons button{
+.buttons button {
   border-radius: 20px;
   padding: 5px 20px;
   background-color: #284621;
@@ -53,7 +60,7 @@
   margin: 15px 25px;
   color: #ffffff;
 }
-.question h4{
+.question h4 {
   margin: 20px 0;
   padding: 0 12px;
   font-size: 18px;
@@ -61,7 +68,7 @@
   color: #ffffff;
   font-weight: 400;
 }
-.question button{
+.question button {
   width: 120px;
   height: 50px;
   border-radius: 20px;

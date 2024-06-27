@@ -105,33 +105,37 @@ const Sidebar = ({ life, money, upgrades, addMoney }) => {
 
   return (
     <div className="sidebar">
-      <h2>Estado del Juego</h2>
-      <div className="sidebar-puntos">
-        <FontAwesomeIcon icon={faHeart} className="sidebar-icon" />
-        <strong>Vida:</strong> {life}
+      <div className="sidebar-gamestatus">
+        <h2>Estado del Juego</h2>
+        <div className="sidebar-puntos">
+          <FontAwesomeIcon icon={faHeart} className="sidebar-icon" />
+          <strong>Vida:</strong> {life}
+        </div>
+        <div className="sidebar-puntos">
+          <FontAwesomeIcon icon={faCoins} className="sidebar-icon2" />
+          <strong>Dinero:</strong> ${money}
+        </div>
+        <div className="sidebar-puntos">
+          <FontAwesomeIcon icon={faSkull} className="sidebar-icon3" />
+          <strong>Muertes</strong>
+        </div>
       </div>
-      <div className="sidebar-puntos">
-        <FontAwesomeIcon icon={faCoins} className="sidebar-icon2" />
-        <strong>Dinero:</strong> ${money}
-      </div>
-      <div className="sidebar-puntos">
-        <FontAwesomeIcon icon={faSkull} className="sidebar-icon3" />
-        <strong>Muertes</strong>
-      </div>
-      <h3>Mejoras Disponibles</h3>
-      <ul>
-        {upgrades.map((upgrade, index) => (
-          <li key={index}>
-            {upgrade.name} - ${upgrade.cost}
-          </li>
-        ))}
-      </ul>
-      <div className="buttons">
-        {buttonsEnabled.map((enabled, index) => (
-          <button key={index} disabled={!enabled} onClick={handleButtonClick}>
-            Pregunta {index + 1}
-          </button>
-        ))}
+      <div className="sidebar-upgrades">
+        <h3>Mejoras Disponibles</h3>
+        <ul>
+          {upgrades.map((upgrade, index) => (
+            <li key={index}>
+              {upgrade.name} - ${upgrade.cost}
+            </li>
+          ))}
+        </ul>
+        <div className="buttons">
+          {buttonsEnabled.map((enabled, index) => (
+            <button key={index} disabled={!enabled} onClick={handleButtonClick}>
+              Pregunta {index + 1}
+            </button>
+          ))}
+        </div>
       </div>
       {showQuestion && (
         <div className="question">

@@ -1,15 +1,25 @@
 .navigation-back-2 {
-    width: 51px;
-    cursor: pointer;
-    margin-left: 0px;
-    margin-top: 70px;
-  }
-
-.vista-juego {
-  background: linear-gradient(to right, #2C3E50, #4CAF50, #AAB7B8);
+  width: 51px;
+  cursor: pointer;
+  margin-left: 0px;
+  margin-top: 70px;
 }
 
-.vista-juego::before {
+.vista-juego {
+  background: linear-gradient(to right, #2c3e50, #4caf50, #aab7b8);
+}
+
+.game-container {
+  display: flex;
+  gap: 1em;
+  padding: 2em;
+}
+
+.sidebar-container {
+  flex: 1 0 0;
+}
+
+/* .vista-juego::before {
   content: "⚡ Energizatech Tower Defense: Sostenibilidad en Acción ⚡ ";
   display: block;
   color: white;
@@ -19,4 +29,4 @@
   top: 1100px; 
   left: 50%;
   transform: translateX(-50%);
-}
+} */

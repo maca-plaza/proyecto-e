@@ -4,7 +4,7 @@ import preload from "./Preload";
 import update from "./Update";
 
 
-const gameConfig = (setLife, setMoney) => ({
+const gameConfig = (setLife, setMoney, setTowers) => ({
   type: Phaser.AUTO,
   width: 800,
   height: 600,
